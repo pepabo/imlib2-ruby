@@ -1,0 +1,1008 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Class: Imlib2::Font</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript" />
+  <link rel="stylesheet" href="../.././rdoc-style.css" type="text/css" media="screen" />
+  <script type="text/javascript">
+  // <![CDATA[
+
+  function popupCode( url ) {
+    window.open(url, "Code", "resizable=yes,scrollbars=yes,toolbar=no,status=no,height=150,width=400")
+  }
+
+  function toggleCode( id ) {
+    if ( document.getElementById )
+      elem = document.getElementById( id );
+    else if ( document.all )
+      elem = eval( "document.all." + id );
+    else
+      return false;
+
+    elemStyle = elem.style;
+    
+    if ( elemStyle.display != "block" ) {
+      elemStyle.display = "block"
+    } else {
+      elemStyle.display = "none"
+    }
+
+    return true;
+  }
+  
+  // Make codeblocks hidden by default
+  document.writeln( "<style type=\"text/css\">div.method-source-code { display: none }</style>" )
+  
+  // ]]>
+  </script>
+
+</head>
+<body>
+
+
+
+    <div id="classHeader">
+        <table class="header-table">
+        <tr class="top-aligned-row">
+          <td><strong>Class</strong></td>
+          <td class="class-name-in-header">Imlib2::Font</td>
+        </tr>
+        <tr class="top-aligned-row">
+            <td><strong>In:</strong></td>
+            <td>
+                <a href="../../files/imlib2_c.html">
+                imlib2.c
+                </a>
+        &nbsp;(<a href="http://cvs.pablotron.org/cgi-bin/viewcvs.cgi/imlib2-ruby/imlib2.c">CVS</a>)
+        <br />
+            </td>
+        </tr>
+
+        <tr class="top-aligned-row">
+            <td><strong>Parent:</strong></td>
+            <td>
+                Object
+            </td>
+        </tr>
+        </table>
+    </div>
+  <!-- banner header -->
+
+  <div id="bodyContent">
+
+
+
+  <div id="contextContent">
+
+
+
+   </div>
+
+    <div id="method-list">
+      <h3 class="section-bar">Methods</h3>
+
+      <div class="name-list">
+      <a href="#M000410">add_path</a>&nbsp;&nbsp;
+      <a href="#M000385">advance</a>&nbsp;&nbsp;
+      <a href="#M000399">ascent</a>&nbsp;&nbsp;
+      <a href="#M000401">descent</a>&nbsp;&nbsp;
+      <a href="#M000408">fonts</a>&nbsp;&nbsp;
+      <a href="#M000400">get_ascent</a>&nbsp;&nbsp;
+      <a href="#M000402">get_descent</a>&nbsp;&nbsp;
+      <a href="#M000404">get_maximum_ascent</a>&nbsp;&nbsp;
+      <a href="#M000406">get_maximum_descent</a>&nbsp;&nbsp;
+      <a href="#M000387">get_text_advance</a>&nbsp;&nbsp;
+      <a href="#M000394">get_text_index_and_location</a>&nbsp;&nbsp;
+      <a href="#M000390">get_text_inset</a>&nbsp;&nbsp;
+      <a href="#M000398">get_text_location_at_index</a>&nbsp;&nbsp;
+      <a href="#M000384">get_text_size</a>&nbsp;&nbsp;
+      <a href="#M000391">index</a>&nbsp;&nbsp;
+      <a href="#M000388">inset</a>&nbsp;&nbsp;
+      <a href="#M000407">list</a>&nbsp;&nbsp;
+      <a href="#M000409">list_fonts</a>&nbsp;&nbsp;
+      <a href="#M000413">list_paths</a>&nbsp;&nbsp;
+      <a href="#M000380">load</a>&nbsp;&nbsp;
+      <a href="#M000395">location</a>&nbsp;&nbsp;
+      <a href="#M000403">maximum_ascent</a>&nbsp;&nbsp;
+      <a href="#M000405">maximum_descent</a>&nbsp;&nbsp;
+      <a href="#M000381">new</a>&nbsp;&nbsp;
+      <a href="#M000379">new</a>&nbsp;&nbsp;
+      <a href="#M000412">paths</a>&nbsp;&nbsp;
+      <a href="#M000411">remove_path</a>&nbsp;&nbsp;
+      <a href="#M000382">size</a>&nbsp;&nbsp;
+      <a href="#M000386">text_advance</a>&nbsp;&nbsp;
+      <a href="#M000392">text_index</a>&nbsp;&nbsp;
+      <a href="#M000393">text_index_and_location</a>&nbsp;&nbsp;
+      <a href="#M000389">text_inset</a>&nbsp;&nbsp;
+      <a href="#M000396">text_location</a>&nbsp;&nbsp;
+      <a href="#M000397">text_location_at_index</a>&nbsp;&nbsp;
+      <a href="#M000383">text_size</a>&nbsp;&nbsp;
+      </div>
+    </div>
+
+  </div>
+
+
+    <!-- if includes -->
+
+    <div id="section">
+
+
+
+
+
+      
+
+
+    <!-- if method_list -->
+    <div id="methods">
+      <h3 class="section-bar">Public Class methods</h3>
+
+      <div id="method-M000410" class="method-detail">
+        <a name="M000410"></a>
+
+        <div class="method-heading">
+          <a href="Font.src/M000410.html" target="Code" class="method-signature"
+            onclick="popupCode('Font.src/M000410.html');return false;">
+          <span class="method-name">add_path</span><span class="method-args">(p1)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Add a path to the list of font paths.
+</p>
+<p>
+Example:
+</p>
+<pre>
+  Imlib2::Font.add_path '/usr/lib/X11/fonts/Truetype'
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000408" class="method-detail">
+        <a name="M000408"></a>
+
+        <div class="method-heading">
+          <a href="Font.src/M000408.html" target="Code" class="method-signature"
+            onclick="popupCode('Font.src/M000408.html');return false;">
+          <span class="method-name">fonts</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Return an array of all known fonts
+</p>
+<p>
+Example:
+</p>
+<pre>
+  font_list = Imlib2::Font.list_fonts
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000407" class="method-detail">
+        <a name="M000407"></a>
+
+        <div class="method-heading">
+          <a href="Font.src/M000407.html" target="Code" class="method-signature"
+            onclick="popupCode('Font.src/M000407.html');return false;">
+          <span class="method-name">list</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Return an array of all known fonts
+</p>
+<p>
+Example:
+</p>
+<pre>
+  font_list = Imlib2::Font.list_fonts
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000409" class="method-detail">
+        <a name="M000409"></a>
+
+        <div class="method-heading">
+          <a href="Font.src/M000409.html" target="Code" class="method-signature"
+            onclick="popupCode('Font.src/M000409.html');return false;">
+          <span class="method-name">list_fonts</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Return an array of all known fonts
+</p>
+<p>
+Example:
+</p>
+<pre>
+  font_list = Imlib2::Font.list_fonts
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000413" class="method-detail">
+        <a name="M000413"></a>
+
+        <div class="method-heading">
+          <a href="Font.src/M000413.html" target="Code" class="method-signature"
+            onclick="popupCode('Font.src/M000413.html');return false;">
+          <span class="method-name">list_paths</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Return an array of font paths.
+</p>
+<p>
+Example:
+</p>
+<pre>
+  path_list = Imlib2::Font.list_paths
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000380" class="method-detail">
+        <a name="M000380"></a>
+
+        <div class="method-heading">
+          <a href="Font.src/M000380.html" target="Code" class="method-signature"
+            onclick="popupCode('Font.src/M000380.html');return false;">
+          <span class="method-name">load</span><span class="method-args">(p1)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Returns a new <a href="Font.html">Imlib2::Font</a>
+</p>
+<p>
+Note: the specified font must be in the font path. See
+Imlib2::Font::list_paths() for a list of font paths, and
+Imlib2::Font::list_fonts() for a list of fonts.
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  font = Imlib2::Font.new 'helvetica/24'
+  font = Imlib2::Font.load 'helvetica/24'
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000381" class="method-detail">
+        <a name="M000381"></a>
+
+        <div class="method-heading">
+          <a href="Font.src/M000381.html" target="Code" class="method-signature"
+            onclick="popupCode('Font.src/M000381.html');return false;">
+          <span class="method-name">new</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Constructor for <a href="Font.html">Imlib2::Font</a>
+</p>
+<p>
+Currently just a placeholder.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000379" class="method-detail">
+        <a name="M000379"></a>
+
+        <div class="method-heading">
+          <a href="Font.src/M000379.html" target="Code" class="method-signature"
+            onclick="popupCode('Font.src/M000379.html');return false;">
+          <span class="method-name">new</span><span class="method-args">(p1)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Returns a new <a href="Font.html">Imlib2::Font</a>
+</p>
+<p>
+Note: the specified font must be in the font path. See
+Imlib2::Font::list_paths() for a list of font paths, and
+Imlib2::Font::list_fonts() for a list of fonts.
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  font = Imlib2::Font.new 'helvetica/24'
+  font = Imlib2::Font.load 'helvetica/24'
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000412" class="method-detail">
+        <a name="M000412"></a>
+
+        <div class="method-heading">
+          <a href="Font.src/M000412.html" target="Code" class="method-signature"
+            onclick="popupCode('Font.src/M000412.html');return false;">
+          <span class="method-name">paths</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Return an array of font paths.
+</p>
+<p>
+Example:
+</p>
+<pre>
+  path_list = Imlib2::Font.list_paths
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000411" class="method-detail">
+        <a name="M000411"></a>
+
+        <div class="method-heading">
+          <a href="Font.src/M000411.html" target="Code" class="method-signature"
+            onclick="popupCode('Font.src/M000411.html');return false;">
+          <span class="method-name">remove_path</span><span class="method-args">(p1)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Remove a path from the list of font paths.
+</p>
+<p>
+Example:
+</p>
+<pre>
+  Imlib2::Font.remove_path '/usr/lib/X11/fonts/Truetype'
+</pre>
+        </div>
+      </div>
+
+      <h3 class="section-bar">Public Instance methods</h3>
+
+      <div id="method-M000385" class="method-detail">
+        <a name="M000385"></a>
+
+        <div class="method-heading">
+          <a href="Font.src/M000385.html" target="Code" class="method-signature"
+            onclick="popupCode('Font.src/M000385.html');return false;">
+          <span class="method-name">advance</span><span class="method-args">(p1)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Get the horizontal and vertical advance of the given string using this
+font.
+</p>
+<p>
+Example:
+</p>
+<pre>
+  font = Imlib2::Font.new 'verdana/36'
+  advances = font.advance &quot;what's my advance?&quot;
+  ['horizontal', 'vertical'].each_index { |i, v|
+    puts 'text ' &lt;&lt; v &lt;&lt; ' advance = ' &lt;&lt; advances[i]
+  }
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000399" class="method-detail">
+        <a name="M000399"></a>
+
+        <div class="method-heading">
+          <a href="Font.src/M000399.html" target="Code" class="method-signature"
+            onclick="popupCode('Font.src/M000399.html');return false;">
+          <span class="method-name">ascent</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Get font ascent.
+</p>
+<p>
+Example:
+</p>
+<pre>
+  a = font.ascent
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000401" class="method-detail">
+        <a name="M000401"></a>
+
+        <div class="method-heading">
+          <a href="Font.src/M000401.html" target="Code" class="method-signature"
+            onclick="popupCode('Font.src/M000401.html');return false;">
+          <span class="method-name">descent</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Get font descent.
+</p>
+<p>
+Example:
+</p>
+<pre>
+  a = font.descent
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000400" class="method-detail">
+        <a name="M000400"></a>
+
+        <div class="method-heading">
+          <a href="Font.src/M000400.html" target="Code" class="method-signature"
+            onclick="popupCode('Font.src/M000400.html');return false;">
+          <span class="method-name">get_ascent</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Get font ascent.
+</p>
+<p>
+Example:
+</p>
+<pre>
+  a = font.ascent
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000402" class="method-detail">
+        <a name="M000402"></a>
+
+        <div class="method-heading">
+          <a href="Font.src/M000402.html" target="Code" class="method-signature"
+            onclick="popupCode('Font.src/M000402.html');return false;">
+          <span class="method-name">get_descent</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Get font descent.
+</p>
+<p>
+Example:
+</p>
+<pre>
+  a = font.descent
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000404" class="method-detail">
+        <a name="M000404"></a>
+
+        <div class="method-heading">
+          <a href="Font.src/M000404.html" target="Code" class="method-signature"
+            onclick="popupCode('Font.src/M000404.html');return false;">
+          <span class="method-name">get_maximum_ascent</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Get font maximum ascent.
+</p>
+<p>
+Example:
+</p>
+<pre>
+  a = font.maximum_ascent
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000406" class="method-detail">
+        <a name="M000406"></a>
+
+        <div class="method-heading">
+          <a href="Font.src/M000406.html" target="Code" class="method-signature"
+            onclick="popupCode('Font.src/M000406.html');return false;">
+          <span class="method-name">get_maximum_descent</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Get font maximum descent.
+</p>
+<p>
+Example:
+</p>
+<pre>
+  a = font.maximum_descent
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000387" class="method-detail">
+        <a name="M000387"></a>
+
+        <div class="method-heading">
+          <a href="Font.src/M000387.html" target="Code" class="method-signature"
+            onclick="popupCode('Font.src/M000387.html');return false;">
+          <span class="method-name">get_text_advance</span><span class="method-args">(p1)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Get the horizontal and vertical advance of the given string using this
+font.
+</p>
+<p>
+Example:
+</p>
+<pre>
+  font = Imlib2::Font.new 'verdana/36'
+  advances = font.advance &quot;what's my advance?&quot;
+  ['horizontal', 'vertical'].each_index { |i, v|
+    puts 'text ' &lt;&lt; v &lt;&lt; ' advance = ' &lt;&lt; advances[i]
+  }
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000394" class="method-detail">
+        <a name="M000394"></a>
+
+        <div class="method-heading">
+          <a href="Font.src/M000394.html" target="Code" class="method-signature"
+            onclick="popupCode('Font.src/M000394.html');return false;">
+          <span class="method-name">get_text_index_and_location</span><span class="method-args">(...)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Get the character index of the pixel at the given coordinates using this
+font.
+</p>
+<p>
+Example:
+</p>
+<pre>
+  x, y, char_w, char_h = font.index &quot;index\nstring\n&quot;, 5, 5
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000390" class="method-detail">
+        <a name="M000390"></a>
+
+        <div class="method-heading">
+          <a href="Font.src/M000390.html" target="Code" class="method-signature"
+            onclick="popupCode('Font.src/M000390.html');return false;">
+          <span class="method-name">get_text_inset</span><span class="method-args">(p1)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Get the inset of the given string using this font
+</p>
+<p>
+Example:
+</p>
+<pre>
+  font = Imlib2::Font.new 'palatino/9'
+  inset = font.inset 'wonder what the inset for this string is...'
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000398" class="method-detail">
+        <a name="M000398"></a>
+
+        <div class="method-heading">
+          <a href="Font.src/M000398.html" target="Code" class="method-signature"
+            onclick="popupCode('Font.src/M000398.html');return false;">
+          <span class="method-name">get_text_location_at_index</span><span class="method-args">(p1, p2)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Get the character coordinates of the at the given index using this font.
+</p>
+<p>
+Example:
+</p>
+<pre>
+  x, y, char_w, char_h = font.index &quot;index\nstring\n&quot;, 8
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000384" class="method-detail">
+        <a name="M000384"></a>
+
+        <div class="method-heading">
+          <a href="Font.src/M000384.html" target="Code" class="method-signature"
+            onclick="popupCode('Font.src/M000384.html');return false;">
+          <span class="method-name">get_text_size</span><span class="method-args">(p1)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Get the width and height of the given string using this font.
+</p>
+<p>
+Example:
+</p>
+<pre>
+  font = Imlib2::Font.new 'helvetica/12'
+  size = font.size 'how big am i?'
+  ['width', 'height'].each_index { |i, v|
+    puts 'text ' &lt;&lt; v &lt;&lt; ' = ' &lt;&lt; size[i]
+  }
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000391" class="method-detail">
+        <a name="M000391"></a>
+
+        <div class="method-heading">
+          <a href="Font.src/M000391.html" target="Code" class="method-signature"
+            onclick="popupCode('Font.src/M000391.html');return false;">
+          <span class="method-name">index</span><span class="method-args">(...)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Get the character index of the pixel at the given coordinates using this
+font.
+</p>
+<p>
+Example:
+</p>
+<pre>
+  x, y, char_w, char_h = font.index &quot;index\nstring\n&quot;, 5, 5
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000388" class="method-detail">
+        <a name="M000388"></a>
+
+        <div class="method-heading">
+          <a href="Font.src/M000388.html" target="Code" class="method-signature"
+            onclick="popupCode('Font.src/M000388.html');return false;">
+          <span class="method-name">inset</span><span class="method-args">(p1)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Get the inset of the given string using this font
+</p>
+<p>
+Example:
+</p>
+<pre>
+  font = Imlib2::Font.new 'palatino/9'
+  inset = font.inset 'wonder what the inset for this string is...'
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000395" class="method-detail">
+        <a name="M000395"></a>
+
+        <div class="method-heading">
+          <a href="Font.src/M000395.html" target="Code" class="method-signature"
+            onclick="popupCode('Font.src/M000395.html');return false;">
+          <span class="method-name">location</span><span class="method-args">(p1, p2)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Get the character coordinates of the at the given index using this font.
+</p>
+<p>
+Example:
+</p>
+<pre>
+  x, y, char_w, char_h = font.index &quot;index\nstring\n&quot;, 8
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000403" class="method-detail">
+        <a name="M000403"></a>
+
+        <div class="method-heading">
+          <a href="Font.src/M000403.html" target="Code" class="method-signature"
+            onclick="popupCode('Font.src/M000403.html');return false;">
+          <span class="method-name">maximum_ascent</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Get font maximum ascent.
+</p>
+<p>
+Example:
+</p>
+<pre>
+  a = font.maximum_ascent
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000405" class="method-detail">
+        <a name="M000405"></a>
+
+        <div class="method-heading">
+          <a href="Font.src/M000405.html" target="Code" class="method-signature"
+            onclick="popupCode('Font.src/M000405.html');return false;">
+          <span class="method-name">maximum_descent</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Get font maximum descent.
+</p>
+<p>
+Example:
+</p>
+<pre>
+  a = font.maximum_descent
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000382" class="method-detail">
+        <a name="M000382"></a>
+
+        <div class="method-heading">
+          <a href="Font.src/M000382.html" target="Code" class="method-signature"
+            onclick="popupCode('Font.src/M000382.html');return false;">
+          <span class="method-name">size</span><span class="method-args">(p1)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Get the width and height of the given string using this font.
+</p>
+<p>
+Example:
+</p>
+<pre>
+  font = Imlib2::Font.new 'helvetica/12'
+  size = font.size 'how big am i?'
+  ['width', 'height'].each_index { |i, v|
+    puts 'text ' &lt;&lt; v &lt;&lt; ' = ' &lt;&lt; size[i]
+  }
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000386" class="method-detail">
+        <a name="M000386"></a>
+
+        <div class="method-heading">
+          <a href="Font.src/M000386.html" target="Code" class="method-signature"
+            onclick="popupCode('Font.src/M000386.html');return false;">
+          <span class="method-name">text_advance</span><span class="method-args">(p1)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Get the horizontal and vertical advance of the given string using this
+font.
+</p>
+<p>
+Example:
+</p>
+<pre>
+  font = Imlib2::Font.new 'verdana/36'
+  advances = font.advance &quot;what's my advance?&quot;
+  ['horizontal', 'vertical'].each_index { |i, v|
+    puts 'text ' &lt;&lt; v &lt;&lt; ' advance = ' &lt;&lt; advances[i]
+  }
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000392" class="method-detail">
+        <a name="M000392"></a>
+
+        <div class="method-heading">
+          <a href="Font.src/M000392.html" target="Code" class="method-signature"
+            onclick="popupCode('Font.src/M000392.html');return false;">
+          <span class="method-name">text_index</span><span class="method-args">(...)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Get the character index of the pixel at the given coordinates using this
+font.
+</p>
+<p>
+Example:
+</p>
+<pre>
+  x, y, char_w, char_h = font.index &quot;index\nstring\n&quot;, 5, 5
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000393" class="method-detail">
+        <a name="M000393"></a>
+
+        <div class="method-heading">
+          <a href="Font.src/M000393.html" target="Code" class="method-signature"
+            onclick="popupCode('Font.src/M000393.html');return false;">
+          <span class="method-name">text_index_and_location</span><span class="method-args">(...)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Get the character index of the pixel at the given coordinates using this
+font.
+</p>
+<p>
+Example:
+</p>
+<pre>
+  x, y, char_w, char_h = font.index &quot;index\nstring\n&quot;, 5, 5
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000389" class="method-detail">
+        <a name="M000389"></a>
+
+        <div class="method-heading">
+          <a href="Font.src/M000389.html" target="Code" class="method-signature"
+            onclick="popupCode('Font.src/M000389.html');return false;">
+          <span class="method-name">text_inset</span><span class="method-args">(p1)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Get the inset of the given string using this font
+</p>
+<p>
+Example:
+</p>
+<pre>
+  font = Imlib2::Font.new 'palatino/9'
+  inset = font.inset 'wonder what the inset for this string is...'
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000396" class="method-detail">
+        <a name="M000396"></a>
+
+        <div class="method-heading">
+          <a href="Font.src/M000396.html" target="Code" class="method-signature"
+            onclick="popupCode('Font.src/M000396.html');return false;">
+          <span class="method-name">text_location</span><span class="method-args">(p1, p2)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Get the character coordinates of the at the given index using this font.
+</p>
+<p>
+Example:
+</p>
+<pre>
+  x, y, char_w, char_h = font.index &quot;index\nstring\n&quot;, 8
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000397" class="method-detail">
+        <a name="M000397"></a>
+
+        <div class="method-heading">
+          <a href="Font.src/M000397.html" target="Code" class="method-signature"
+            onclick="popupCode('Font.src/M000397.html');return false;">
+          <span class="method-name">text_location_at_index</span><span class="method-args">(p1, p2)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Get the character coordinates of the at the given index using this font.
+</p>
+<p>
+Example:
+</p>
+<pre>
+  x, y, char_w, char_h = font.index &quot;index\nstring\n&quot;, 8
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000383" class="method-detail">
+        <a name="M000383"></a>
+
+        <div class="method-heading">
+          <a href="Font.src/M000383.html" target="Code" class="method-signature"
+            onclick="popupCode('Font.src/M000383.html');return false;">
+          <span class="method-name">text_size</span><span class="method-args">(p1)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Get the width and height of the given string using this font.
+</p>
+<p>
+Example:
+</p>
+<pre>
+  font = Imlib2::Font.new 'helvetica/12'
+  size = font.size 'how big am i?'
+  ['width', 'height'].each_index { |i, v|
+    puts 'text ' &lt;&lt; v &lt;&lt; ' = ' &lt;&lt; size[i]
+  }
+</pre>
+        </div>
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+
+<div id="validator-badges">
+  <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+</div>
+
+</body>
+</html>

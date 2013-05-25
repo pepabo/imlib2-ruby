@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+  <title>draw_text (Imlib2::Image)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="../../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre>/*
+ * Draw a string with the given Imlib2::Font at the specified coordinates
+ *
+ * Examples:
+ *   font = Imlib2::Font.new 'helvetica/12'
+ *   string = 'the blue crow flies at midnight'
+ *   image.draw_text font, string, 10, 10
+ *
+ *   # draw text in a specified color
+ *   font = Imlib2::Font.new 'helvetica/12'
+ *   string = 'the blue crow flies at midnight'
+ *   color = Imlib2::Color::AQUA
+ *   image.draw_text font, string, 10, 10, color
+ *
+ *   # draw text in a specified direction
+ *   font = Imlib2::Font.new 'verdana/24'
+ *   string = 'the blue crow flies at midnight'
+ *   color = Imlib2::Color::YELLOW
+ *   direction = Imlib2::Direction::DOWN
+ *   image.draw_text font, string, 10, 10, color, direction
+ *
+ *   # draw text with return metrics
+ *   font = Imlib2::Font.new 'arial/36'
+ *   string = 'the blue crow flies at midnight'
+ *   color = Imlib2::Color::PURPLE
+ *   direction = Imlib2::Direction::LEFT
+ *   metrics = image.draw_text font, string, 10, 10, color, direction
+ *   ['width', 'height', 'horiz_advance', 'vert_advance'].each_index { |i, v|
+ *     puts v &lt;&lt; ' = ' &lt;&lt; metrics[i]
+ *   }
+ *
+ */ 
+static VALUE image_draw_text(int argc, VALUE *argv, VALUE self) {
+</pre>
+</body>
+</html>

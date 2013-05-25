@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+  <title>save (Imlib2::Image)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="../../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre>/*
+ * Save an Imlib2::Image to a file (throws an exception on error).
+ * 
+ * Examples:
+ *   image.save 'output_file.png'
+ *
+ *   filename = 'output_file.jpg'
+ *   begin
+ *     image.save filename
+ *   rescue Imlib2::FileError
+ *     $stderr.puts &quot;Couldn't save file \&quot;#{filename}\&quot;: &quot; + $!
+ *   end
+ *
+ */
+static VALUE image_save(VALUE self, VALUE val) {
+</pre>
+</body>
+</html>

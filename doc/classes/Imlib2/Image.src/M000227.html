@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+  <title>draw_pixel_workaround? (Imlib2::Image)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="../../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre>/*
+ * Are we using the buggy imlib_image_draw_pixel() work-around?
+ *
+ * Versions of Imlib2 up to and including 1.0.5 had a broken
+ * imlib_image_draw_pixel() call. Imlib2-Ruby has a work-around, which
+ * simulates drawing a pixel with a 1x1 rectangle.  This method allows 
+ * you to check whether the work-around behavior is enabled.
+ *
+ * Examples:
+ *   puts 'work-around is enabled' if Imlib2::Image::draw_pixel_workaround?
+ *   puts 'work-around is enabled' if Imlib2::Image::bypass_draw_pixel?
+ *
+ */
+VALUE image_dp_workaround(VALUE klass) {
+</pre>
+</body>
+</html>

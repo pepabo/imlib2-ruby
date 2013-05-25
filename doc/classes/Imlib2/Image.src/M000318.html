@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+  <title>copy_alpha_rect (Imlib2::Image)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="../../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre>/*
+ * Copy the alpha channel from a rectangle of the source image to the
+ * specified coordinates
+ *
+ * Examples:
+ *   x, y, w, h = 10, 20, 100, 200
+ *   dest_x, dest_y = 5, 10
+ *   image.copy_alpha_rect source_image, x, y, w, h, dest_x, dest_y
+ *
+ *   source_rect = [10, 20, 100, 200]
+ *   dest_coords = [5, 10]
+ *   image.copy_alpha_rect source_image, source_rect, dest_coords
+ *
+ *   values = [10, 20, 100, 200, 5, 10]
+ *   image.copy_alpha_rect source_image, values
+ *
+ */
+static VALUE image_copy_alpha_rect(int argc, VALUE *argv, VALUE self) {
+</pre>
+</body>
+</html>

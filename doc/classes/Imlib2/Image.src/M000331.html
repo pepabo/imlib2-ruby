@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+  <title>draw_polygon (Imlib2::Image)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="../../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre>/*
+ * Draw an Imlib2::Polygon with the specified color
+ *
+ * Examples:
+ *   # create a simple blue right triangle
+ *   triangle = Imlib2::Polygon.new [10, 10], [20, 20], [10, 20]
+ *   image.draw_polygon triangle, Imlib2::Color::BLUE
+ *
+ *   # create an open red square polygon
+ *   square = Imlib2.Polygon.new [10, 10], [20, 10], [20, 20], [10, 20]
+ *   image.draw_poly square, false, Imlib2::Color::RED
+ *
+ */
+static VALUE image_draw_poly(int argc, VALUE *argv, VALUE self) {
+</pre>
+</body>
+</html>

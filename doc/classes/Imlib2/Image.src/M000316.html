@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+  <title>fill_rectangle (Imlib2::Image)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="../../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre>/* 
+ * Fill a rectangle at the specified coordinates.
+ *
+ * Examples:
+ *   # fill image using context color
+ *   rect = [0, 0, im.width, im.height]
+ *   im.fill_rect rect
+ *
+ *   # fill top-left quarter of image with green
+ *   color = Imlib2::Color::GREEN
+ *   im.fill_rect [0, 0], [im.width / 2, im.height / 2], color
+ *
+ *   # fill square from 10, 10 to 30, 30 using context color
+ *   im.fill_rect [10, 10, 20, 20] 
+ *
+ */
+static VALUE image_fill_rect(int argc, VALUE *argv, VALUE self) {
+</pre>
+</body>
+</html>

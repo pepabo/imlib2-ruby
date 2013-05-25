@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+  <title>load_with_error_return (Imlib2::Image)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="../../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre>/*
+ * Load an Imlib2::Image from a file with a hash of the error value and
+ * the image.
+ *
+ * Imlib2::Image::load_with_error_return() provides access to the
+ * low-level imlib_load_image_with_error_return() function.  You
+ * probably want to use Imlib2::Image::load() instead of this function.
+ *
+ * Examples:
+ *   hash = Imlib2::Image.load_with_error_return 'sample_file.png'
+ *   if hash['error'] == 0 # 0 is no error
+ *     image = hash['image']
+ *   end
+ *
+ */
+static VALUE image_load_with_error_return(VALUE klass, VALUE filename) {
+</pre>
+</body>
+</html>

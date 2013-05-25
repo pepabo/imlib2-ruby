@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+  <title>blend (Imlib2::Image)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="../../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre>/*
+ * Return a copy of the image with the a portion of the source image
+ * blended at the specified rectangle.
+ *
+ * Examples:
+ *   src_x, src_y, src_w, src_h = 10, 10, 100, 100
+ *   dst_x, dst_y, dst_w, dst_h = 10, 10, 50, 50
+ *   image.blend source_image,
+ *               src_x, src_y, src_w, src_h, 
+ *               dst_x, dst_y, dst_w, dst_h
+ *
+ *   src_rect = [50, 50, 5, 5]
+ *   dst_rect = [0, 0, image.width, image.height]
+ *   merge_alpha = false
+ *   image.blend source_image, src_rect, dst_rect, merge_alpha
+ *
+ *   src_x, src_y, src_w, src_h = 10, 10, 100, 100
+ *   dst_x, dst_y, dst_w, dst_h = 10, 10, 50, 50
+ *   image.blend_image source_image,
+ *                     src_x, src_y, src_w, src_h, 
+ *                     dst_x, dst_y, dst_w, dst_h
+ *
+ *   src_rect = [50, 50, 5, 5]
+ *   dst_rect = [0, 0, image.width, image.height]
+ *   merge_alpha = false
+ *   image.blend_image source_image, src_rect, dst_rect, merge_alpha
+ *
+ */
+static VALUE image_blend_image(int argc, VALUE *argv, VALUE self) {
+</pre>
+</body>
+</html>

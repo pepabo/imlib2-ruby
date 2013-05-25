@@ -1,0 +1,280 @@
+* Wed Mar 27 11:04:01 2002, pabs <pabs@pablotron.org>
+  * released version 0.1.0 yesterday
+
+* Thu Mar 28 20:20:11 2002, pabs <pabs@pablotron.org>
+  * added ellipse routines (Imlib2::Image#{draw,fill}_ellipse)
+  * added rotation routines (Imlib2::Image#rotate{,!})
+  * updated checkerboard.rb to draw pieces as well (to test
+    {draw,fill}_ellipse)
+
+* Sat Mar 30 15:07:02 2002, pabs <pabs@pablotron.org>
+  * added draw_oval and fill_oval (more concice aliases for *_ellipse)
+  * better comments in examples/checkerboard.rb
+  * fixed blue/green mixup in set_context_color()
+  * added object-oriented version of examples/checkerboard.rb
+    (examples/checkerboard2.rb)
+  * updated doc/api.txt with new ellipse calls
+
+* Sat Mar 30 19:11:56 2002 , pabs <pabs@pablotron.org>
+  * added Imlib2::Font (and associated methods)
+  * added Imlib2::Cache  (and associated methods)
+  * added Imlib2::Font::{add,remove}_path, Imlib2::Font::paths
+
+* Sat Mar 30 20:11:18 2002, pabs <pabs@pablotron.org>
+  * added Imlib2::Image#draw_text() -- works as follows:
+    im.draw_text font, text, [x, y]
+    im.draw_text font, text, [x, y], color
+    im.draw_text font, text, {'x' => x, 'y' => y}
+    im.draw_text font, text, {'x' => x, 'y' => y}, color
+    im.draw_text font, text, x, y
+    im.draw_text font, text, x, y, color
+  * fixed color setting routines (had 0 for argument count)
+
+* Sat Mar 30 21:04:46 2002, pabs <pabs@pablotron.org>
+  * added examples/test_font.rb
+  * added font, cache, and font path calls to doc/api.txt
+
+* Sat Mar 30 22:08:32 2002, pabs <pabs@pablotron.org>
+  * added better comments in examples/test_font.rb
+  * released version 0.2.0
+
+* Sun Mar 31 06:04:06 2002, pabs <pabs@pablotron.org>
+  * added Imlib2::Gradient::* (Imlib_Color_Range)
+  * added Imlib2::Image#{,fill_}gradient
+  * examples/checkerboard.rb now uses a Gradient for the foreground color
+  * added Imlib2::ColorRange (inherits from Imlib2::Gradient, so it's
+    essentially an alias for Gradient)
+
+* Sun Mar 31 06:46:36 2002, pabs <pabs@pablotron.org>
+  * added Imlib2::Polygon::*
+  * added examples/test_poly.rb
+  * renamed examples/checkerboard2.rb to examples/oo-board.rb
+
+* Sun Mar 31 07:50:19 2002, pabs <pabs@pablotron.org>
+  * added Imlib2::Image::blend_image! and Imlib2::Image::blend_image
+    (and also their more concise synonyms: blend! and blend, respectively)
+
+* Sun Mar 31 16:42:32 2002, pabs <pabs@pablotron.org>
+  * released 0.3.0
+
+* Sun Apr 14 02:17:11 2002, pabs <pabs@pablotron.org>
+  * inline documentation (for rdoc) finished for Imlib2::Border,
+    Imlib2::Cache, and Imlib2::Color::RgbaColor.
+
+* Sun Apr 14 04:01:55 2002, pabs <pabs@pablotron.org>
+  * inline documentation for Imlib2::Color::HsvaColor
+  * changed border.{l,l=,r,r=,t,t=,b,b=} to aliases instead of method
+    defines
+
+* Wed Apr 17 15:58:40 2002, pabs <pabs@pablotron.org>
+  * added Imlib2::Filter and associated methods
+  * Imlib2::Image#filter (it's polymorphic; takes either a String,
+    which it passes to imlib_apply_filter(), or an Imlib2::Filter,
+    which it passes to imlib_image_filter()).  the explicit calls 
+    are Imlib2::Image#string_filter and Imlib2::Image#static_filter,
+    respectively.
+
+* Wed Apr 17 16:35:36 2002, pabs <pabs@pablotron.org>
+  * added support for text directions (via Imlib2::Direction::LEFT,
+    Imlib2::Direction::RIGHT, etc).  it's now an optional last argument
+    to Imlib2::Image::#draw_text
+
+* Thu Apr 18 14:06:17 2002, pabs <pabs@pablotron.org>
+  * added Imlib2::ColorModifier
+  * added Imlib2::Image#apply_color_modifier and Imlib2::Image#apply_cmod
+    they take either a color modifier or a color modifier and a rectangle
+  * added Imlib2::Encoding (font encoding constants)
+  * initial Imlib2::Context code.
+
+* Thu Apr 18 15:44:57 2002, pabs <pabs@pablotron.org>
+  * all non-X11 context calls available, except for progress callbacks.
+
+* Thu Apr 18 19:34:38 2002, pabs <pabs@pablotron.org>
+  * updated README to reflect post-0.2.0 features.
+  * applied extconf.rb patch from Akinori Musha <knu@iDaemons.org>
+  * added AUTHORS.
+
+* Thu Apr 18 20:09:59 2002, pabs <pabs@pablotron.org>
+  * documentation for Imlib2::Color::HlsaColor methods
+  * documentation for Imlib2::Color::CmyaColor methods
+  * documentation for Imlib2::Image::load_* methods
+
+* Fri Apr 19 00:05:04 2002, pabs <pabs@pablotron.org>
+  * documentation for all Imlib2::Image methods
+  * documentation for all Imlib2::Font methods
+  * documentation for all Imlib2::Gradient methods
+  * documentation for all Imlib2::Filter methods
+  * documentation for all Imlib2::Context methods
+
+* Fri Apr 19 01:22:06 2002, pabs <pabs@pablotron.org>
+  * updated TODO
+  * posted docs online (http://www.pablotron.org/software/imlib2-ruby/doc/)
+  * updated README to mention doc/ dir
+  * copied ChangeLog online
+  * released 0.4.0
+
+* Mon Apr 22 11:48:33 2002, pabs <pabs@pablotron.org>
+  * fixed a bug in draw_pixel reported by Phlip (phlip_cpp@yahoo.com).
+  * updated Imlib2 requirement in README, and added a link to the source
+    download (via Sourceforge FTP).
+  * change Imlib2::Context get methods so they don't require an argument
+    (oops :D)
+  * added workaround for broken imlib_image_draw_pixel() call (uses
+    imlib_image_draw_rectangle() instead)
+  * released 0.4.1
+
+* Wed Apr 24 22:00:37 2002, pabs <pabs@pablotron.org>
+  * removed tutorial/ directory (how the hell did that get in the main
+    release?)
+  * minor fix to examples/checkerboard.rb (and examples/oo-board.rb) to
+    avoid imlib2 fill_ellipse bug
+
+* Sun Apr 28 21:48:36 2002, pabs <pabs@pablotron.org>
+  * added Imlib2::Image::draw_pixel_workaround{?,=} to enable or disable
+    imlib_image_draw_pixel() work-around behavior
+  * changed minor number to 5 (0.5.0)
+  * added X11 calls
+  * partial support for X11 primitives in Imlib2::X11, although I doubt
+    they interact properly with Ruby/X11 or Ruby/Xlib properly.
+  * TODO: Ruby/Gtk+ support (via gdkx primitive wrappers)
+  * changed all instances (except one, where it was appropriate) of
+    STR2CSTR() to RSTRING(blah)->ptr.  should be a minor speed increase
+    (and, more importantly, it won't leak memory any more)
+
+* Mon Oct 21 12:26:23 2002, Jon Bernard <jbernard@roanoke.edu>
+  * removed examples/fonts/20thcent.ttf due to licensing issues
+  * removed examples/fonts/quadapto.ttf due to licensing issues
+  * added examples/fonts/yudit.ttf (this one's free)
+  * examples/test_font.rb now uses yudit.ttf
+
+* Mon Oct 28 20:32:32 2002, pabs <pabs@pablotron.org>
+  * imlib2.c: fixed bug in crop_scaled reported by
+    Yosuke Oikawa <rx21@ma2.justnet.ne.jp>
+  * updated ChangeLog format to make it more GNU-esqe.
+  * update README (added reference to FreeBSD port and Debian packages).
+  * applied patch from Jon for fonts (included changelog entry above)
+  * imlib2.c: disabled X stuff for now (I'll work on it some other time)
+  * removed non-free fonts
+  * imlib2.c: fixed link errors reported by
+    Christian Szegedy <szegedy@ur.uni-bonn.de>
+  * imlib2.c: fixed a bug in Imlib2::Image#static_filter
+  * imlib2.c: fixed a bug with Imlib2::Context#cmod=
+  * imlib2.c: fixed Imlib2::Image#sharpen and Imlib2::Image#sharpen!
+  * imlib2.c: fixed Imlib2::Context#set_dither
+
+* Tue Oct 29 00:07:06 2002, pabs <pabs@pablotron.org>
+  * now compiles clean with -W -Wall -pedantic (except for a few ruby.h
+    errors, that is)
+  * regenerated documentation
+  * imlib2.c: exceptions now work properly again
+  * doc/old-api.txt: added Imlib2::Error constants
+  * extconf.rb: checks imlib2 version to adjust imlib_draw_pixel()
+    workaround (imlib2 1.0.5 and earlier get it set)
+
+* Tue Oct 29 11:25:24 2002, pabs <pabs@pablotron.org 
+  * examples/test_imlib2.rb: added sharpena dn blur tests
+
+* Thu Oct 31 10:17:19 2002, pabs <pabs@pablotron.org 
+  * released version 0.4.2
+
+* Mon Jul 12 15:02:04 2004, pabs <pabs@pablotron.org>
+  * imlib2.c: patch from Alvin Schur <schur@cpsc.ucalgary.ca> to fix
+    Imlib2::Image#image_data{,_ro}.
+  * imlib2.c: update version and copyright year
+  * README: incrementing version number, copyright year
+  * COPYING: update copyright year
+
+* Mon Jul 12 15:11:56 2004, pabs <pabs@pablotron.org>
+  * releasing version 0.4.3
+
+* Wed Aug 25 00:39:55 2004, pabs <pabs@pablotron.org>
+  * added imlib2.gemspec
+
+* Wed Aug 25 00:41:01 2004, pabs <pabs@pablotron.org>
+  * imlib2.gemspec: fixed version
+
+* Wed Aug 25 00:53:35 2004, pabs <pabs@pablotron.org>
+  * imlib2.gemspec: added CVS path to rdoc
+	* imlib2.gemspec: added --ri-site to rdoc options
+
+* Wed Aug 25 02:19:58 2004, pabs <pabs@pablotron.org>
+  * imlib2.gemspec: removed --ri-site, added --title (rdoc opts)
+  * imlib2.gemspec: 'fam' => 'imlib2'
+
+* Mon Feb 21 01:38:28 2005, pabs <pabs@pablotron.org>
+  * imlib2.c: apply patch from Tilman Sauerbeck <tilman@code-monkey.de> 
+    to fix the declarations of create_using{copied,}_data and switcht o
+    StringValuePtr() from RSTRING(blah)->ptr
+  * imlib2.c: wrap Image#attach_value (aliased as Image#[]=), 
+    Image#get_attached_value (aliased as Image#[]), and
+    Image#remove_attached_value
+  * imlib2.c: incremented version to 0.4.4
+
+* Mon Feb 21 01:43:05 2005, pabs <pabs@pablotron.org>
+  * imlib2.gemspec increment version to 0.4.4
+
+* Mon Feb 21 01:48:24 2005, pabs <pabs@pablotron.org>
+  * TODO: updates
+  * AUTHORS: updates (added chad too)
+  * README: removed reference to cs.roanoke.edu, added note about
+    gem.
+
+* Mon Feb 21 02:27:11 2005, pabs <pabs@pablotron.org>
+  * imlib2.c: attempted to add support for attaching data values, but
+    imlbi2 apparently doesn't work the way i thought it did (or maybe
+    it just doesn't work?)
+  * added examples/test_attach.rb
+
+* Mon Feb 21 02:28:33 2005, pabs <pabs@pablotron.org>
+  * examplse/test_attach.rb: remove some cruft
+
+* Thu Mar 10 22:56:48 2005, pabs <pabs@pablotron.org>
+  * imlib2.c: removed ColorRange hackery (class still obviously exists as
+    Imlib2::Gradient)
+
+* Thu Mar 10 21:46:18 2005, pabs <pabs@pablotron.org>
+  * imlib2.c: incremented version to 0.5.0
+  * README: incremented version to 0.5.0
+
+* Thu Mar 10 21:50:25 2005, pabs <pabs@pablotron.org>
+  * README: misc version requirements updates
+
+* Thu Mar 10 21:54:01 2005, pabs <pabs@pablotron.org>
+  * releasing version 0.5.0
+
+* Thu Mar 10 22:02:00 2005, pabs <pabs@pablotron.org>
+  * imlib2.gemspec: forgot to update version and requirements in here
+
+* Thu Mar 10 22:02:35 2005, pabs <pabs@pablotron.org>
+  * _really_ releasing 0.5.0
+
+* Sun May 29 03:12:41 2005, pabs <pabs@pablotron.org>
+	* imlib2.c: apply patch from OBATA Akio <obata@lins.jp> to fix
+		im_struct memory leak (Fixes: [10])
+	* imlib2.c: add filename to exception description (Fixes: [11])
+
+* Sun May 29 18:02:37 2005, pabs <pabs@pablotron.org>
+  * imlib2.c: add Imlib2::Image#delete! (Fixes: [12])
+
+* Sun May 29 18:23:41 2005, pabs <pabs@pablotron.org>
+  * imlib2.c: increment version to 0.5.1
+  * imlib2.gemspec: ditto
+  * README: ditto
+  * AUTHORS: updates
+
+* Sun May 29 18:35:45 2005, pabs <pabs@pablotron.org>
+  * README: added "Reporting Bugs" section
+
+* Sun May 29 18:37:51 2005, pabs <pabs@pablotron.org>
+  * releasing 0.5.1
+
+* Sat Jun 11 05:10:05 2005, pabs <pabs@pablotron.org>
+  * imlib2.c: fix Image#draw_text brokenness
+  * imlib2.c: check buffer size in Image#put_data (Fixes: #32)
+  * imlib2.c: increment version to 0.5.2
+  * README: ditto
+  * imlib2.gemspec: ditto
+  * AUTHORS: update tilman's entry
+
+* Sat Jun 11 05:34:58 2005, pabs <pabs@pablotron.org>
+  * releasing 0.5.2

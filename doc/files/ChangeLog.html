@@ -1,0 +1,844 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>File: ChangeLog</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript" />
+  <link rel="stylesheet" href=".././rdoc-style.css" type="text/css" media="screen" />
+  <script type="text/javascript">
+  // <![CDATA[
+
+  function popupCode( url ) {
+    window.open(url, "Code", "resizable=yes,scrollbars=yes,toolbar=no,status=no,height=150,width=400")
+  }
+
+  function toggleCode( id ) {
+    if ( document.getElementById )
+      elem = document.getElementById( id );
+    else if ( document.all )
+      elem = eval( "document.all." + id );
+    else
+      return false;
+
+    elemStyle = elem.style;
+    
+    if ( elemStyle.display != "block" ) {
+      elemStyle.display = "block"
+    } else {
+      elemStyle.display = "none"
+    }
+
+    return true;
+  }
+  
+  // Make codeblocks hidden by default
+  document.writeln( "<style type=\"text/css\">div.method-source-code { display: none }</style>" )
+  
+  // ]]>
+  </script>
+
+</head>
+<body>
+
+
+
+  <div id="fileHeader">
+    <h1>ChangeLog</h1>
+    <table class="header-table">
+    <tr class="top-aligned-row">
+      <td><strong>Path:</strong></td>
+      <td>ChangeLog
+        &nbsp;(<a href="http://cvs.pablotron.org/cgi-bin/viewcvs.cgi/imlib2-ruby/ChangeLog">CVS</a>)
+      </td>
+    </tr>
+    <tr class="top-aligned-row">
+      <td><strong>Last Update:</strong></td>
+      <td>Sat Jun 11 05:35:13 EDT 2005</td>
+    </tr>
+    </table>
+  </div>
+  <!-- banner header -->
+
+  <div id="bodyContent">
+
+
+
+  <div id="contextContent">
+
+    <div id="description">
+      <ul>
+<li>Wed Mar 27 11:04:01 2002, pabs &lt;pabs@pablotron.org&gt;
+
+<ul>
+<li>released version 0.1.0 yesterday
+
+</li>
+</ul>
+</li>
+<li>Thu Mar 28 20:20:11 2002, pabs &lt;pabs@pablotron.org&gt;
+
+<ul>
+<li>added ellipse routines (<a
+href="../classes/Imlib2/Image.html">Imlib2::Image</a>#{draw,fill}_ellipse)
+
+</li>
+<li>added rotation routines (<a
+href="../classes/Imlib2/Image.html#M000338">Imlib2::Image#rotate</a>{,!})
+
+</li>
+<li>updated checkerboard.rb to draw pieces as well (to test
+{draw,fill}_ellipse)
+
+</li>
+</ul>
+</li>
+<li>Sat Mar 30 15:07:02 2002, pabs &lt;pabs@pablotron.org&gt;
+
+<ul>
+<li>added draw_oval and fill_oval (more concice aliases for *_ellipse)
+
+</li>
+<li>better comments in examples/checkerboard.rb
+
+</li>
+<li>fixed blue/green mixup in set_context_color()
+
+</li>
+<li>added object-oriented version of examples/checkerboard.rb
+(examples/checkerboard2.rb)
+
+</li>
+<li>updated doc/api.txt with new ellipse calls
+
+</li>
+</ul>
+</li>
+<li>Sat Mar 30 19:11:56 2002 , pabs &lt;pabs@pablotron.org&gt;
+
+<ul>
+<li>added <a href="../classes/Imlib2/Font.html">Imlib2::Font</a> (and
+associated methods)
+
+</li>
+<li>added <a href="../classes/Imlib2/Cache.html">Imlib2::Cache</a> (and
+associated methods)
+
+</li>
+<li>added <a
+href="../classes/Imlib2/Font.html">Imlib2::Font</a>::{add,remove}_path,
+Imlib2::Font::paths
+
+</li>
+</ul>
+</li>
+<li>Sat Mar 30 20:11:18 2002, pabs &lt;pabs@pablotron.org&gt;
+
+<ul>
+<li>added <a
+href="../classes/Imlib2/Image.html#M000325">Imlib2::Image#draw_text</a>()
+&#8212; works as follows: im.draw_text font, text, [x, y] im.draw_text
+font, text, [x, y], color im.draw_text font, text, {&#8216;x&#8217; =&gt;
+x, &#8216;y&#8217; =&gt; y} im.draw_text font, text, {&#8216;x&#8217; =&gt;
+x, &#8216;y&#8217; =&gt; y}, color im.draw_text font, text, x, y
+im.draw_text font, text, x, y, color
+
+</li>
+<li>fixed color setting routines (had 0 for argument count)
+
+</li>
+</ul>
+</li>
+<li>Sat Mar 30 21:04:46 2002, pabs &lt;pabs@pablotron.org&gt;
+
+<ul>
+<li>added examples/test_font.rb
+
+</li>
+<li>added font, cache, and font path calls to doc/api.txt
+
+</li>
+</ul>
+</li>
+<li>Sat Mar 30 22:08:32 2002, pabs &lt;pabs@pablotron.org&gt;
+
+<ul>
+<li>added better comments in examples/test_font.rb
+
+</li>
+<li>released version 0.2.0
+
+</li>
+</ul>
+</li>
+<li>Sun Mar 31 06:04:06 2002, pabs &lt;pabs@pablotron.org&gt;
+
+<ul>
+<li>added <a href="../classes/Imlib2/Gradient.html">Imlib2::Gradient</a>::*
+(Imlib_Color_Range)
+
+</li>
+<li>added <a
+href="../classes/Imlib2/Image.html">Imlib2::Image</a>#{,fill_}gradient
+
+</li>
+<li>examples/checkerboard.rb now uses a Gradient for the foreground color
+
+</li>
+<li>added Imlib2::ColorRange (inherits from <a
+href="../classes/Imlib2/Gradient.html">Imlib2::Gradient</a>, so it&#8217;s
+essentially an alias for Gradient)
+
+</li>
+</ul>
+</li>
+<li>Sun Mar 31 06:46:36 2002, pabs &lt;pabs@pablotron.org&gt;
+
+<ul>
+<li>added <a href="../classes/Imlib2/Polygon.html">Imlib2::Polygon</a>::*
+
+</li>
+<li>added examples/test_poly.rb
+
+</li>
+<li>renamed examples/checkerboard2.rb to examples/oo-board.rb
+
+</li>
+</ul>
+</li>
+<li>Sun Mar 31 07:50:19 2002, pabs &lt;pabs@pablotron.org&gt;
+
+<ul>
+<li>added Imlib2::Image::blend_image! and Imlib2::Image::blend_image (and also
+their more concise synonyms: blend! and blend, respectively)
+
+</li>
+</ul>
+</li>
+<li>Sun Mar 31 16:42:32 2002, pabs &lt;pabs@pablotron.org&gt;
+
+<ul>
+<li>released 0.3.0
+
+</li>
+</ul>
+</li>
+<li>Sun Apr 14 02:17:11 2002, pabs &lt;pabs@pablotron.org&gt;
+
+<ul>
+<li>inline documentation (for rdoc) finished for <a
+href="../classes/Imlib2/Border.html">Imlib2::Border</a>, <a
+href="../classes/Imlib2/Cache.html">Imlib2::Cache</a>, and <a
+href="../classes/Imlib2/Color/RgbaColor.html">Imlib2::Color::RgbaColor</a>.
+
+</li>
+</ul>
+</li>
+<li>Sun Apr 14 04:01:55 2002, pabs &lt;pabs@pablotron.org&gt;
+
+<ul>
+<li>inline documentation for <a
+href="../classes/Imlib2/Color/HsvaColor.html">Imlib2::Color::HsvaColor</a>
+
+</li>
+<li>changed border.{l,l=,r,r=,t,t=,b,b=} to aliases instead of method defines
+
+</li>
+</ul>
+</li>
+<li>Wed Apr 17 15:58:40 2002, pabs &lt;pabs@pablotron.org&gt;
+
+<ul>
+<li>added <a href="../classes/Imlib2/Filter.html">Imlib2::Filter</a> and
+associated methods
+
+</li>
+<li><a href="../classes/Imlib2/Image.html#M000345">Imlib2::Image#filter</a>
+(it&#8217;s polymorphic; takes either a String, which it passes to
+imlib_apply_filter(), or an <a
+href="../classes/Imlib2/Filter.html">Imlib2::Filter</a>, which it passes to
+imlib_image_filter()). the explicit calls are Imlib2::Image#string_filter
+and <a
+href="../classes/Imlib2/Image.html#M000347">Imlib2::Image#static_filter</a>,
+respectively.
+
+</li>
+</ul>
+</li>
+<li>Wed Apr 17 16:35:36 2002, pabs &lt;pabs@pablotron.org&gt;
+
+<ul>
+<li>added support for text directions (via Imlib2::Direction::LEFT,
+Imlib2::Direction::RIGHT, etc). it&#8217;s now an optional last argument to
+<a href="../classes/Imlib2/Image.html">Imlib2::Image</a>::draw_text
+
+</li>
+</ul>
+</li>
+<li>Thu Apr 18 14:06:17 2002, pabs &lt;pabs@pablotron.org&gt;
+
+<ul>
+<li>added <a
+href="../classes/Imlib2/ColorModifier.html">Imlib2::ColorModifier</a>
+
+</li>
+<li>added <a
+href="../classes/Imlib2/Image.html#M000349">Imlib2::Image#apply_color_modifier</a>
+and <a
+href="../classes/Imlib2/Image.html#M000350">Imlib2::Image#apply_cmod</a>
+they take either a color modifier or a color modifier and a rectangle
+
+</li>
+<li>added <a href="../classes/Imlib2/Encoding.html">Imlib2::Encoding</a> (font
+encoding constants)
+
+</li>
+<li>initial <a href="../classes/Imlib2/Context.html">Imlib2::Context</a> code.
+
+</li>
+</ul>
+</li>
+<li>Thu Apr 18 15:44:57 2002, pabs &lt;pabs@pablotron.org&gt;
+
+<ul>
+<li>all non-X11 context calls available, except for progress callbacks.
+
+</li>
+</ul>
+</li>
+<li>Thu Apr 18 19:34:38 2002, pabs &lt;pabs@pablotron.org&gt;
+
+<ul>
+<li>updated README to reflect post-0.2.0 features.
+
+</li>
+<li>applied extconf.rb patch from Akinori Musha &lt;knu@iDaemons.org&gt;
+
+</li>
+<li>added AUTHORS.
+
+</li>
+</ul>
+</li>
+<li>Thu Apr 18 20:09:59 2002, pabs &lt;pabs@pablotron.org&gt;
+
+<ul>
+<li>documentation for <a
+href="../classes/Imlib2/Color/HlsaColor.html">Imlib2::Color::HlsaColor</a>
+methods
+
+</li>
+<li>documentation for <a
+href="../classes/Imlib2/Color/CmyaColor.html">Imlib2::Color::CmyaColor</a>
+methods
+
+</li>
+<li>documentation for Imlib2::Image::load_* methods
+
+</li>
+</ul>
+</li>
+<li>Fri Apr 19 00:05:04 2002, pabs &lt;pabs@pablotron.org&gt;
+
+<ul>
+<li>documentation for all <a
+href="../classes/Imlib2/Image.html">Imlib2::Image</a> methods
+
+</li>
+<li>documentation for all <a
+href="../classes/Imlib2/Font.html">Imlib2::Font</a> methods
+
+</li>
+<li>documentation for all <a
+href="../classes/Imlib2/Gradient.html">Imlib2::Gradient</a> methods
+
+</li>
+<li>documentation for all <a
+href="../classes/Imlib2/Filter.html">Imlib2::Filter</a> methods
+
+</li>
+<li>documentation for all <a
+href="../classes/Imlib2/Context.html">Imlib2::Context</a> methods
+
+</li>
+</ul>
+</li>
+<li>Fri Apr 19 01:22:06 2002, pabs &lt;pabs@pablotron.org&gt;
+
+<ul>
+<li>updated TODO
+
+</li>
+<li>posted docs online (<a
+href="http://www.pablotron.org/software/imlib2-ruby/doc">www.pablotron.org/software/imlib2-ruby/doc</a>/)
+
+</li>
+<li>updated README to mention doc/ dir
+
+</li>
+<li>copied ChangeLog online
+
+</li>
+<li>released 0.4.0
+
+</li>
+</ul>
+</li>
+<li>Mon Apr 22 11:48:33 2002, pabs &lt;pabs@pablotron.org&gt;
+
+<ul>
+<li>fixed a bug in draw_pixel reported by Phlip (phlip_cpp@yahoo.com).
+
+</li>
+<li>updated <a href="../classes/Imlib2.html">Imlib2</a> requirement in README,
+and added a link to the source download (via Sourceforge FTP).
+
+</li>
+<li>change <a href="../classes/Imlib2/Context.html">Imlib2::Context</a> get
+methods so they don&#8217;t require an argument (oops :D)
+
+</li>
+<li>added workaround for broken imlib_image_draw_pixel() call (uses
+imlib_image_draw_rectangle() instead)
+
+</li>
+<li>released 0.4.1
+
+</li>
+</ul>
+</li>
+<li>Wed Apr 24 22:00:37 2002, pabs &lt;pabs@pablotron.org&gt;
+
+<ul>
+<li>removed tutorial/ directory (how the hell did that get in the main
+release?)
+
+</li>
+<li>minor fix to examples/checkerboard.rb (and examples/oo-board.rb) to avoid
+imlib2 fill_ellipse bug
+
+</li>
+</ul>
+</li>
+<li>Sun Apr 28 21:48:36 2002, pabs &lt;pabs@pablotron.org&gt;
+
+<ul>
+<li>added Imlib2::Image::draw_pixel_workaround{?,=} to enable or disable
+imlib_image_draw_pixel() work-around behavior
+
+</li>
+<li>changed minor number to 5 (0.5.0)
+
+</li>
+<li>added X11 calls
+
+</li>
+<li>partial support for X11 primitives in Imlib2::X11, although I doubt they
+interact properly with Ruby/X11 or Ruby/Xlib properly.
+
+</li>
+<li>TODO: Ruby/Gtk+ support (via gdkx primitive wrappers)
+
+</li>
+<li>changed all instances (except one, where it was appropriate) of STR2CSTR()
+to RSTRING(blah)-&gt;ptr. should be a minor speed increase (and, more
+importantly, it won&#8217;t leak memory any more)
+
+</li>
+</ul>
+</li>
+<li>Mon Oct 21 12:26:23 2002, Jon Bernard &lt;jbernard@roanoke.edu&gt;
+
+<ul>
+<li>removed examples/fonts/20thcent.ttf due to licensing issues
+
+</li>
+<li>removed examples/fonts/quadapto.ttf due to licensing issues
+
+</li>
+<li>added examples/fonts/yudit.ttf (this one&#8217;s free)
+
+</li>
+<li>examples/test_font.rb now uses yudit.ttf
+
+</li>
+</ul>
+</li>
+<li>Mon Oct 28 20:32:32 2002, pabs &lt;pabs@pablotron.org&gt;
+
+<ul>
+<li>imlib2.c: fixed bug in crop_scaled reported by Yosuke Oikawa
+&lt;rx21@ma2.justnet.ne.jp&gt;
+
+</li>
+<li>updated ChangeLog format to make it more GNU-esqe.
+
+</li>
+<li>update README (added reference to FreeBSD port and Debian packages).
+
+</li>
+<li>applied patch from Jon for fonts (included changelog entry above)
+
+</li>
+<li>imlib2.c: disabled X stuff for now (I&#8217;ll work on it some other time)
+
+</li>
+<li>removed non-free fonts
+
+</li>
+<li>imlib2.c: fixed link errors reported by Christian Szegedy
+&lt;szegedy@ur.uni-bonn.de&gt;
+
+</li>
+<li>imlib2.c: fixed a bug in <a
+href="../classes/Imlib2/Image.html#M000347">Imlib2::Image#static_filter</a>
+
+</li>
+<li>imlib2.c: fixed a bug with <a
+href="../classes/Imlib2/Context.html#M000150">Imlib2::Context#cmod</a>=
+
+</li>
+<li>imlib2.c: fixed <a
+href="../classes/Imlib2/Image.html#M000302">Imlib2::Image#sharpen</a> and
+<a href="../classes/Imlib2/Image.html#M000302">Imlib2::Image#sharpen</a>!
+
+</li>
+<li>imlib2.c: fixed <a
+href="../classes/Imlib2/Context.html#M000127">Imlib2::Context#set_dither</a>
+
+</li>
+</ul>
+</li>
+<li>Tue Oct 29 00:07:06 2002, pabs &lt;pabs@pablotron.org&gt;
+
+<ul>
+<li>now compiles clean with -W -Wall -pedantic (except for a few ruby.h errors,
+that is)
+
+</li>
+<li>regenerated documentation
+
+</li>
+<li>imlib2.c: exceptions now work properly again
+
+</li>
+<li>doc/old-api.txt: added <a
+href="../classes/Imlib2/Error.html">Imlib2::Error</a> constants
+
+</li>
+<li>extconf.rb: checks imlib2 version to adjust imlib_draw_pixel() workaround
+(imlib2 1.0.5 and earlier get it set)
+
+</li>
+</ul>
+</li>
+<li>Tue Oct 29 11:25:24 2002, pabs &lt;pabs@pablotron.org
+
+<ul>
+<li>examples/test_imlib2.rb: added sharpena dn blur tests
+
+</li>
+</ul>
+</li>
+<li>Thu Oct 31 10:17:19 2002, pabs &lt;pabs@pablotron.org
+
+<ul>
+<li>released version 0.4.2
+
+</li>
+</ul>
+</li>
+<li>Mon Jul 12 15:02:04 2004, pabs &lt;pabs@pablotron.org&gt;
+
+<ul>
+<li>imlib2.c: patch from Alvin Schur &lt;schur@cpsc.ucalgary.ca&gt; to fix
+Imlib2::Image#image_data{,_ro}.
+
+</li>
+<li>imlib2.c: update version and copyright year
+
+</li>
+<li>README: incrementing version number, copyright year
+
+</li>
+<li>COPYING: update copyright year
+
+</li>
+</ul>
+</li>
+<li>Mon Jul 12 15:11:56 2004, pabs &lt;pabs@pablotron.org&gt;
+
+<ul>
+<li>releasing version 0.4.3
+
+</li>
+</ul>
+</li>
+<li>Wed Aug 25 00:39:55 2004, pabs &lt;pabs@pablotron.org&gt;
+
+<ul>
+<li>added imlib2.gemspec
+
+</li>
+</ul>
+</li>
+<li>Wed Aug 25 00:41:01 2004, pabs &lt;pabs@pablotron.org&gt;
+
+<ul>
+<li>imlib2.gemspec: fixed version
+
+</li>
+</ul>
+</li>
+<li>Wed Aug 25 00:53:35 2004, pabs &lt;pabs@pablotron.org&gt;
+
+<ul>
+<li>imlib2.gemspec: added CVS path to rdoc
+
+<pre>
+    * imlib2.gemspec: added --ri-site to rdoc options
+</pre>
+</li>
+</ul>
+</li>
+<li>Wed Aug 25 02:19:58 2004, pabs &lt;pabs@pablotron.org&gt;
+
+<ul>
+<li>imlib2.gemspec: removed &#8212;ri-site, added &#8212;title (rdoc opts)
+
+</li>
+<li>imlib2.gemspec: &#8216;fam&#8217; =&gt; &#8216;imlib2&#8217;
+
+</li>
+</ul>
+</li>
+<li>Mon Feb 21 01:38:28 2005, pabs &lt;pabs@pablotron.org&gt;
+
+<ul>
+<li>imlib2.c: apply patch from Tilman Sauerbeck &lt;tilman@code-monkey.de&gt;
+to fix the declarations of create_using{copied,}_data and switcht o
+StringValuePtr() from RSTRING(blah)-&gt;ptr
+
+</li>
+<li>imlib2.c: wrap Image#attach_value (aliased as Image#[]=),
+Image#get_attached_value (aliased as Image#[]), and
+Image#remove_attached_value
+
+</li>
+<li>imlib2.c: incremented version to 0.4.4
+
+</li>
+</ul>
+</li>
+<li>Mon Feb 21 01:43:05 2005, pabs &lt;pabs@pablotron.org&gt;
+
+<ul>
+<li>imlib2.gemspec increment version to 0.4.4
+
+</li>
+</ul>
+</li>
+<li>Mon Feb 21 01:48:24 2005, pabs &lt;pabs@pablotron.org&gt;
+
+<ul>
+<li>TODO: updates
+
+</li>
+<li>AUTHORS: updates (added chad too)
+
+</li>
+<li>README: removed reference to cs.roanoke.edu, added note about gem.
+
+</li>
+</ul>
+</li>
+<li>Mon Feb 21 02:27:11 2005, pabs &lt;pabs@pablotron.org&gt;
+
+<ul>
+<li>imlib2.c: attempted to add support for attaching data values, but imlbi2
+apparently doesn&#8217;t work the way i thought it did (or maybe it just
+doesn&#8217;t work?)
+
+</li>
+<li>added examples/test_attach.rb
+
+</li>
+</ul>
+</li>
+<li>Mon Feb 21 02:28:33 2005, pabs &lt;pabs@pablotron.org&gt;
+
+<ul>
+<li>examplse/test_attach.rb: remove some cruft
+
+</li>
+</ul>
+</li>
+<li>Thu Mar 10 22:56:48 2005, pabs &lt;pabs@pablotron.org&gt;
+
+<ul>
+<li>imlib2.c: removed ColorRange hackery (class still obviously exists as <a
+href="../classes/Imlib2/Gradient.html">Imlib2::Gradient</a>)
+
+</li>
+</ul>
+</li>
+<li>Thu Mar 10 21:46:18 2005, pabs &lt;pabs@pablotron.org&gt;
+
+<ul>
+<li>imlib2.c: incremented version to 0.5.0
+
+</li>
+<li>README: incremented version to 0.5.0
+
+</li>
+</ul>
+</li>
+<li>Thu Mar 10 21:50:25 2005, pabs &lt;pabs@pablotron.org&gt;
+
+<ul>
+<li>README: misc version requirements updates
+
+</li>
+</ul>
+</li>
+<li>Thu Mar 10 21:54:01 2005, pabs &lt;pabs@pablotron.org&gt;
+
+<ul>
+<li>releasing version 0.5.0
+
+</li>
+</ul>
+</li>
+<li>Thu Mar 10 22:02:00 2005, pabs &lt;pabs@pablotron.org&gt;
+
+<ul>
+<li>imlib2.gemspec: forgot to update version and requirements in here
+
+</li>
+</ul>
+</li>
+<li>Thu Mar 10 22:02:35 2005, pabs &lt;pabs@pablotron.org&gt;
+
+<ul>
+<li><em>really</em> releasing 0.5.0
+
+</li>
+</ul>
+</li>
+<li>Sun May 29 03:12:41 2005, pabs &lt;pabs@pablotron.org&gt;
+
+<pre>
+      * imlib2.c: apply patch from OBATA Akio &lt;obata@lins.jp&gt; to fix
+              im_struct memory leak (Fixes: [10])
+      * imlib2.c: add filename to exception description (Fixes: [11])
+</pre>
+</li>
+<li>Sun May 29 18:02:37 2005, pabs &lt;pabs@pablotron.org&gt;
+
+<ul>
+<li>imlib2.c: add Imlib2::Image#delete! (Fixes: [12])
+
+</li>
+</ul>
+</li>
+<li>Sun May 29 18:23:41 2005, pabs &lt;pabs@pablotron.org&gt;
+
+<ul>
+<li>imlib2.c: increment version to 0.5.1
+
+</li>
+<li>imlib2.gemspec: ditto
+
+</li>
+<li>README: ditto
+
+</li>
+<li>AUTHORS: updates
+
+</li>
+</ul>
+</li>
+<li>Sun May 29 18:35:45 2005, pabs &lt;pabs@pablotron.org&gt;
+
+<ul>
+<li>README: added &quot;Reporting Bugs&quot; section
+
+</li>
+</ul>
+</li>
+<li>Sun May 29 18:37:51 2005, pabs &lt;pabs@pablotron.org&gt;
+
+<ul>
+<li>releasing 0.5.1
+
+</li>
+</ul>
+</li>
+<li>Sat Jun 11 05:10:05 2005, pabs &lt;pabs@pablotron.org&gt;
+
+<ul>
+<li>imlib2.c: fix Image#draw_text brokenness
+
+</li>
+<li>imlib2.c: check buffer size in Image#put_data (Fixes: 32)
+
+</li>
+<li>imlib2.c: increment version to 0.5.2
+
+</li>
+<li>README: ditto
+
+</li>
+<li>imlib2.gemspec: ditto
+
+</li>
+<li>AUTHORS: update tilman&#8217;s entry
+
+</li>
+</ul>
+</li>
+<li>Sat Jun 11 05:34:58 2005, pabs &lt;pabs@pablotron.org&gt;
+
+<ul>
+<li>releasing 0.5.2
+
+</li>
+</ul>
+</li>
+</ul>
+
+    </div>
+
+
+   </div>
+
+
+  </div>
+
+
+    <!-- if includes -->
+
+    <div id="section">
+
+
+
+
+
+      
+
+
+    <!-- if method_list -->
+
+
+  </div>
+
+
+<div id="validator-badges">
+  <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+</div>
+
+</body>
+</html>

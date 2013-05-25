@@ -1,0 +1,4005 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Class: Imlib2::Image</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript" />
+  <link rel="stylesheet" href="../.././rdoc-style.css" type="text/css" media="screen" />
+  <script type="text/javascript">
+  // <![CDATA[
+
+  function popupCode( url ) {
+    window.open(url, "Code", "resizable=yes,scrollbars=yes,toolbar=no,status=no,height=150,width=400")
+  }
+
+  function toggleCode( id ) {
+    if ( document.getElementById )
+      elem = document.getElementById( id );
+    else if ( document.all )
+      elem = eval( "document.all." + id );
+    else
+      return false;
+
+    elemStyle = elem.style;
+    
+    if ( elemStyle.display != "block" ) {
+      elemStyle.display = "block"
+    } else {
+      elemStyle.display = "none"
+    }
+
+    return true;
+  }
+  
+  // Make codeblocks hidden by default
+  document.writeln( "<style type=\"text/css\">div.method-source-code { display: none }</style>" )
+  
+  // ]]>
+  </script>
+
+</head>
+<body>
+
+
+
+    <div id="classHeader">
+        <table class="header-table">
+        <tr class="top-aligned-row">
+          <td><strong>Class</strong></td>
+          <td class="class-name-in-header">Imlib2::Image</td>
+        </tr>
+        <tr class="top-aligned-row">
+            <td><strong>In:</strong></td>
+            <td>
+                <a href="../../files/imlib2_c.html">
+                imlib2.c
+                </a>
+        &nbsp;(<a href="http://cvs.pablotron.org/cgi-bin/viewcvs.cgi/imlib2-ruby/imlib2.c">CVS</a>)
+        <br />
+            </td>
+        </tr>
+
+        <tr class="top-aligned-row">
+            <td><strong>Parent:</strong></td>
+            <td>
+                Object
+            </td>
+        </tr>
+        </table>
+    </div>
+  <!-- banner header -->
+
+  <div id="bodyContent">
+
+
+
+  <div id="contextContent">
+
+
+
+   </div>
+
+    <div id="method-list">
+      <h3 class="section-bar">Methods</h3>
+
+      <div class="name-list">
+      <a href="#M000355">[]</a>&nbsp;&nbsp;
+      <a href="#M000356">[]=</a>&nbsp;&nbsp;
+      <a href="#M000351">apply</a>&nbsp;&nbsp;
+      <a href="#M000350">apply_cmod</a>&nbsp;&nbsp;
+      <a href="#M000349">apply_color_modifier</a>&nbsp;&nbsp;
+      <a href="#M000346">apply_filter</a>&nbsp;&nbsp;
+      <a href="#M000352">attach_value</a>&nbsp;&nbsp;
+      <a href="#M000336">blend</a>&nbsp;&nbsp;
+      <a href="#M000334">blend!</a>&nbsp;&nbsp;
+      <a href="#M000363">blend_drawable</a>&nbsp;&nbsp;
+      <a href="#M000337">blend_image</a>&nbsp;&nbsp;
+      <a href="#M000335">blend_image!</a>&nbsp;&nbsp;
+      <a href="#M000300">blur</a>&nbsp;&nbsp;
+      <a href="#M000301">blur!</a>&nbsp;&nbsp;
+      <a href="#M000260">border</a>&nbsp;&nbsp;
+      <a href="#M000262">border=</a>&nbsp;&nbsp;
+      <a href="#M000230">bypass_draw_pixel=</a>&nbsp;&nbsp;
+      <a href="#M000228">bypass_draw_pixel?</a>&nbsp;&nbsp;
+      <a href="#M000258">changes_on_disk</a>&nbsp;&nbsp;
+      <a href="#M000342">clear</a>&nbsp;&nbsp;
+      <a href="#M000343">clear_color</a>&nbsp;&nbsp;
+      <a href="#M000344">clear_color!</a>&nbsp;&nbsp;
+      <a href="#M000312">clip_line</a>&nbsp;&nbsp;
+      <a href="#M000340">clone</a>&nbsp;&nbsp;
+      <a href="#M000328">color_range</a>&nbsp;&nbsp;
+      <a href="#M000317">copy_alpha</a>&nbsp;&nbsp;
+      <a href="#M000318">copy_alpha_rect</a>&nbsp;&nbsp;
+      <a href="#M000362">copy_drawable</a>&nbsp;&nbsp;
+      <a href="#M000320">copy_rect</a>&nbsp;&nbsp;
+      <a href="#M000231">create</a>&nbsp;&nbsp;
+      <a href="#M000285">create_cropped</a>&nbsp;&nbsp;
+      <a href="#M000287">create_cropped!</a>&nbsp;&nbsp;
+      <a href="#M000289">create_cropped_scaled</a>&nbsp;&nbsp;
+      <a href="#M000291">create_cropped_scaled!</a>&nbsp;&nbsp;
+      <a href="#M000360">create_from_drawable</a>&nbsp;&nbsp;
+      <a href="#M000361">create_from_ximage</a>&nbsp;&nbsp;
+      <a href="#M000233">create_using_copied_data</a>&nbsp;&nbsp;
+      <a href="#M000232">create_using_data</a>&nbsp;&nbsp;
+      <a href="#M000284">crop</a>&nbsp;&nbsp;
+      <a href="#M000286">crop!</a>&nbsp;&nbsp;
+      <a href="#M000288">crop_scaled</a>&nbsp;&nbsp;
+      <a href="#M000290">crop_scaled!</a>&nbsp;&nbsp;
+      <a href="#M000249">data</a>&nbsp;&nbsp;
+      <a href="#M000251">data!</a>&nbsp;&nbsp;
+      <a href="#M000252">data=</a>&nbsp;&nbsp;
+      <a href="#M000250">data_for_reading_only</a>&nbsp;&nbsp;
+      <a href="#M000243">delete!</a>&nbsp;&nbsp;
+      <a href="#M000321">draw_ellipse</a>&nbsp;&nbsp;
+      <a href="#M000311">draw_line</a>&nbsp;&nbsp;
+      <a href="#M000322">draw_oval</a>&nbsp;&nbsp;
+      <a href="#M000310">draw_pixel</a>&nbsp;&nbsp;
+      <a href="#M000229">draw_pixel_workaround=</a>&nbsp;&nbsp;
+      <a href="#M000227">draw_pixel_workaround?</a>&nbsp;&nbsp;
+      <a href="#M000330">draw_poly</a>&nbsp;&nbsp;
+      <a href="#M000331">draw_polygon</a>&nbsp;&nbsp;
+      <a href="#M000313">draw_rect</a>&nbsp;&nbsp;
+      <a href="#M000314">draw_rectangle</a>&nbsp;&nbsp;
+      <a href="#M000325">draw_text</a>&nbsp;&nbsp;
+      <a href="#M000341">dup</a>&nbsp;&nbsp;
+      <a href="#M000248">filename</a>&nbsp;&nbsp;
+      <a href="#M000329">fill_color_range</a>&nbsp;&nbsp;
+      <a href="#M000323">fill_ellipse</a>&nbsp;&nbsp;
+      <a href="#M000327">fill_gradient</a>&nbsp;&nbsp;
+      <a href="#M000324">fill_oval</a>&nbsp;&nbsp;
+      <a href="#M000332">fill_poly</a>&nbsp;&nbsp;
+      <a href="#M000333">fill_polygon</a>&nbsp;&nbsp;
+      <a href="#M000315">fill_rect</a>&nbsp;&nbsp;
+      <a href="#M000316">fill_rectangle</a>&nbsp;&nbsp;
+      <a href="#M000345">filter</a>&nbsp;&nbsp;
+      <a href="#M000296">flip_diagonal</a>&nbsp;&nbsp;
+      <a href="#M000297">flip_diagonal!</a>&nbsp;&nbsp;
+      <a href="#M000292">flip_horizontal</a>&nbsp;&nbsp;
+      <a href="#M000293">flip_horizontal!</a>&nbsp;&nbsp;
+      <a href="#M000294">flip_vertical</a>&nbsp;&nbsp;
+      <a href="#M000295">flip_vertical!</a>&nbsp;&nbsp;
+      <a href="#M000264">format</a>&nbsp;&nbsp;
+      <a href="#M000266">format=</a>&nbsp;&nbsp;
+      <a href="#M000353">get_attached_value</a>&nbsp;&nbsp;
+      <a href="#M000261">get_border</a>&nbsp;&nbsp;
+      <a href="#M000265">get_format</a>&nbsp;&nbsp;
+      <a href="#M000326">gradient</a>&nbsp;&nbsp;
+      <a href="#M000247">h</a>&nbsp;&nbsp;
+      <a href="#M000254">has_alpha</a>&nbsp;&nbsp;
+      <a href="#M000256">has_alpha=</a>&nbsp;&nbsp;
+      <a href="#M000255">has_alpha?</a>&nbsp;&nbsp;
+      <a href="#M000246">height</a>&nbsp;&nbsp;
+      <a href="#M000272">irrelevant_alpha=</a>&nbsp;&nbsp;
+      <a href="#M000270">irrelevant_border=</a>&nbsp;&nbsp;
+      <a href="#M000268">irrelevant_format=</a>&nbsp;&nbsp;
+      <a href="#M000234">load</a>&nbsp;&nbsp;
+      <a href="#M000235">load_image</a>&nbsp;&nbsp;
+      <a href="#M000236">load_immediately</a>&nbsp;&nbsp;
+      <a href="#M000238">load_immediately_without_cache</a>&nbsp;&nbsp;
+      <a href="#M000239">load_with_error_return</a>&nbsp;&nbsp;
+      <a href="#M000237">load_without_cache</a>&nbsp;&nbsp;
+      <a href="#M000225">new</a>&nbsp;&nbsp;
+      <a href="#M000226">new</a>&nbsp;&nbsp;
+      <a href="#M000298">orientate</a>&nbsp;&nbsp;
+      <a href="#M000299">orientate!</a>&nbsp;&nbsp;
+      <a href="#M000274">pixel</a>&nbsp;&nbsp;
+      <a href="#M000282">pixel_cmya</a>&nbsp;&nbsp;
+      <a href="#M000280">pixel_hlsa</a>&nbsp;&nbsp;
+      <a href="#M000278">pixel_hsva</a>&nbsp;&nbsp;
+      <a href="#M000275">pixel_rgba</a>&nbsp;&nbsp;
+      <a href="#M000358">pixmap</a>&nbsp;&nbsp;
+      <a href="#M000253">put_back_data</a>&nbsp;&nbsp;
+      <a href="#M000276">query_pixel</a>&nbsp;&nbsp;
+      <a href="#M000283">query_pixel_cmya</a>&nbsp;&nbsp;
+      <a href="#M000281">query_pixel_hlsa</a>&nbsp;&nbsp;
+      <a href="#M000279">query_pixel_hsva</a>&nbsp;&nbsp;
+      <a href="#M000277">query_pixel_rgba</a>&nbsp;&nbsp;
+      <a href="#M000354">remove_attached_value</a>&nbsp;&nbsp;
+      <a href="#M000359">render_on_drawable</a>&nbsp;&nbsp;
+      <a href="#M000365">render_on_drawable_at_angle</a>&nbsp;&nbsp;
+      <a href="#M000364">render_on_drawable_skewed</a>&nbsp;&nbsp;
+      <a href="#M000357">render_pixmap</a>&nbsp;&nbsp;
+      <a href="#M000338">rotate</a>&nbsp;&nbsp;
+      <a href="#M000339">rotate!</a>&nbsp;&nbsp;
+      <a href="#M000240">save</a>&nbsp;&nbsp;
+      <a href="#M000241">save_image</a>&nbsp;&nbsp;
+      <a href="#M000242">save_with_error_return</a>&nbsp;&nbsp;
+      <a href="#M000348">script_filter</a>&nbsp;&nbsp;
+      <a href="#M000319">scroll_rect</a>&nbsp;&nbsp;
+      <a href="#M000263">set_border</a>&nbsp;&nbsp;
+      <a href="#M000259">set_changes_on_disk</a>&nbsp;&nbsp;
+      <a href="#M000267">set_format</a>&nbsp;&nbsp;
+      <a href="#M000257">set_has_alpha</a>&nbsp;&nbsp;
+      <a href="#M000273">set_irrelevant_alpha</a>&nbsp;&nbsp;
+      <a href="#M000271">set_irrelevant_border</a>&nbsp;&nbsp;
+      <a href="#M000269">set_irrelevant_format</a>&nbsp;&nbsp;
+      <a href="#M000302">sharpen</a>&nbsp;&nbsp;
+      <a href="#M000303">sharpen!</a>&nbsp;&nbsp;
+      <a href="#M000347">static_filter</a>&nbsp;&nbsp;
+      <a href="#M000308">tile</a>&nbsp;&nbsp;
+      <a href="#M000309">tile!</a>&nbsp;&nbsp;
+      <a href="#M000304">tile_horizontal</a>&nbsp;&nbsp;
+      <a href="#M000305">tile_horizontal!</a>&nbsp;&nbsp;
+      <a href="#M000306">tile_vertical</a>&nbsp;&nbsp;
+      <a href="#M000307">tile_vertical!</a>&nbsp;&nbsp;
+      <a href="#M000245">w</a>&nbsp;&nbsp;
+      <a href="#M000244">width</a>&nbsp;&nbsp;
+      </div>
+    </div>
+
+  </div>
+
+
+    <!-- if includes -->
+
+    <div id="section">
+
+
+
+
+
+      
+
+
+    <!-- if method_list -->
+    <div id="methods">
+      <h3 class="section-bar">Public Class methods</h3>
+
+      <div id="method-M000230" class="method-detail">
+        <a name="M000230"></a>
+
+        <div class="method-heading">
+          <a href="Image.src/M000230.html" target="Code" class="method-signature"
+            onclick="popupCode('Image.src/M000230.html');return false;">
+          <span class="method-name">bypass_draw_pixel=</span><span class="method-args">(p1)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Are we using the buggy imlib_image_draw_pixel() work-around?
+</p>
+<p>
+Versions of <a href="../Imlib2.html">Imlib2</a> up to and including 1.0.5
+had a broken imlib_image_draw_pixel() call. <a
+href="../Imlib2.html">Imlib2</a>-Ruby has a work-around, which simulates
+drawing a pixel with a 1x1 rectangle. This method allows you to check
+whether the work-around behavior is enabled.
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  puts 'work-around is enabled' if Imlib2::Image::draw_pixel_workaround?
+  puts 'work-around is enabled' if Imlib2::Image::bypass_draw_pixel?
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000228" class="method-detail">
+        <a name="M000228"></a>
+
+        <div class="method-heading">
+          <a href="Image.src/M000228.html" target="Code" class="method-signature"
+            onclick="popupCode('Image.src/M000228.html');return false;">
+          <span class="method-name">bypass_draw_pixel?</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Are we using the buggy imlib_image_draw_pixel() work-around?
+</p>
+<p>
+Versions of <a href="../Imlib2.html">Imlib2</a> up to and including 1.0.5
+had a broken imlib_image_draw_pixel() call. <a
+href="../Imlib2.html">Imlib2</a>-Ruby has a work-around, which simulates
+drawing a pixel with a 1x1 rectangle. This method allows you to check
+whether the work-around behavior is enabled.
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  puts 'work-around is enabled' if Imlib2::Image::draw_pixel_workaround?
+  puts 'work-around is enabled' if Imlib2::Image::bypass_draw_pixel?
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000231" class="method-detail">
+        <a name="M000231"></a>
+
+        <div class="method-heading">
+          <a href="Image.src/M000231.html" target="Code" class="method-signature"
+            onclick="popupCode('Image.src/M000231.html');return false;">
+          <span class="method-name">create</span><span class="method-args">(p1, p2)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Returns a new <a href="Image.html">Imlib2::Image</a> with the specified
+width and height.
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  width, height = 640, 480
+  image = Imlib2::Image.new width, height
+
+  width, height = 320, 240
+  image = Imlib2::Image.create width, height
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000360" class="method-detail">
+        <a name="M000360"></a>
+
+        <div class="method-heading">
+          <span class="method-name">create_from_drawable</span><span class="method-args">(...)</span>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000361" class="method-detail">
+        <a name="M000361"></a>
+
+        <div class="method-heading">
+          <span class="method-name">create_from_ximage</span><span class="method-args">(...)</span>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000233" class="method-detail">
+        <a name="M000233"></a>
+
+        <div class="method-heading">
+          <a href="Image.src/M000233.html" target="Code" class="method-signature"
+            onclick="popupCode('Image.src/M000233.html');return false;">
+          <span class="method-name">create_using_copied_data</span><span class="method-args">(p1, p2, p3)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Returns a new <a href="Image.html">Imlib2::Image</a> initialized with the
+specified data.
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  other_image = Imlib2::Image.load 'sample_file.png'
+  width, height = other_image.width, other_image.height
+  data = other_image.data
+  image = Imlib2::Image.create_using_copied_data width, height, data
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000232" class="method-detail">
+        <a name="M000232"></a>
+
+        <div class="method-heading">
+          <a href="Image.src/M000232.html" target="Code" class="method-signature"
+            onclick="popupCode('Image.src/M000232.html');return false;">
+          <span class="method-name">create_using_data</span><span class="method-args">(p1, p2, p3)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Returns a new <a href="Image.html">Imlib2::Image</a> initialized with the
+specified data.
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  other_image = Imlib2::Image.load 'sample_file.png'
+  width, height = other_image.width, other_image.height
+  data = other_image.data_for_reading_only
+  image = Imlib2::Image.create_using_data width, height, data
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000229" class="method-detail">
+        <a name="M000229"></a>
+
+        <div class="method-heading">
+          <a href="Image.src/M000229.html" target="Code" class="method-signature"
+            onclick="popupCode('Image.src/M000229.html');return false;">
+          <span class="method-name">draw_pixel_workaround=</span><span class="method-args">(p1)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Are we using the buggy imlib_image_draw_pixel() work-around?
+</p>
+<p>
+Versions of <a href="../Imlib2.html">Imlib2</a> up to and including 1.0.5
+had a broken imlib_image_draw_pixel() call. <a
+href="../Imlib2.html">Imlib2</a>-Ruby has a work-around, which simulates
+drawing a pixel with a 1x1 rectangle. This method allows you to check
+whether the work-around behavior is enabled.
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  puts 'work-around is enabled' if Imlib2::Image::draw_pixel_workaround?
+  puts 'work-around is enabled' if Imlib2::Image::bypass_draw_pixel?
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000227" class="method-detail">
+        <a name="M000227"></a>
+
+        <div class="method-heading">
+          <a href="Image.src/M000227.html" target="Code" class="method-signature"
+            onclick="popupCode('Image.src/M000227.html');return false;">
+          <span class="method-name">draw_pixel_workaround?</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Are we using the buggy imlib_image_draw_pixel() work-around?
+</p>
+<p>
+Versions of <a href="../Imlib2.html">Imlib2</a> up to and including 1.0.5
+had a broken imlib_image_draw_pixel() call. <a
+href="../Imlib2.html">Imlib2</a>-Ruby has a work-around, which simulates
+drawing a pixel with a 1x1 rectangle. This method allows you to check
+whether the work-around behavior is enabled.
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  puts 'work-around is enabled' if Imlib2::Image::draw_pixel_workaround?
+  puts 'work-around is enabled' if Imlib2::Image::bypass_draw_pixel?
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000234" class="method-detail">
+        <a name="M000234"></a>
+
+        <div class="method-heading">
+          <a href="Image.src/M000234.html" target="Code" class="method-signature"
+            onclick="popupCode('Image.src/M000234.html');return false;">
+          <span class="method-name">load</span><span class="method-args">(p1)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Load an <a href="Image.html">Imlib2::Image</a> from a file (throws
+exceptions).
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  image = Imlib2::Image.load 'sample_file.png'
+
+  begin
+    image = Imlib2::Image.load 'sample_file.png'
+  rescue Imlib2::FileError
+    $stderr.puts 'Couldn't load file: ' + $!
+  end
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000235" class="method-detail">
+        <a name="M000235"></a>
+
+        <div class="method-heading">
+          <a href="Image.src/M000235.html" target="Code" class="method-signature"
+            onclick="popupCode('Image.src/M000235.html');return false;">
+          <span class="method-name">load_image</span><span class="method-args">(p1)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Load an <a href="Image.html">Imlib2::Image</a> from a file (no exceptions
+or error).
+</p>
+<p>
+Imlib2::Image::load_image() provides access to the low-level
+imlib_load_image() function. You probably want to use Imlib2::Image::load()
+instead of Imlib2::Image::load_image().
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  image = Imlib2::Image.load_image 'sample_file.png'
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000236" class="method-detail">
+        <a name="M000236"></a>
+
+        <div class="method-heading">
+          <a href="Image.src/M000236.html" target="Code" class="method-signature"
+            onclick="popupCode('Image.src/M000236.html');return false;">
+          <span class="method-name">load_immediately</span><span class="method-args">(p1)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Load an <a href="Image.html">Imlib2::Image</a> from a file (no exceptions
+or error).
+</p>
+<p>
+Imlib2::Image::load_immediately() provides access to the low-level
+imlib_load_image_immediately() function. You probably want to use
+Imlib2::Image::load() instead of this function.
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  image = Imlib2::Image.load_immediately 'sample_file.png'
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000238" class="method-detail">
+        <a name="M000238"></a>
+
+        <div class="method-heading">
+          <a href="Image.src/M000238.html" target="Code" class="method-signature"
+            onclick="popupCode('Image.src/M000238.html');return false;">
+          <span class="method-name">load_immediately_without_cache</span><span class="method-args">(p1)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Load an <a href="Image.html">Imlib2::Image</a> from a file (no caching,
+deferred loading, exceptions, or errors).
+</p>
+<p>
+Imlib2::Image::load_immediately_without_cache() provides access to the
+low-level imlib_load_image_immediately_without_cache() function. You
+probably want to use Imlib2::Image::load() instead of this function.
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  image = Imlib2::Image.load_immediately_without_cache 'sample_file.png'
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000239" class="method-detail">
+        <a name="M000239"></a>
+
+        <div class="method-heading">
+          <a href="Image.src/M000239.html" target="Code" class="method-signature"
+            onclick="popupCode('Image.src/M000239.html');return false;">
+          <span class="method-name">load_with_error_return</span><span class="method-args">(p1)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Load an <a href="Image.html">Imlib2::Image</a> from a file with a hash of
+the error value and the image.
+</p>
+<p>
+Imlib2::Image::load_with_error_return() provides access to the low-level
+imlib_load_image_with_error_return() function. You probably want to use
+Imlib2::Image::load() instead of this function.
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  hash = Imlib2::Image.load_with_error_return 'sample_file.png'
+  if hash['error'] == 0 # 0 is no error
+    image = hash['image']
+  end
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000237" class="method-detail">
+        <a name="M000237"></a>
+
+        <div class="method-heading">
+          <a href="Image.src/M000237.html" target="Code" class="method-signature"
+            onclick="popupCode('Image.src/M000237.html');return false;">
+          <span class="method-name">load_without_cache</span><span class="method-args">(p1)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Load an <a href="Image.html">Imlib2::Image</a> from a file (no caching,
+exception, or error).
+</p>
+<p>
+Imlib2::Image::load_without_cache() provides access to the low-level
+imlib_load_image_without_cache() function. You probably want to use
+Imlib2::Image::load() instead of this function.
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  image = Imlib2::Image.load_without_cache 'sample_file.png'
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000225" class="method-detail">
+        <a name="M000225"></a>
+
+        <div class="method-heading">
+          <a href="Image.src/M000225.html" target="Code" class="method-signature"
+            onclick="popupCode('Image.src/M000225.html');return false;">
+          <span class="method-name">new</span><span class="method-args">(p1, p2)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Returns a new <a href="Image.html">Imlib2::Image</a> with the specified
+width and height.
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  width, height = 640, 480
+  image = Imlib2::Image.new width, height
+
+  width, height = 320, 240
+  image = Imlib2::Image.create width, height
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000226" class="method-detail">
+        <a name="M000226"></a>
+
+        <div class="method-heading">
+          <a href="Image.src/M000226.html" target="Code" class="method-signature"
+            onclick="popupCode('Image.src/M000226.html');return false;">
+          <span class="method-name">new</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+<a href="Image.html">Imlib2::Image</a> constructor (currently just an empty
+placeholder).
+</p>
+        </div>
+      </div>
+
+      <h3 class="section-bar">Public Instance methods</h3>
+
+      <div id="method-M000355" class="method-detail">
+        <a name="M000355"></a>
+
+        <div class="method-heading">
+          <a href="Image.src/M000355.html" target="Code" class="method-signature"
+            onclick="popupCode('Image.src/M000355.html');return false;">
+          <span class="method-name">[]</span><span class="method-args">(p1)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Get an integer value attached to an <a href="Image.html">Imlib2::Image</a>.
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  qual = image.get_attached_value('quality')
+  qual = image['quality']
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000356" class="method-detail">
+        <a name="M000356"></a>
+
+        <div class="method-heading">
+          <a href="Image.src/M000356.html" target="Code" class="method-signature"
+            onclick="popupCode('Image.src/M000356.html');return false;">
+          <span class="method-name">[]=</span><span class="method-args">(p1, p2)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Attach an integer value to an <a href="Image.html">Imlib2::Image</a>.
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  image.attach_value('quality', 90)
+  image['quality'] = 90
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000351" class="method-detail">
+        <a name="M000351"></a>
+
+        <div class="method-heading">
+          <a href="Image.src/M000351.html" target="Code" class="method-signature"
+            onclick="popupCode('Image.src/M000351.html');return false;">
+          <span class="method-name">apply</span><span class="method-args">(p1)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Apply an <a href="ColorModifier.html">Imlib2::ColorModifier</a> to the
+image
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  # modify the contrast of the entire image
+  cmod = Imlib2::ColorModifier.new
+  cmod.contrast = 1.5
+  image.apply_cmod color_mod
+
+  # adjust the gamma of the given rect
+  cmod = Imlib2::ColorModifier.new
+  cmod.gamma = 0.5
+  rect = [10, 10, 20, 40]
+  image.apply_color_modifier cmod, rect
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000350" class="method-detail">
+        <a name="M000350"></a>
+
+        <div class="method-heading">
+          <a href="Image.src/M000350.html" target="Code" class="method-signature"
+            onclick="popupCode('Image.src/M000350.html');return false;">
+          <span class="method-name">apply_cmod</span><span class="method-args">(p1)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Apply an <a href="ColorModifier.html">Imlib2::ColorModifier</a> to the
+image
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  # modify the contrast of the entire image
+  cmod = Imlib2::ColorModifier.new
+  cmod.contrast = 1.5
+  image.apply_cmod color_mod
+
+  # adjust the gamma of the given rect
+  cmod = Imlib2::ColorModifier.new
+  cmod.gamma = 0.5
+  rect = [10, 10, 20, 40]
+  image.apply_color_modifier cmod, rect
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000349" class="method-detail">
+        <a name="M000349"></a>
+
+        <div class="method-heading">
+          <a href="Image.src/M000349.html" target="Code" class="method-signature"
+            onclick="popupCode('Image.src/M000349.html');return false;">
+          <span class="method-name">apply_color_modifier</span><span class="method-args">(p1)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Apply an <a href="ColorModifier.html">Imlib2::ColorModifier</a> to the
+image
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  # modify the contrast of the entire image
+  cmod = Imlib2::ColorModifier.new
+  cmod.contrast = 1.5
+  image.apply_cmod color_mod
+
+  # adjust the gamma of the given rect
+  cmod = Imlib2::ColorModifier.new
+  cmod.gamma = 0.5
+  rect = [10, 10, 20, 40]
+  image.apply_color_modifier cmod, rect
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000346" class="method-detail">
+        <a name="M000346"></a>
+
+        <div class="method-heading">
+          <a href="Image.src/M000346.html" target="Code" class="method-signature"
+            onclick="popupCode('Image.src/M000346.html');return false;">
+          <span class="method-name">apply_filter</span><span class="method-args">(p1)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Apply a scripted filter or a static (eg <a
+href="Filter.html">Imlib2::Filter</a>) filter
+</p>
+<p>
+Example:
+</p>
+<pre>
+  # apply a static filter
+  filter = Imlib2::Filter.new 20
+  filter.set 2, 2, Imlib2::Color::GREEN
+  image.filter filter
+
+  # apply a scripted filter
+  x, y = 20, 10
+  filter_string = &quot;tint( x=#{x}, y=#{y}, red=255, alpha=55 );&quot;
+  image.filter filter_string
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000352" class="method-detail">
+        <a name="M000352"></a>
+
+        <div class="method-heading">
+          <a href="Image.src/M000352.html" target="Code" class="method-signature"
+            onclick="popupCode('Image.src/M000352.html');return false;">
+          <span class="method-name">attach_value</span><span class="method-args">(p1, p2)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Attach an integer value to an <a href="Image.html">Imlib2::Image</a>.
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  image.attach_value('quality', 90)
+  image['quality'] = 90
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000336" class="method-detail">
+        <a name="M000336"></a>
+
+        <div class="method-heading">
+          <a href="Image.src/M000336.html" target="Code" class="method-signature"
+            onclick="popupCode('Image.src/M000336.html');return false;">
+          <span class="method-name">blend</span><span class="method-args">(...)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Return a copy of the image with the a portion of the source image blended
+at the specified rectangle.
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  src_x, src_y, src_w, src_h = 10, 10, 100, 100
+  dst_x, dst_y, dst_w, dst_h = 10, 10, 50, 50
+  image.blend source_image,
+              src_x, src_y, src_w, src_h,
+              dst_x, dst_y, dst_w, dst_h
+
+  src_rect = [50, 50, 5, 5]
+  dst_rect = [0, 0, image.width, image.height]
+  merge_alpha = false
+  image.blend source_image, src_rect, dst_rect, merge_alpha
+
+  src_x, src_y, src_w, src_h = 10, 10, 100, 100
+  dst_x, dst_y, dst_w, dst_h = 10, 10, 50, 50
+  image.blend_image source_image,
+                    src_x, src_y, src_w, src_h,
+                    dst_x, dst_y, dst_w, dst_h
+
+  src_rect = [50, 50, 5, 5]
+  dst_rect = [0, 0, image.width, image.height]
+  merge_alpha = false
+  image.blend_image source_image, src_rect, dst_rect, merge_alpha
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000334" class="method-detail">
+        <a name="M000334"></a>
+
+        <div class="method-heading">
+          <a href="Image.src/M000334.html" target="Code" class="method-signature"
+            onclick="popupCode('Image.src/M000334.html');return false;">
+          <span class="method-name">blend!</span><span class="method-args">(...)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Blend a source image onto the image
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  src_x, src_y, src_w, src_h = 10, 10, 100, 100
+  dst_x, dst_y, dst_w, dst_h = 10, 10, 50, 50
+  image.blend! source_image,
+              src_x, src_y, src_w, src_h,
+              dst_x, dst_y, dst_w, dst_h
+
+  src_rect = [50, 50, 5, 5]
+  dst_rect = [0, 0, image.width, image.height]
+  merge_alpha = false
+  image.blend! source_image, src_rect, dst_rect, merge_alpha
+
+  src_x, src_y, src_w, src_h = 10, 10, 100, 100
+  dst_x, dst_y, dst_w, dst_h = 10, 10, 50, 50
+  image.blend_image! source_image,
+                     src_x, src_y, src_w, src_h,
+                     dst_x, dst_y, dst_w, dst_h
+
+  src_rect = [50, 50, 5, 5]
+  dst_rect = [0, 0, image.width, image.height]
+  merge_alpha = false
+  image.blend_image! source_image, src_rect, dst_rect, merge_alpha
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000363" class="method-detail">
+        <a name="M000363"></a>
+
+        <div class="method-heading">
+          <span class="method-name">blend_drawable</span><span class="method-args">(...)</span>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000337" class="method-detail">
+        <a name="M000337"></a>
+
+        <div class="method-heading">
+          <a href="Image.src/M000337.html" target="Code" class="method-signature"
+            onclick="popupCode('Image.src/M000337.html');return false;">
+          <span class="method-name">blend_image</span><span class="method-args">(...)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Return a copy of the image with the a portion of the source image blended
+at the specified rectangle.
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  src_x, src_y, src_w, src_h = 10, 10, 100, 100
+  dst_x, dst_y, dst_w, dst_h = 10, 10, 50, 50
+  image.blend source_image,
+              src_x, src_y, src_w, src_h,
+              dst_x, dst_y, dst_w, dst_h
+
+  src_rect = [50, 50, 5, 5]
+  dst_rect = [0, 0, image.width, image.height]
+  merge_alpha = false
+  image.blend source_image, src_rect, dst_rect, merge_alpha
+
+  src_x, src_y, src_w, src_h = 10, 10, 100, 100
+  dst_x, dst_y, dst_w, dst_h = 10, 10, 50, 50
+  image.blend_image source_image,
+                    src_x, src_y, src_w, src_h,
+                    dst_x, dst_y, dst_w, dst_h
+
+  src_rect = [50, 50, 5, 5]
+  dst_rect = [0, 0, image.width, image.height]
+  merge_alpha = false
+  image.blend_image source_image, src_rect, dst_rect, merge_alpha
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000335" class="method-detail">
+        <a name="M000335"></a>
+
+        <div class="method-heading">
+          <a href="Image.src/M000335.html" target="Code" class="method-signature"
+            onclick="popupCode('Image.src/M000335.html');return false;">
+          <span class="method-name">blend_image!</span><span class="method-args">(...)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Blend a source image onto the image
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  src_x, src_y, src_w, src_h = 10, 10, 100, 100
+  dst_x, dst_y, dst_w, dst_h = 10, 10, 50, 50
+  image.blend! source_image,
+              src_x, src_y, src_w, src_h,
+              dst_x, dst_y, dst_w, dst_h
+
+  src_rect = [50, 50, 5, 5]
+  dst_rect = [0, 0, image.width, image.height]
+  merge_alpha = false
+  image.blend! source_image, src_rect, dst_rect, merge_alpha
+
+  src_x, src_y, src_w, src_h = 10, 10, 100, 100
+  dst_x, dst_y, dst_w, dst_h = 10, 10, 50, 50
+  image.blend_image! source_image,
+                     src_x, src_y, src_w, src_h,
+                     dst_x, dst_y, dst_w, dst_h
+
+  src_rect = [50, 50, 5, 5]
+  dst_rect = [0, 0, image.width, image.height]
+  merge_alpha = false
+  image.blend_image! source_image, src_rect, dst_rect, merge_alpha
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000300" class="method-detail">
+        <a name="M000300"></a>
+
+        <div class="method-heading">
+          <a href="Image.src/M000300.html" target="Code" class="method-signature"
+            onclick="popupCode('Image.src/M000300.html');return false;">
+          <span class="method-name">blur</span><span class="method-args">(p1)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Return a blurred copy of an image
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  radius = 20 # radius of blur, in pixels
+  new_image = old_image.blur radius
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000301" class="method-detail">
+        <a name="M000301"></a>
+
+        <div class="method-heading">
+          <a href="Image.src/M000301.html" target="Code" class="method-signature"
+            onclick="popupCode('Image.src/M000301.html');return false;">
+          <span class="method-name">blur!</span><span class="method-args">(p1)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Blur an image
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  radius = 20 # radius of blur, in pixels
+  image.blur! radius
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000260" class="method-detail">
+        <a name="M000260"></a>
+
+        <div class="method-heading">
+          <a href="Image.src/M000260.html" target="Code" class="method-signature"
+            onclick="popupCode('Image.src/M000260.html');return false;">
+          <span class="method-name">border</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Get the <a href="Border.html">Imlib2::Border</a> of an <a
+href="Image.html">Imlib2::Image</a>
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  border = image.get_border
+  border = image.border
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000262" class="method-detail">
+        <a name="M000262"></a>
+
+        <div class="method-heading">
+          <a href="Image.src/M000262.html" target="Code" class="method-signature"
+            onclick="popupCode('Image.src/M000262.html');return false;">
+          <span class="method-name">border=</span><span class="method-args">(p1)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Set the <a href="Border.html">Imlib2::Border</a> of an <a
+href="Image.html">Imlib2::Image</a>
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  image.set_border border
+  image.border = border
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000258" class="method-detail">
+        <a name="M000258"></a>
+
+        <div class="method-heading">
+          <a href="Image.src/M000258.html" target="Code" class="method-signature"
+            onclick="popupCode('Image.src/M000258.html');return false;">
+          <span class="method-name">changes_on_disk</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Flag this image as changing on disk
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  image.changes_on_disk
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000342" class="method-detail">
+        <a name="M000342"></a>
+
+        <div class="method-heading">
+          <a href="Image.src/M000342.html" target="Code" class="method-signature"
+            onclick="popupCode('Image.src/M000342.html');return false;">
+          <span class="method-name">clear</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Clear the contents of an image
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  image.clear
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000343" class="method-detail">
+        <a name="M000343"></a>
+
+        <div class="method-heading">
+          <a href="Image.src/M000343.html" target="Code" class="method-signature"
+            onclick="popupCode('Image.src/M000343.html');return false;">
+          <span class="method-name">clear_color</span><span class="method-args">(p1)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+I&#8217;m honestly not quite sure what this function does, but I wrapped it
+anyway.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000344" class="method-detail">
+        <a name="M000344"></a>
+
+        <div class="method-heading">
+          <a href="Image.src/M000344.html" target="Code" class="method-signature"
+            onclick="popupCode('Image.src/M000344.html');return false;">
+          <span class="method-name">clear_color!</span><span class="method-args">(p1)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+I&#8217;m honestly not quite sure what this function does, but I wrapped it
+anyway.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000312" class="method-detail">
+        <a name="M000312"></a>
+
+        <div class="method-heading">
+          <span class="method-name">clip_line</span><span class="method-args">(...)</span>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000340" class="method-detail">
+        <a name="M000340"></a>
+
+        <div class="method-heading">
+          <a href="Image.src/M000340.html" target="Code" class="method-signature"
+            onclick="popupCode('Image.src/M000340.html');return false;">
+          <span class="method-name">clone</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Copy an <a href="Image.html">Imlib2::Image</a>
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  new_image = old_image.clone
+  new_image = old_image.dup
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000328" class="method-detail">
+        <a name="M000328"></a>
+
+        <div class="method-heading">
+          <a href="Image.src/M000328.html" target="Code" class="method-signature"
+            onclick="popupCode('Image.src/M000328.html');return false;">
+          <span class="method-name">color_range</span><span class="method-args">(...)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Fill a rectangle with the given <a
+href="Gradient.html">Imlib2::Gradient</a> at a given angle
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  x, y, w, h = 10, 10, image.width - 20, image.height - 20
+  angle = 45.2
+  image.fill_gradient gradient, x, y, w, h, angle
+
+  rect = [5, 5, 500, 20]
+  image.gradient gradient, rect, 36.8
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000317" class="method-detail">
+        <a name="M000317"></a>
+
+        <div class="method-heading">
+          <a href="Image.src/M000317.html" target="Code" class="method-signature"
+            onclick="popupCode('Image.src/M000317.html');return false;">
+          <span class="method-name">copy_alpha</span><span class="method-args">(...)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Copy the alpha channel from the source image to the specified coordinates
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  image.copy_alpha source_image, 10, 10
+  image.copy_alpha source_image, [10, 10]
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000318" class="method-detail">
+        <a name="M000318"></a>
+
+        <div class="method-heading">
+          <a href="Image.src/M000318.html" target="Code" class="method-signature"
+            onclick="popupCode('Image.src/M000318.html');return false;">
+          <span class="method-name">copy_alpha_rect</span><span class="method-args">(...)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Copy the alpha channel from a rectangle of the source image to the
+specified coordinates
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  x, y, w, h = 10, 20, 100, 200
+  dest_x, dest_y = 5, 10
+  image.copy_alpha_rect source_image, x, y, w, h, dest_x, dest_y
+
+  source_rect = [10, 20, 100, 200]
+  dest_coords = [5, 10]
+  image.copy_alpha_rect source_image, source_rect, dest_coords
+
+  values = [10, 20, 100, 200, 5, 10]
+  image.copy_alpha_rect source_image, values
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000362" class="method-detail">
+        <a name="M000362"></a>
+
+        <div class="method-heading">
+          <span class="method-name">copy_drawable</span><span class="method-args">(...)</span>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000320" class="method-detail">
+        <a name="M000320"></a>
+
+        <div class="method-heading">
+          <a href="Image.src/M000320.html" target="Code" class="method-signature"
+            onclick="popupCode('Image.src/M000320.html');return false;">
+          <span class="method-name">copy_rect</span><span class="method-args">(...)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Copy a rectangle to the specified coordinates
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  x, y, w, h = 10, 20, 100, 200
+  dest_x, dest_y = 5, 10
+  image.copy_rect x, y, w, h, dest_x, dest_y
+
+  source_rect = [10, 20, 100, 200]
+  dest_coords = [5, 10]
+  image.copy_rect source_rect, dest_coords
+
+  values = [10, 20, 100, 200, 5, 10]
+  image.copy_rect values
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000285" class="method-detail">
+        <a name="M000285"></a>
+
+        <div class="method-heading">
+          <a href="Image.src/M000285.html" target="Code" class="method-signature"
+            onclick="popupCode('Image.src/M000285.html');return false;">
+          <span class="method-name">create_cropped</span><span class="method-args">(...)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Return a cropped copy of the image
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  x, y, w, h = 10, 10, old_image.width - 10, old_image.height - 10
+  new_image = old_image.crop x, y, w, h
+
+  rect = [10, 10, old_image.width - 10, old_image.height - 10]
+  new_image = old_image.crop rect
+
+  x, y, w, h = 10, 10, old_image.width - 10, old_image.height - 10
+  new_image = old_image.create_cropped x, y, w, h
+
+  rect = [10, 10, old_image.width - 10, old_image.height - 10]
+  new_image = old_image.create_cropped rect
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000287" class="method-detail">
+        <a name="M000287"></a>
+
+        <div class="method-heading">
+          <a href="Image.src/M000287.html" target="Code" class="method-signature"
+            onclick="popupCode('Image.src/M000287.html');return false;">
+          <span class="method-name">create_cropped!</span><span class="method-args">(...)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Crop an image
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  x, y, w, h = 10, 10, image.width - 10, image.height - 10
+  image.crop! x, y, w, h
+
+  rect = [10, 10, image.width - 10, image.height - 10]
+  image.crop! rect
+
+  x, y, w, h = 10, 10, image.width - 10, image.height - 10
+  image.create_cropped! x, y, w, h
+
+  rect = [10, 10, image.width - 10, image.height - 10]
+  image.create_cropped! rect
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000289" class="method-detail">
+        <a name="M000289"></a>
+
+        <div class="method-heading">
+          <a href="Image.src/M000289.html" target="Code" class="method-signature"
+            onclick="popupCode('Image.src/M000289.html');return false;">
+          <span class="method-name">create_cropped_scaled</span><span class="method-args">(...)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Create a cropped and scaled copy of an image
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  iw, ih = old_image.width, old_image.height
+  new_w, new_h = iw - 20, ih - 20
+  x, y, w, h = 10, 10, iw - 10, ih - 10
+  new_image = old_image.crop_scaled x, y, w, h, new_w, new_h
+
+  iw, ih = old_image.width, old_image.height
+  new_w, new_h = iw - 20, ih - 20
+  values = [10, 10, iw - 10, iw - 10, new_w, new_h]
+  new_image = old_image.crop_scaled values
+
+  iw, ih = old_image.width, old_image.height
+  new_w, new_h = iw - 20, ih - 20
+  x, y, w, h = 10, 10, iw - 10, ih - 10
+  new_image = old_image.create_crop_scaled x, y, w, h, new_w, new_h
+
+  iw, ih = old_image.width, old_image.height
+  new_w, new_h = iw - 20, ih - 20
+  values = [10, 10, iw - 10, iw - 10, new_w, new_h]
+  new_image = old_image.create_crop_scaled values
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000291" class="method-detail">
+        <a name="M000291"></a>
+
+        <div class="method-heading">
+          <a href="Image.src/M000291.html" target="Code" class="method-signature"
+            onclick="popupCode('Image.src/M000291.html');return false;">
+          <span class="method-name">create_cropped_scaled!</span><span class="method-args">(...)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Crop and scale an image
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  iw, ih = image.width, image.height
+  new_w, new_h = iw - 20, ih - 20
+  x, y, w, h = 10, 10, iw - 10, ih - 10
+  image.crop_scaled! x, y, w, h, new_w, new_h
+
+  iw, ih = image.width, image.height
+  new_w, new_h = iw - 20, ih - 20
+  values = [10, 10, iw - 10, iw - 10, new_w, new_h]
+  image.crop_scaled! values
+
+  iw, ih = image.width, image.height
+  new_w, new_h = iw - 20, ih - 20
+  x, y, w, h = 10, 10, iw - 10, ih - 10
+  image.create_crop_scaled! x, y, w, h, new_w, new_h
+
+  iw, ih = image.width, image.height
+  new_w, new_h = iw - 20, ih - 20
+  values = [10, 10, iw - 10, iw - 10, new_w, new_h]
+  image.create_crop_scaled! values
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000284" class="method-detail">
+        <a name="M000284"></a>
+
+        <div class="method-heading">
+          <a href="Image.src/M000284.html" target="Code" class="method-signature"
+            onclick="popupCode('Image.src/M000284.html');return false;">
+          <span class="method-name">crop</span><span class="method-args">(...)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Return a cropped copy of the image
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  x, y, w, h = 10, 10, old_image.width - 10, old_image.height - 10
+  new_image = old_image.crop x, y, w, h
+
+  rect = [10, 10, old_image.width - 10, old_image.height - 10]
+  new_image = old_image.crop rect
+
+  x, y, w, h = 10, 10, old_image.width - 10, old_image.height - 10
+  new_image = old_image.create_cropped x, y, w, h
+
+  rect = [10, 10, old_image.width - 10, old_image.height - 10]
+  new_image = old_image.create_cropped rect
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000286" class="method-detail">
+        <a name="M000286"></a>
+
+        <div class="method-heading">
+          <a href="Image.src/M000286.html" target="Code" class="method-signature"
+            onclick="popupCode('Image.src/M000286.html');return false;">
+          <span class="method-name">crop!</span><span class="method-args">(...)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Crop an image
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  x, y, w, h = 10, 10, image.width - 10, image.height - 10
+  image.crop! x, y, w, h
+
+  rect = [10, 10, image.width - 10, image.height - 10]
+  image.crop! rect
+
+  x, y, w, h = 10, 10, image.width - 10, image.height - 10
+  image.create_cropped! x, y, w, h
+
+  rect = [10, 10, image.width - 10, image.height - 10]
+  image.create_cropped! rect
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000288" class="method-detail">
+        <a name="M000288"></a>
+
+        <div class="method-heading">
+          <a href="Image.src/M000288.html" target="Code" class="method-signature"
+            onclick="popupCode('Image.src/M000288.html');return false;">
+          <span class="method-name">crop_scaled</span><span class="method-args">(...)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Create a cropped and scaled copy of an image
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  iw, ih = old_image.width, old_image.height
+  new_w, new_h = iw - 20, ih - 20
+  x, y, w, h = 10, 10, iw - 10, ih - 10
+  new_image = old_image.crop_scaled x, y, w, h, new_w, new_h
+
+  iw, ih = old_image.width, old_image.height
+  new_w, new_h = iw - 20, ih - 20
+  values = [10, 10, iw - 10, iw - 10, new_w, new_h]
+  new_image = old_image.crop_scaled values
+
+  iw, ih = old_image.width, old_image.height
+  new_w, new_h = iw - 20, ih - 20
+  x, y, w, h = 10, 10, iw - 10, ih - 10
+  new_image = old_image.create_crop_scaled x, y, w, h, new_w, new_h
+
+  iw, ih = old_image.width, old_image.height
+  new_w, new_h = iw - 20, ih - 20
+  values = [10, 10, iw - 10, iw - 10, new_w, new_h]
+  new_image = old_image.create_crop_scaled values
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000290" class="method-detail">
+        <a name="M000290"></a>
+
+        <div class="method-heading">
+          <a href="Image.src/M000290.html" target="Code" class="method-signature"
+            onclick="popupCode('Image.src/M000290.html');return false;">
+          <span class="method-name">crop_scaled!</span><span class="method-args">(...)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Crop and scale an image
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  iw, ih = image.width, image.height
+  new_w, new_h = iw - 20, ih - 20
+  x, y, w, h = 10, 10, iw - 10, ih - 10
+  image.crop_scaled! x, y, w, h, new_w, new_h
+
+  iw, ih = image.width, image.height
+  new_w, new_h = iw - 20, ih - 20
+  values = [10, 10, iw - 10, iw - 10, new_w, new_h]
+  image.crop_scaled! values
+
+  iw, ih = image.width, image.height
+  new_w, new_h = iw - 20, ih - 20
+  x, y, w, h = 10, 10, iw - 10, ih - 10
+  image.create_crop_scaled! x, y, w, h, new_w, new_h
+
+  iw, ih = image.width, image.height
+  new_w, new_h = iw - 20, ih - 20
+  values = [10, 10, iw - 10, iw - 10, new_w, new_h]
+  image.create_crop_scaled! values
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000249" class="method-detail">
+        <a name="M000249"></a>
+
+        <div class="method-heading">
+          <a href="Image.src/M000249.html" target="Code" class="method-signature"
+            onclick="popupCode('Image.src/M000249.html');return false;">
+          <span class="method-name">data</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Return a copy of an image&#8217;s raw 32-bit data.
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  raw = image.data
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000251" class="method-detail">
+        <a name="M000251"></a>
+
+        <div class="method-heading">
+          <a href="Image.src/M000251.html" target="Code" class="method-signature"
+            onclick="popupCode('Image.src/M000251.html');return false;">
+          <span class="method-name">data!</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Return a read-only reference to an image&#8217;s raw 32-bit data.
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  RAW_DATA = image.data_for_reading_only
+  RAW_DATA = image.data!
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000252" class="method-detail">
+        <a name="M000252"></a>
+
+        <div class="method-heading">
+          <a href="Image.src/M000252.html" target="Code" class="method-signature"
+            onclick="popupCode('Image.src/M000252.html');return false;">
+          <span class="method-name">data=</span><span class="method-args">(p1)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Fill an image using raw 32-bit data.
+</p>
+<p>
+Note: The new data buffer must be the same size (in bytes) as the original
+data buffer.
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  RAW_DATA = other_image.data!
+  image.put_data RAW_DATA
+
+  RAW_DATA = other_image.data!
+  image.data = RAW_DATA
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000250" class="method-detail">
+        <a name="M000250"></a>
+
+        <div class="method-heading">
+          <a href="Image.src/M000250.html" target="Code" class="method-signature"
+            onclick="popupCode('Image.src/M000250.html');return false;">
+          <span class="method-name">data_for_reading_only</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Return a read-only reference to an image&#8217;s raw 32-bit data.
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  RAW_DATA = image.data_for_reading_only
+  RAW_DATA = image.data!
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000243" class="method-detail">
+        <a name="M000243"></a>
+
+        <div class="method-heading">
+          <a href="Image.src/M000243.html" target="Code" class="method-signature"
+            onclick="popupCode('Image.src/M000243.html');return false;">
+          <span class="method-name">delete!</span><span class="method-args">(...)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Free an <a href="Image.html">Imlib2::Image</a> object, and (optionally)
+de-cache it as well.
+</p>
+<p>
+Note: Any future operations on this image will raise an exception.
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  # free image
+  im.delete!
+
+  # free image, and de-cache it too
+  im.delete!(true)
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000321" class="method-detail">
+        <a name="M000321"></a>
+
+        <div class="method-heading">
+          <a href="Image.src/M000321.html" target="Code" class="method-signature"
+            onclick="popupCode('Image.src/M000321.html');return false;">
+          <span class="method-name">draw_ellipse</span><span class="method-args">(...)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Draw an ellipse at the specified coordinates with the given color
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  # draw an ellipse in the center of the image using the context color
+  xc, yc, w, h = image.w / 2, image.h / 2, image.w / 2, image.h / 2
+  image.draw_oval xc, yc, w, h
+
+  # draw a violet circle in the center of the image
+  rect = [image.w / 2, image.h / 2, image.w / 2, image.w / 2]
+  color = Imlib2::Color::VIOLET
+  image.draw_ellipse rect, color
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000311" class="method-detail">
+        <a name="M000311"></a>
+
+        <div class="method-heading">
+          <a href="Image.src/M000311.html" target="Code" class="method-signature"
+            onclick="popupCode('Image.src/M000311.html');return false;">
+          <span class="method-name">draw_line</span><span class="method-args">(...)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Draw a line at the specified coordinates.
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  # draw line from 10, 10 to 20, 20 using context color
+  im.draw_line 10, 10, 20, 20
+
+  # draw magenta line from 5, 10 to 15, 20
+  im.draw_line 5, 10, 15, 20, Imlib2::Color::MAGENTA
+
+  # draw line from 10, 15 to 20, 25 using context color
+  im.draw_pixel [10, 15], [20, 25]
+
+  # draw line from 1000, 2000 to 2100, 4200 with funky color
+  my_color = Imlib2::Color::CmykColor.new 100, 255, 0, 128
+  im.draw_line [1000, 2000], [2100, 4200], my_color
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000322" class="method-detail">
+        <a name="M000322"></a>
+
+        <div class="method-heading">
+          <a href="Image.src/M000322.html" target="Code" class="method-signature"
+            onclick="popupCode('Image.src/M000322.html');return false;">
+          <span class="method-name">draw_oval</span><span class="method-args">(...)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Draw an ellipse at the specified coordinates with the given color
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  # draw an ellipse in the center of the image using the context color
+  xc, yc, w, h = image.w / 2, image.h / 2, image.w / 2, image.h / 2
+  image.draw_oval xc, yc, w, h
+
+  # draw a violet circle in the center of the image
+  rect = [image.w / 2, image.h / 2, image.w / 2, image.w / 2]
+  color = Imlib2::Color::VIOLET
+  image.draw_ellipse rect, color
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000310" class="method-detail">
+        <a name="M000310"></a>
+
+        <div class="method-heading">
+          <a href="Image.src/M000310.html" target="Code" class="method-signature"
+            onclick="popupCode('Image.src/M000310.html');return false;">
+          <span class="method-name">draw_pixel</span><span class="method-args">(...)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Draw a pixel at the specified coordinates.
+</p>
+<p>
+Note: Versions of <a href="../Imlib2.html">Imlib2</a> up to and including
+1.0.5 had a broken imlib_image_draw_pixel() call. <a
+href="../Imlib2.html">Imlib2</a>-Ruby has a work-around, which simulates
+drawing a pixel with a 1x1 rectangle. To disable this behavior, see the
+Imlib2::Image::draw_pixel_workaround= method.
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  im.draw_pixel 10, 10                      # draw using context color
+  im.draw_pixel 10, 10, Imlib2::Color::BLUE # draw blue pixel
+  im.draw_pixel [10, 10], Imlib2::Color::RED # draw red pixel
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000330" class="method-detail">
+        <a name="M000330"></a>
+
+        <div class="method-heading">
+          <a href="Image.src/M000330.html" target="Code" class="method-signature"
+            onclick="popupCode('Image.src/M000330.html');return false;">
+          <span class="method-name">draw_poly</span><span class="method-args">(...)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Draw an <a href="Polygon.html">Imlib2::Polygon</a> with the specified color
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  # create a simple blue right triangle
+  triangle = Imlib2::Polygon.new [10, 10], [20, 20], [10, 20]
+  image.draw_polygon triangle, Imlib2::Color::BLUE
+
+  # create an open red square polygon
+  square = Imlib2.Polygon.new [10, 10], [20, 10], [20, 20], [10, 20]
+  image.draw_poly square, false, Imlib2::Color::RED
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000331" class="method-detail">
+        <a name="M000331"></a>
+
+        <div class="method-heading">
+          <a href="Image.src/M000331.html" target="Code" class="method-signature"
+            onclick="popupCode('Image.src/M000331.html');return false;">
+          <span class="method-name">draw_polygon</span><span class="method-args">(...)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Draw an <a href="Polygon.html">Imlib2::Polygon</a> with the specified color
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  # create a simple blue right triangle
+  triangle = Imlib2::Polygon.new [10, 10], [20, 20], [10, 20]
+  image.draw_polygon triangle, Imlib2::Color::BLUE
+
+  # create an open red square polygon
+  square = Imlib2.Polygon.new [10, 10], [20, 10], [20, 20], [10, 20]
+  image.draw_poly square, false, Imlib2::Color::RED
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000313" class="method-detail">
+        <a name="M000313"></a>
+
+        <div class="method-heading">
+          <a href="Image.src/M000313.html" target="Code" class="method-signature"
+            onclick="popupCode('Image.src/M000313.html');return false;">
+          <span class="method-name">draw_rect</span><span class="method-args">(...)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Draw a rectangle outline at the specified coordinates.
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  # draw rectangle around edge of image using context color
+  rect = [1, 1, im.width - 2, im.height - 2]
+  im.draw_rect rect
+
+  # draw magenta rectangle outline in top-left corner of image
+  color = Imlib2::Color::MAGENTA
+  im.draw_rect [0, 0], [im.width / 2, im.height / 2], color
+
+  # draw square from 10, 10 to 30, 30 using context color
+  im.draw_rect [10, 10, 20, 20]
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000314" class="method-detail">
+        <a name="M000314"></a>
+
+        <div class="method-heading">
+          <a href="Image.src/M000314.html" target="Code" class="method-signature"
+            onclick="popupCode('Image.src/M000314.html');return false;">
+          <span class="method-name">draw_rectangle</span><span class="method-args">(...)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Draw a rectangle outline at the specified coordinates.
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  # draw rectangle around edge of image using context color
+  rect = [1, 1, im.width - 2, im.height - 2]
+  im.draw_rect rect
+
+  # draw magenta rectangle outline in top-left corner of image
+  color = Imlib2::Color::MAGENTA
+  im.draw_rect [0, 0], [im.width / 2, im.height / 2], color
+
+  # draw square from 10, 10 to 30, 30 using context color
+  im.draw_rect [10, 10, 20, 20]
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000325" class="method-detail">
+        <a name="M000325"></a>
+
+        <div class="method-heading">
+          <a href="Image.src/M000325.html" target="Code" class="method-signature"
+            onclick="popupCode('Image.src/M000325.html');return false;">
+          <span class="method-name">draw_text</span><span class="method-args">(...)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Draw a string with the given <a href="Font.html">Imlib2::Font</a> at the
+specified coordinates
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  font = Imlib2::Font.new 'helvetica/12'
+  string = 'the blue crow flies at midnight'
+  image.draw_text font, string, 10, 10
+
+  # draw text in a specified color
+  font = Imlib2::Font.new 'helvetica/12'
+  string = 'the blue crow flies at midnight'
+  color = Imlib2::Color::AQUA
+  image.draw_text font, string, 10, 10, color
+
+  # draw text in a specified direction
+  font = Imlib2::Font.new 'verdana/24'
+  string = 'the blue crow flies at midnight'
+  color = Imlib2::Color::YELLOW
+  direction = Imlib2::Direction::DOWN
+  image.draw_text font, string, 10, 10, color, direction
+
+  # draw text with return metrics
+  font = Imlib2::Font.new 'arial/36'
+  string = 'the blue crow flies at midnight'
+  color = Imlib2::Color::PURPLE
+  direction = Imlib2::Direction::LEFT
+  metrics = image.draw_text font, string, 10, 10, color, direction
+  ['width', 'height', 'horiz_advance', 'vert_advance'].each_index { |i, v|
+    puts v &lt;&lt; ' = ' &lt;&lt; metrics[i]
+  }
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000341" class="method-detail">
+        <a name="M000341"></a>
+
+        <div class="method-heading">
+          <a href="Image.src/M000341.html" target="Code" class="method-signature"
+            onclick="popupCode('Image.src/M000341.html');return false;">
+          <span class="method-name">dup</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Copy an <a href="Image.html">Imlib2::Image</a>
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  new_image = old_image.clone
+  new_image = old_image.dup
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000248" class="method-detail">
+        <a name="M000248"></a>
+
+        <div class="method-heading">
+          <a href="Image.src/M000248.html" target="Code" class="method-signature"
+            onclick="popupCode('Image.src/M000248.html');return false;">
+          <span class="method-name">filename</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Return the filename of an <a href="Image.html">Imlib2::Image</a>.
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  path = image.filename
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000329" class="method-detail">
+        <a name="M000329"></a>
+
+        <div class="method-heading">
+          <a href="Image.src/M000329.html" target="Code" class="method-signature"
+            onclick="popupCode('Image.src/M000329.html');return false;">
+          <span class="method-name">fill_color_range</span><span class="method-args">(...)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Fill a rectangle with the given <a
+href="Gradient.html">Imlib2::Gradient</a> at a given angle
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  x, y, w, h = 10, 10, image.width - 20, image.height - 20
+  angle = 45.2
+  image.fill_gradient gradient, x, y, w, h, angle
+
+  rect = [5, 5, 500, 20]
+  image.gradient gradient, rect, 36.8
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000323" class="method-detail">
+        <a name="M000323"></a>
+
+        <div class="method-heading">
+          <a href="Image.src/M000323.html" target="Code" class="method-signature"
+            onclick="popupCode('Image.src/M000323.html');return false;">
+          <span class="method-name">fill_ellipse</span><span class="method-args">(...)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Fill an ellipse at the specified coordinates with the given color
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  # fill an ellipse in the center of the image using the context color
+  xc, yc, w, h = image.w / 2, image.h / 2, image.w / 2, image.h / 2
+  image.draw_oval xc, yc, w, h
+
+  # fill a violet circle in the center of the image
+  rect = [image.w / 2, image.h / 2, image.w / 2, image.w / 2]
+  color = Imlib2::Color::VIOLET
+  image.draw_ellipse rect, color
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000327" class="method-detail">
+        <a name="M000327"></a>
+
+        <div class="method-heading">
+          <a href="Image.src/M000327.html" target="Code" class="method-signature"
+            onclick="popupCode('Image.src/M000327.html');return false;">
+          <span class="method-name">fill_gradient</span><span class="method-args">(...)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Fill a rectangle with the given <a
+href="Gradient.html">Imlib2::Gradient</a> at a given angle
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  x, y, w, h = 10, 10, image.width - 20, image.height - 20
+  angle = 45.2
+  image.fill_gradient gradient, x, y, w, h, angle
+
+  rect = [5, 5, 500, 20]
+  image.gradient gradient, rect, 36.8
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000324" class="method-detail">
+        <a name="M000324"></a>
+
+        <div class="method-heading">
+          <a href="Image.src/M000324.html" target="Code" class="method-signature"
+            onclick="popupCode('Image.src/M000324.html');return false;">
+          <span class="method-name">fill_oval</span><span class="method-args">(...)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Fill an ellipse at the specified coordinates with the given color
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  # fill an ellipse in the center of the image using the context color
+  xc, yc, w, h = image.w / 2, image.h / 2, image.w / 2, image.h / 2
+  image.draw_oval xc, yc, w, h
+
+  # fill a violet circle in the center of the image
+  rect = [image.w / 2, image.h / 2, image.w / 2, image.w / 2]
+  color = Imlib2::Color::VIOLET
+  image.draw_ellipse rect, color
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000332" class="method-detail">
+        <a name="M000332"></a>
+
+        <div class="method-heading">
+          <a href="Image.src/M000332.html" target="Code" class="method-signature"
+            onclick="popupCode('Image.src/M000332.html');return false;">
+          <span class="method-name">fill_poly</span><span class="method-args">(...)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Fill an <a href="Polygon.html">Imlib2::Polygon</a> with the specified color
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  # create an filled green diamond polygon
+  square = Imlib2.Polygon.new [50, 10], [70, 30], [50, 50], [30, 30]
+  image.fill_poly square, false, Imlib2::Color::GREEN
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000333" class="method-detail">
+        <a name="M000333"></a>
+
+        <div class="method-heading">
+          <a href="Image.src/M000333.html" target="Code" class="method-signature"
+            onclick="popupCode('Image.src/M000333.html');return false;">
+          <span class="method-name">fill_polygon</span><span class="method-args">(...)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Fill an <a href="Polygon.html">Imlib2::Polygon</a> with the specified color
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  # create an filled green diamond polygon
+  square = Imlib2.Polygon.new [50, 10], [70, 30], [50, 50], [30, 30]
+  image.fill_poly square, false, Imlib2::Color::GREEN
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000315" class="method-detail">
+        <a name="M000315"></a>
+
+        <div class="method-heading">
+          <a href="Image.src/M000315.html" target="Code" class="method-signature"
+            onclick="popupCode('Image.src/M000315.html');return false;">
+          <span class="method-name">fill_rect</span><span class="method-args">(...)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Fill a rectangle at the specified coordinates.
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  # fill image using context color
+  rect = [0, 0, im.width, im.height]
+  im.fill_rect rect
+
+  # fill top-left quarter of image with green
+  color = Imlib2::Color::GREEN
+  im.fill_rect [0, 0], [im.width / 2, im.height / 2], color
+
+  # fill square from 10, 10 to 30, 30 using context color
+  im.fill_rect [10, 10, 20, 20]
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000316" class="method-detail">
+        <a name="M000316"></a>
+
+        <div class="method-heading">
+          <a href="Image.src/M000316.html" target="Code" class="method-signature"
+            onclick="popupCode('Image.src/M000316.html');return false;">
+          <span class="method-name">fill_rectangle</span><span class="method-args">(...)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Fill a rectangle at the specified coordinates.
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  # fill image using context color
+  rect = [0, 0, im.width, im.height]
+  im.fill_rect rect
+
+  # fill top-left quarter of image with green
+  color = Imlib2::Color::GREEN
+  im.fill_rect [0, 0], [im.width / 2, im.height / 2], color
+
+  # fill square from 10, 10 to 30, 30 using context color
+  im.fill_rect [10, 10, 20, 20]
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000345" class="method-detail">
+        <a name="M000345"></a>
+
+        <div class="method-heading">
+          <a href="Image.src/M000345.html" target="Code" class="method-signature"
+            onclick="popupCode('Image.src/M000345.html');return false;">
+          <span class="method-name">filter</span><span class="method-args">(p1)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Apply a scripted filter or a static (eg <a
+href="Filter.html">Imlib2::Filter</a>) filter
+</p>
+<p>
+Example:
+</p>
+<pre>
+  # apply a static filter
+  filter = Imlib2::Filter.new 20
+  filter.set 2, 2, Imlib2::Color::GREEN
+  image.filter filter
+
+  # apply a scripted filter
+  x, y = 20, 10
+  filter_string = &quot;tint( x=#{x}, y=#{y}, red=255, alpha=55 );&quot;
+  image.filter filter_string
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000296" class="method-detail">
+        <a name="M000296"></a>
+
+        <div class="method-heading">
+          <a href="Image.src/M000296.html" target="Code" class="method-signature"
+            onclick="popupCode('Image.src/M000296.html');return false;">
+          <span class="method-name">flip_diagonal</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Create a copy of an image flipped along it&#8217;s diagonal axis
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  new_image = old_image.flip_diagonal
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000297" class="method-detail">
+        <a name="M000297"></a>
+
+        <div class="method-heading">
+          <a href="Image.src/M000297.html" target="Code" class="method-signature"
+            onclick="popupCode('Image.src/M000297.html');return false;">
+          <span class="method-name">flip_diagonal!</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Flip an image along it&#8217;s diagonal axis
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  image.flip_diagonal!
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000292" class="method-detail">
+        <a name="M000292"></a>
+
+        <div class="method-heading">
+          <a href="Image.src/M000292.html" target="Code" class="method-signature"
+            onclick="popupCode('Image.src/M000292.html');return false;">
+          <span class="method-name">flip_horizontal</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Create a horizontally-flipped copy of an image
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  backwards_image = old_image.flip_horizontal
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000293" class="method-detail">
+        <a name="M000293"></a>
+
+        <div class="method-heading">
+          <a href="Image.src/M000293.html" target="Code" class="method-signature"
+            onclick="popupCode('Image.src/M000293.html');return false;">
+          <span class="method-name">flip_horizontal!</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Flip an image horizontally
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  image.flip_horizontal!
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000294" class="method-detail">
+        <a name="M000294"></a>
+
+        <div class="method-heading">
+          <a href="Image.src/M000294.html" target="Code" class="method-signature"
+            onclick="popupCode('Image.src/M000294.html');return false;">
+          <span class="method-name">flip_vertical</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Create a vertically-flipped copy of an image
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  upside_down_image = old_image.flip_vertical
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000295" class="method-detail">
+        <a name="M000295"></a>
+
+        <div class="method-heading">
+          <a href="Image.src/M000295.html" target="Code" class="method-signature"
+            onclick="popupCode('Image.src/M000295.html');return false;">
+          <span class="method-name">flip_vertical!</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Flip an image vertically
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  image.flip_vertical!
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000264" class="method-detail">
+        <a name="M000264"></a>
+
+        <div class="method-heading">
+          <a href="Image.src/M000264.html" target="Code" class="method-signature"
+            onclick="popupCode('Image.src/M000264.html');return false;">
+          <span class="method-name">format</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Get the on-disk format of an <a href="Image.html">Imlib2::Image</a>
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  format = image.get_format
+  format = image.format
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000266" class="method-detail">
+        <a name="M000266"></a>
+
+        <div class="method-heading">
+          <a href="Image.src/M000266.html" target="Code" class="method-signature"
+            onclick="popupCode('Image.src/M000266.html');return false;">
+          <span class="method-name">format=</span><span class="method-args">(p1)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Set the on-disk format of an <a href="Image.html">Imlib2::Image</a>
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  image.get_format 'png'
+  image.format = 'png'
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000353" class="method-detail">
+        <a name="M000353"></a>
+
+        <div class="method-heading">
+          <a href="Image.src/M000353.html" target="Code" class="method-signature"
+            onclick="popupCode('Image.src/M000353.html');return false;">
+          <span class="method-name">get_attached_value</span><span class="method-args">(p1)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Get an integer value attached to an <a href="Image.html">Imlib2::Image</a>.
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  qual = image.get_attached_value('quality')
+  qual = image['quality']
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000261" class="method-detail">
+        <a name="M000261"></a>
+
+        <div class="method-heading">
+          <a href="Image.src/M000261.html" target="Code" class="method-signature"
+            onclick="popupCode('Image.src/M000261.html');return false;">
+          <span class="method-name">get_border</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Get the <a href="Border.html">Imlib2::Border</a> of an <a
+href="Image.html">Imlib2::Image</a>
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  border = image.get_border
+  border = image.border
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000265" class="method-detail">
+        <a name="M000265"></a>
+
+        <div class="method-heading">
+          <a href="Image.src/M000265.html" target="Code" class="method-signature"
+            onclick="popupCode('Image.src/M000265.html');return false;">
+          <span class="method-name">get_format</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Get the on-disk format of an <a href="Image.html">Imlib2::Image</a>
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  format = image.get_format
+  format = image.format
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000326" class="method-detail">
+        <a name="M000326"></a>
+
+        <div class="method-heading">
+          <a href="Image.src/M000326.html" target="Code" class="method-signature"
+            onclick="popupCode('Image.src/M000326.html');return false;">
+          <span class="method-name">gradient</span><span class="method-args">(...)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Fill a rectangle with the given <a
+href="Gradient.html">Imlib2::Gradient</a> at a given angle
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  x, y, w, h = 10, 10, image.width - 20, image.height - 20
+  angle = 45.2
+  image.fill_gradient gradient, x, y, w, h, angle
+
+  rect = [5, 5, 500, 20]
+  image.gradient gradient, rect, 36.8
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000247" class="method-detail">
+        <a name="M000247"></a>
+
+        <div class="method-heading">
+          <a href="Image.src/M000247.html" target="Code" class="method-signature"
+            onclick="popupCode('Image.src/M000247.html');return false;">
+          <span class="method-name">h</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Return the height of an <a href="Image.html">Imlib2::Image</a>.
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  h = image.height
+  h = image.h
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000254" class="method-detail">
+        <a name="M000254"></a>
+
+        <div class="method-heading">
+          <a href="Image.src/M000254.html" target="Code" class="method-signature"
+            onclick="popupCode('Image.src/M000254.html');return false;">
+          <span class="method-name">has_alpha</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Does this image have transparent or translucent regions?
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  if image.has_alpha?
+    puts 'this image has alpha'
+  end
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000256" class="method-detail">
+        <a name="M000256"></a>
+
+        <div class="method-heading">
+          <a href="Image.src/M000256.html" target="Code" class="method-signature"
+            onclick="popupCode('Image.src/M000256.html');return false;">
+          <span class="method-name">has_alpha=</span><span class="method-args">(p1)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Set image alpha transparency.
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  image.set_has_alpha true
+  image.has_alpha = true
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000255" class="method-detail">
+        <a name="M000255"></a>
+
+        <div class="method-heading">
+          <a href="Image.src/M000255.html" target="Code" class="method-signature"
+            onclick="popupCode('Image.src/M000255.html');return false;">
+          <span class="method-name">has_alpha?</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Does this image have transparent or translucent regions?
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  if image.has_alpha?
+    puts 'this image has alpha'
+  end
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000246" class="method-detail">
+        <a name="M000246"></a>
+
+        <div class="method-heading">
+          <a href="Image.src/M000246.html" target="Code" class="method-signature"
+            onclick="popupCode('Image.src/M000246.html');return false;">
+          <span class="method-name">height</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Return the height of an <a href="Image.html">Imlib2::Image</a>.
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  h = image.height
+  h = image.h
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000272" class="method-detail">
+        <a name="M000272"></a>
+
+        <div class="method-heading">
+          <a href="Image.src/M000272.html" target="Code" class="method-signature"
+            onclick="popupCode('Image.src/M000272.html');return false;">
+          <span class="method-name">irrelevant_alpha=</span><span class="method-args">(p1)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Set the irrelevant_alpha flag of an <a href="Image.html">Imlib2::Image</a>
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  image.set_irrelevant_alpha true
+  image.irrelevant_alpha = true
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000270" class="method-detail">
+        <a name="M000270"></a>
+
+        <div class="method-heading">
+          <a href="Image.src/M000270.html" target="Code" class="method-signature"
+            onclick="popupCode('Image.src/M000270.html');return false;">
+          <span class="method-name">irrelevant_border=</span><span class="method-args">(p1)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Set the irrelevant_border flag of an <a href="Image.html">Imlib2::Image</a>
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  image.set_irrelevant_border true
+  image.irrelevant_border = true
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000268" class="method-detail">
+        <a name="M000268"></a>
+
+        <div class="method-heading">
+          <a href="Image.src/M000268.html" target="Code" class="method-signature"
+            onclick="popupCode('Image.src/M000268.html');return false;">
+          <span class="method-name">irrelevant_format=</span><span class="method-args">(p1)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Set the irrelevant_format flag of an <a href="Image.html">Imlib2::Image</a>
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  image.set_irrelevant_format true
+  image.irrelevant_format = true
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000298" class="method-detail">
+        <a name="M000298"></a>
+
+        <div class="method-heading">
+          <a href="Image.src/M000298.html" target="Code" class="method-signature"
+            onclick="popupCode('Image.src/M000298.html');return false;">
+          <span class="method-name">orientate</span><span class="method-args">(p1)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Return a copy of an image rotated in 90 degree increments
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  increments = 3 # 90 * 3 degrees (eg 270 degrees)
+  new_image = old_image.orientate increments
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000299" class="method-detail">
+        <a name="M000299"></a>
+
+        <div class="method-heading">
+          <a href="Image.src/M000299.html" target="Code" class="method-signature"
+            onclick="popupCode('Image.src/M000299.html');return false;">
+          <span class="method-name">orientate!</span><span class="method-args">(p1)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Rotate an image in 90 degree increments
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  increments = 3 # 90 * 3 degrees (eg 270 degrees)
+  image.orientate! increments
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000274" class="method-detail">
+        <a name="M000274"></a>
+
+        <div class="method-heading">
+          <a href="Image.src/M000274.html" target="Code" class="method-signature"
+            onclick="popupCode('Image.src/M000274.html');return false;">
+          <span class="method-name">pixel</span><span class="method-args">(p1, p2)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Get the <a href="Color/RgbaColor.html">Imlib2::Color::RgbaColor</a> value
+of the pixel at x, y
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  color = image.query_pixel 320, 240
+  color = image.pixel 320, 240
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000282" class="method-detail">
+        <a name="M000282"></a>
+
+        <div class="method-heading">
+          <a href="Image.src/M000282.html" target="Code" class="method-signature"
+            onclick="popupCode('Image.src/M000282.html');return false;">
+          <span class="method-name">pixel_cmya</span><span class="method-args">(p1, p2)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Get the <a href="Color/CmyaColor.html">Imlib2::Color::CmyaColor</a> value
+of the pixel at x, y
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  color = image.query_pixel_cmya 320, 240
+  color = image.pixel_cmya 320, 240
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000280" class="method-detail">
+        <a name="M000280"></a>
+
+        <div class="method-heading">
+          <a href="Image.src/M000280.html" target="Code" class="method-signature"
+            onclick="popupCode('Image.src/M000280.html');return false;">
+          <span class="method-name">pixel_hlsa</span><span class="method-args">(p1, p2)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Get the <a href="Color/HlsaColor.html">Imlib2::Color::HlsaColor</a> value
+of the pixel at x, y
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  color = image.query_pixel_hlsa 320, 240
+  color = image.pixel_hlsa 320, 240
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000278" class="method-detail">
+        <a name="M000278"></a>
+
+        <div class="method-heading">
+          <a href="Image.src/M000278.html" target="Code" class="method-signature"
+            onclick="popupCode('Image.src/M000278.html');return false;">
+          <span class="method-name">pixel_hsva</span><span class="method-args">(p1, p2)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Get the <a href="Color/HsvaColor.html">Imlib2::Color::HsvaColor</a> value
+of the pixel at x, y
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  color = image.query_pixel_hsva 320, 240
+  color = image.pixel_hsva 320, 240
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000275" class="method-detail">
+        <a name="M000275"></a>
+
+        <div class="method-heading">
+          <a href="Image.src/M000275.html" target="Code" class="method-signature"
+            onclick="popupCode('Image.src/M000275.html');return false;">
+          <span class="method-name">pixel_rgba</span><span class="method-args">(p1, p2)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Get the <a href="Color/RgbaColor.html">Imlib2::Color::RgbaColor</a> value
+of the pixel at x, y
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  color = image.query_pixel 320, 240
+  color = image.pixel 320, 240
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000358" class="method-detail">
+        <a name="M000358"></a>
+
+        <div class="method-heading">
+          <span class="method-name">pixmap</span><span class="method-args">(...)</span>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000253" class="method-detail">
+        <a name="M000253"></a>
+
+        <div class="method-heading">
+          <a href="Image.src/M000253.html" target="Code" class="method-signature"
+            onclick="popupCode('Image.src/M000253.html');return false;">
+          <span class="method-name">put_back_data</span><span class="method-args">(p1)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Fill an image using raw 32-bit data.
+</p>
+<p>
+Note: The new data buffer must be the same size (in bytes) as the original
+data buffer.
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  RAW_DATA = other_image.data!
+  image.put_data RAW_DATA
+
+  RAW_DATA = other_image.data!
+  image.data = RAW_DATA
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000276" class="method-detail">
+        <a name="M000276"></a>
+
+        <div class="method-heading">
+          <a href="Image.src/M000276.html" target="Code" class="method-signature"
+            onclick="popupCode('Image.src/M000276.html');return false;">
+          <span class="method-name">query_pixel</span><span class="method-args">(p1, p2)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Get the <a href="Color/RgbaColor.html">Imlib2::Color::RgbaColor</a> value
+of the pixel at x, y
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  color = image.query_pixel 320, 240
+  color = image.pixel 320, 240
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000283" class="method-detail">
+        <a name="M000283"></a>
+
+        <div class="method-heading">
+          <a href="Image.src/M000283.html" target="Code" class="method-signature"
+            onclick="popupCode('Image.src/M000283.html');return false;">
+          <span class="method-name">query_pixel_cmya</span><span class="method-args">(p1, p2)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Get the <a href="Color/CmyaColor.html">Imlib2::Color::CmyaColor</a> value
+of the pixel at x, y
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  color = image.query_pixel_cmya 320, 240
+  color = image.pixel_cmya 320, 240
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000281" class="method-detail">
+        <a name="M000281"></a>
+
+        <div class="method-heading">
+          <a href="Image.src/M000281.html" target="Code" class="method-signature"
+            onclick="popupCode('Image.src/M000281.html');return false;">
+          <span class="method-name">query_pixel_hlsa</span><span class="method-args">(p1, p2)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Get the <a href="Color/HlsaColor.html">Imlib2::Color::HlsaColor</a> value
+of the pixel at x, y
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  color = image.query_pixel_hlsa 320, 240
+  color = image.pixel_hlsa 320, 240
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000279" class="method-detail">
+        <a name="M000279"></a>
+
+        <div class="method-heading">
+          <a href="Image.src/M000279.html" target="Code" class="method-signature"
+            onclick="popupCode('Image.src/M000279.html');return false;">
+          <span class="method-name">query_pixel_hsva</span><span class="method-args">(p1, p2)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Get the <a href="Color/HsvaColor.html">Imlib2::Color::HsvaColor</a> value
+of the pixel at x, y
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  color = image.query_pixel_hsva 320, 240
+  color = image.pixel_hsva 320, 240
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000277" class="method-detail">
+        <a name="M000277"></a>
+
+        <div class="method-heading">
+          <a href="Image.src/M000277.html" target="Code" class="method-signature"
+            onclick="popupCode('Image.src/M000277.html');return false;">
+          <span class="method-name">query_pixel_rgba</span><span class="method-args">(p1, p2)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Get the <a href="Color/RgbaColor.html">Imlib2::Color::RgbaColor</a> value
+of the pixel at x, y
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  color = image.query_pixel 320, 240
+  color = image.pixel 320, 240
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000354" class="method-detail">
+        <a name="M000354"></a>
+
+        <div class="method-heading">
+          <a href="Image.src/M000354.html" target="Code" class="method-signature"
+            onclick="popupCode('Image.src/M000354.html');return false;">
+          <span class="method-name">remove_attached_value</span><span class="method-args">(p1)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Remove an integer value attached to an <a
+href="Image.html">Imlib2::Image</a>.
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  image.remove_attached_value('quality')
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000359" class="method-detail">
+        <a name="M000359"></a>
+
+        <div class="method-heading">
+          <span class="method-name">render_on_drawable</span><span class="method-args">(...)</span>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000365" class="method-detail">
+        <a name="M000365"></a>
+
+        <div class="method-heading">
+          <span class="method-name">render_on_drawable_at_angle</span><span class="method-args">(...)</span>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000364" class="method-detail">
+        <a name="M000364"></a>
+
+        <div class="method-heading">
+          <span class="method-name">render_on_drawable_skewed</span><span class="method-args">(...)</span>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000357" class="method-detail">
+        <a name="M000357"></a>
+
+        <div class="method-heading">
+          <span class="method-name">render_pixmap</span><span class="method-args">(...)</span>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000338" class="method-detail">
+        <a name="M000338"></a>
+
+        <div class="method-heading">
+          <a href="Image.src/M000338.html" target="Code" class="method-signature"
+            onclick="popupCode('Image.src/M000338.html');return false;">
+          <span class="method-name">rotate</span><span class="method-args">(p1)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Return a rotated copy of the image
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  new_image = old_image.rotate 37.2
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000339" class="method-detail">
+        <a name="M000339"></a>
+
+        <div class="method-heading">
+          <a href="Image.src/M000339.html" target="Code" class="method-signature"
+            onclick="popupCode('Image.src/M000339.html');return false;">
+          <span class="method-name">rotate!</span><span class="method-args">(p1)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Rotates the image
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  image.rotate! 37.2
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000240" class="method-detail">
+        <a name="M000240"></a>
+
+        <div class="method-heading">
+          <a href="Image.src/M000240.html" target="Code" class="method-signature"
+            onclick="popupCode('Image.src/M000240.html');return false;">
+          <span class="method-name">save</span><span class="method-args">(p1)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Save an <a href="Image.html">Imlib2::Image</a> to a file (throws an
+exception on error).
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  image.save 'output_file.png'
+
+  filename = 'output_file.jpg'
+  begin
+    image.save filename
+  rescue Imlib2::FileError
+    $stderr.puts &quot;Couldn't save file \&quot;#{filename}\&quot;: &quot; + $!
+  end
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000241" class="method-detail">
+        <a name="M000241"></a>
+
+        <div class="method-heading">
+          <a href="Image.src/M000241.html" target="Code" class="method-signature"
+            onclick="popupCode('Image.src/M000241.html');return false;">
+          <span class="method-name">save_image</span><span class="method-args">(p1)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Save an <a href="Image.html">Imlib2::Image</a> to a file (no exception or
+error).
+</p>
+<p>
+Provides access to the low-level imlib_save_image() call. You probably want
+to use Imlib2::Image::save() instead.
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  image.save_image 'output_file.png'
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000242" class="method-detail">
+        <a name="M000242"></a>
+
+        <div class="method-heading">
+          <a href="Image.src/M000242.html" target="Code" class="method-signature"
+            onclick="popupCode('Image.src/M000242.html');return false;">
+          <span class="method-name">save_with_error_return</span><span class="method-args">(p1)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Save an <a href="Image.html">Imlib2::Image</a> to a file (error returned as
+number).
+</p>
+<p>
+Provides access to the low-level imlib_save_image_with_error_return() call.
+You probably want to use Imlib2::Image::save() instead.
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  error = image.save_with_error_return 'output_file.png'
+  puts 'an error occurred' unless error == 0
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000348" class="method-detail">
+        <a name="M000348"></a>
+
+        <div class="method-heading">
+          <a href="Image.src/M000348.html" target="Code" class="method-signature"
+            onclick="popupCode('Image.src/M000348.html');return false;">
+          <span class="method-name">script_filter</span><span class="method-args">(p1)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Apply a scripted filter
+</p>
+<p>
+You should probably using <a
+href="Image.html#M000345">Imlib2::Image#filter</a>() instead, since it is
+polymorphic (eg, it can handle both static and scripted filters).
+</p>
+<p>
+Example:
+</p>
+<pre>
+  x, y = 20, 10
+  filter_string = &quot;tint( x=#{x}, y=#{y}, red=255, alpha=55 );&quot;
+  image.script_filter filter_string
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000319" class="method-detail">
+        <a name="M000319"></a>
+
+        <div class="method-heading">
+          <a href="Image.src/M000319.html" target="Code" class="method-signature"
+            onclick="popupCode('Image.src/M000319.html');return false;">
+          <span class="method-name">scroll_rect</span><span class="method-args">(...)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Scroll a rectangle to the specified coordinates
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  x, y, w, h = 10, 20, 100, 200
+  dest_x, dest_y = 5, 10
+  image.scroll_rect x, y, w, h, dest_x, dest_y
+
+  source_rect = [10, 20, 100, 200]
+  dest_coords = [5, 10]
+  image.scroll_rect source_rect, dest_coords
+
+  values = [10, 20, 100, 200, 5, 10]
+  image.scroll_rect values
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000263" class="method-detail">
+        <a name="M000263"></a>
+
+        <div class="method-heading">
+          <a href="Image.src/M000263.html" target="Code" class="method-signature"
+            onclick="popupCode('Image.src/M000263.html');return false;">
+          <span class="method-name">set_border</span><span class="method-args">(p1)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Set the <a href="Border.html">Imlib2::Border</a> of an <a
+href="Image.html">Imlib2::Image</a>
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  image.set_border border
+  image.border = border
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000259" class="method-detail">
+        <a name="M000259"></a>
+
+        <div class="method-heading">
+          <a href="Image.src/M000259.html" target="Code" class="method-signature"
+            onclick="popupCode('Image.src/M000259.html');return false;">
+          <span class="method-name">set_changes_on_disk</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Flag this image as changing on disk
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  image.changes_on_disk
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000267" class="method-detail">
+        <a name="M000267"></a>
+
+        <div class="method-heading">
+          <a href="Image.src/M000267.html" target="Code" class="method-signature"
+            onclick="popupCode('Image.src/M000267.html');return false;">
+          <span class="method-name">set_format</span><span class="method-args">(p1)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Set the on-disk format of an <a href="Image.html">Imlib2::Image</a>
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  image.get_format 'png'
+  image.format = 'png'
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000257" class="method-detail">
+        <a name="M000257"></a>
+
+        <div class="method-heading">
+          <a href="Image.src/M000257.html" target="Code" class="method-signature"
+            onclick="popupCode('Image.src/M000257.html');return false;">
+          <span class="method-name">set_has_alpha</span><span class="method-args">(p1)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Set image alpha transparency.
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  image.set_has_alpha true
+  image.has_alpha = true
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000273" class="method-detail">
+        <a name="M000273"></a>
+
+        <div class="method-heading">
+          <a href="Image.src/M000273.html" target="Code" class="method-signature"
+            onclick="popupCode('Image.src/M000273.html');return false;">
+          <span class="method-name">set_irrelevant_alpha</span><span class="method-args">(p1)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Set the irrelevant_alpha flag of an <a href="Image.html">Imlib2::Image</a>
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  image.set_irrelevant_alpha true
+  image.irrelevant_alpha = true
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000271" class="method-detail">
+        <a name="M000271"></a>
+
+        <div class="method-heading">
+          <a href="Image.src/M000271.html" target="Code" class="method-signature"
+            onclick="popupCode('Image.src/M000271.html');return false;">
+          <span class="method-name">set_irrelevant_border</span><span class="method-args">(p1)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Set the irrelevant_border flag of an <a href="Image.html">Imlib2::Image</a>
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  image.set_irrelevant_border true
+  image.irrelevant_border = true
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000269" class="method-detail">
+        <a name="M000269"></a>
+
+        <div class="method-heading">
+          <a href="Image.src/M000269.html" target="Code" class="method-signature"
+            onclick="popupCode('Image.src/M000269.html');return false;">
+          <span class="method-name">set_irrelevant_format</span><span class="method-args">(p1)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Set the irrelevant_format flag of an <a href="Image.html">Imlib2::Image</a>
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  image.set_irrelevant_format true
+  image.irrelevant_format = true
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000302" class="method-detail">
+        <a name="M000302"></a>
+
+        <div class="method-heading">
+          <a href="Image.src/M000302.html" target="Code" class="method-signature"
+            onclick="popupCode('Image.src/M000302.html');return false;">
+          <span class="method-name">sharpen</span><span class="method-args">(p1)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Return a sharpened copy of an image
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  radius = 15 # radius of sharpen, in pixels
+  new_image = old_image.sharpen radius
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000303" class="method-detail">
+        <a name="M000303"></a>
+
+        <div class="method-heading">
+          <a href="Image.src/M000303.html" target="Code" class="method-signature"
+            onclick="popupCode('Image.src/M000303.html');return false;">
+          <span class="method-name">sharpen!</span><span class="method-args">(p1)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Sharpened an image
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  radius = 15 # radius of sharpen, in pixels
+  image.sharpen! radius
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000347" class="method-detail">
+        <a name="M000347"></a>
+
+        <div class="method-heading">
+          <a href="Image.src/M000347.html" target="Code" class="method-signature"
+            onclick="popupCode('Image.src/M000347.html');return false;">
+          <span class="method-name">static_filter</span><span class="method-args">(p1)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Apply an <a href="Filter.html">Imlib2::Filter</a> (eg a static filter)
+</p>
+<p>
+You should probably using <a
+href="Image.html#M000345">Imlib2::Image#filter</a>() instead, since it is
+polymorphic (eg, it can handle both static and scripted filters).
+</p>
+<p>
+Example:
+</p>
+<pre>
+  filter = Imlib2::Filter.new 20
+  filter.set 2, 2, Imlib2::Color::GREEN
+  image.static_filter filter
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000308" class="method-detail">
+        <a name="M000308"></a>
+
+        <div class="method-heading">
+          <a href="Image.src/M000308.html" target="Code" class="method-signature"
+            onclick="popupCode('Image.src/M000308.html');return false;">
+          <span class="method-name">tile</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Return a copy of an image suitable for seamless tiling
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  horiz_tile = old_image.tile
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000309" class="method-detail">
+        <a name="M000309"></a>
+
+        <div class="method-heading">
+          <a href="Image.src/M000309.html" target="Code" class="method-signature"
+            onclick="popupCode('Image.src/M000309.html');return false;">
+          <span class="method-name">tile!</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Modify an image so it is suitable for seamless tiling
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  image.tile!
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000304" class="method-detail">
+        <a name="M000304"></a>
+
+        <div class="method-heading">
+          <a href="Image.src/M000304.html" target="Code" class="method-signature"
+            onclick="popupCode('Image.src/M000304.html');return false;">
+          <span class="method-name">tile_horizontal</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Return a copy of an image suitable for seamless horizontal tiling
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  horiz_tile = old_image.tile_horizontal
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000305" class="method-detail">
+        <a name="M000305"></a>
+
+        <div class="method-heading">
+          <a href="Image.src/M000305.html" target="Code" class="method-signature"
+            onclick="popupCode('Image.src/M000305.html');return false;">
+          <span class="method-name">tile_horizontal!</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Modify an image so it is suitable for seamless horizontal tiling
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  image.tile_horizontal!
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000306" class="method-detail">
+        <a name="M000306"></a>
+
+        <div class="method-heading">
+          <a href="Image.src/M000306.html" target="Code" class="method-signature"
+            onclick="popupCode('Image.src/M000306.html');return false;">
+          <span class="method-name">tile_vertical</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Return a copy of an image suitable for seamless vertical tiling
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  vert_tile = old_image.tile_vertical
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000307" class="method-detail">
+        <a name="M000307"></a>
+
+        <div class="method-heading">
+          <a href="Image.src/M000307.html" target="Code" class="method-signature"
+            onclick="popupCode('Image.src/M000307.html');return false;">
+          <span class="method-name">tile_vertical!</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Modify an image so it is suitable for seamless vertical tiling
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  image.tile_vertical!
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000245" class="method-detail">
+        <a name="M000245"></a>
+
+        <div class="method-heading">
+          <a href="Image.src/M000245.html" target="Code" class="method-signature"
+            onclick="popupCode('Image.src/M000245.html');return false;">
+          <span class="method-name">w</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Return the width of an <a href="Image.html">Imlib2::Image</a>.
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  w = image.width
+  w = image.w
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000244" class="method-detail">
+        <a name="M000244"></a>
+
+        <div class="method-heading">
+          <a href="Image.src/M000244.html" target="Code" class="method-signature"
+            onclick="popupCode('Image.src/M000244.html');return false;">
+          <span class="method-name">width</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Return the width of an <a href="Image.html">Imlib2::Image</a>.
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  w = image.width
+  w = image.w
+</pre>
+        </div>
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+
+<div id="validator-badges">
+  <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+</div>
+
+</body>
+</html>

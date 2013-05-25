@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+  <title>script_filter (Imlib2::Image)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="../../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre>/*
+ * Apply a scripted filter
+ *
+ * You should probably using Imlib2::Image#filter() instead, since it is
+ * polymorphic (eg, it can handle both static and scripted filters).
+ * 
+ * Example:
+ *   x, y = 20, 10
+ *   filter_string = &quot;tint( x=#{x}, y=#{y}, red=255, alpha=55 );&quot;
+ *   image.script_filter filter_string
+ *
+ */
+static VALUE image_script_filter(VALUE self, VALUE filter) {
+</pre>
+</body>
+</html>

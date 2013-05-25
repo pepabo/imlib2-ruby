@@ -1,0 +1,598 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Class: Imlib2::Color::RgbaColor</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript" />
+  <link rel="stylesheet" href="../../.././rdoc-style.css" type="text/css" media="screen" />
+  <script type="text/javascript">
+  // <![CDATA[
+
+  function popupCode( url ) {
+    window.open(url, "Code", "resizable=yes,scrollbars=yes,toolbar=no,status=no,height=150,width=400")
+  }
+
+  function toggleCode( id ) {
+    if ( document.getElementById )
+      elem = document.getElementById( id );
+    else if ( document.all )
+      elem = eval( "document.all." + id );
+    else
+      return false;
+
+    elemStyle = elem.style;
+    
+    if ( elemStyle.display != "block" ) {
+      elemStyle.display = "block"
+    } else {
+      elemStyle.display = "none"
+    }
+
+    return true;
+  }
+  
+  // Make codeblocks hidden by default
+  document.writeln( "<style type=\"text/css\">div.method-source-code { display: none }</style>" )
+  
+  // ]]>
+  </script>
+
+</head>
+<body>
+
+
+
+    <div id="classHeader">
+        <table class="header-table">
+        <tr class="top-aligned-row">
+          <td><strong>Class</strong></td>
+          <td class="class-name-in-header">Imlib2::Color::RgbaColor</td>
+        </tr>
+        <tr class="top-aligned-row">
+            <td><strong>In:</strong></td>
+            <td>
+                <a href="../../../files/imlib2_c.html">
+                imlib2.c
+                </a>
+        &nbsp;(<a href="http://cvs.pablotron.org/cgi-bin/viewcvs.cgi/imlib2-ruby/imlib2.c">CVS</a>)
+        <br />
+            </td>
+        </tr>
+
+        <tr class="top-aligned-row">
+            <td><strong>Parent:</strong></td>
+            <td>
+                Object
+            </td>
+        </tr>
+        </table>
+    </div>
+  <!-- banner header -->
+
+  <div id="bodyContent">
+
+
+
+  <div id="contextContent">
+
+
+
+   </div>
+
+    <div id="method-list">
+      <h3 class="section-bar">Methods</h3>
+
+      <div class="name-list">
+      <a href="#M000043">[]</a>&nbsp;&nbsp;
+      <a href="#M000044">[]=</a>&nbsp;&nbsp;
+      <a href="#M000057">a</a>&nbsp;&nbsp;
+      <a href="#M000058">a=</a>&nbsp;&nbsp;
+      <a href="#M000059">alpha</a>&nbsp;&nbsp;
+      <a href="#M000060">alpha=</a>&nbsp;&nbsp;
+      <a href="#M000053">b</a>&nbsp;&nbsp;
+      <a href="#M000054">b=</a>&nbsp;&nbsp;
+      <a href="#M000055">blue</a>&nbsp;&nbsp;
+      <a href="#M000056">blue=</a>&nbsp;&nbsp;
+      <a href="#M000049">g</a>&nbsp;&nbsp;
+      <a href="#M000050">g=</a>&nbsp;&nbsp;
+      <a href="#M000051">green</a>&nbsp;&nbsp;
+      <a href="#M000052">green=</a>&nbsp;&nbsp;
+      <a href="#M000042">new</a>&nbsp;&nbsp;
+      <a href="#M000041">new</a>&nbsp;&nbsp;
+      <a href="#M000045">r</a>&nbsp;&nbsp;
+      <a href="#M000046">r=</a>&nbsp;&nbsp;
+      <a href="#M000047">red</a>&nbsp;&nbsp;
+      <a href="#M000048">red=</a>&nbsp;&nbsp;
+      </div>
+    </div>
+
+  </div>
+
+
+    <!-- if includes -->
+
+    <div id="section">
+
+
+
+
+
+      
+
+
+    <!-- if method_list -->
+    <div id="methods">
+      <h3 class="section-bar">Public Class methods</h3>
+
+      <div id="method-M000042" class="method-detail">
+        <a name="M000042"></a>
+
+        <div class="method-heading">
+          <a href="RgbaColor.src/M000042.html" target="Code" class="method-signature"
+            onclick="popupCode('RgbaColor.src/M000042.html');return false;">
+          <span class="method-name">new</span><span class="method-args">(...)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+<a href="RgbaColor.html">Imlib2::Color::RgbaColor</a> constructor.
+</p>
+<p>
+Parameters are identical to Imlib2::Color::RgbaColor::new.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000041" class="method-detail">
+        <a name="M000041"></a>
+
+        <div class="method-heading">
+          <a href="RgbaColor.src/M000041.html" target="Code" class="method-signature"
+            onclick="popupCode('RgbaColor.src/M000041.html');return false;">
+          <span class="method-name">new</span><span class="method-args">(...)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Returns a new <a href="RgbaColor.html">Imlib2::Color::RgbaColor</a>.
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  r, g, b, a = 255, 0, 0, 255
+  border = Imlib2::Color::RgbaColor.new r, g, b, a
+
+  values = [255, 0, 0, 255]
+  border = Imlib2::Color::RgbaColor.new values
+</pre>
+        </div>
+      </div>
+
+      <h3 class="section-bar">Public Instance methods</h3>
+
+      <div id="method-M000043" class="method-detail">
+        <a name="M000043"></a>
+
+        <div class="method-heading">
+          <span class="method-name">[]</span><span class="method-args">()</span>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000044" class="method-detail">
+        <a name="M000044"></a>
+
+        <div class="method-heading">
+          <span class="method-name">[]=</span><span class="method-args">(p1, p2)</span>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000057" class="method-detail">
+        <a name="M000057"></a>
+
+        <div class="method-heading">
+          <a href="RgbaColor.src/M000057.html" target="Code" class="method-signature"
+            onclick="popupCode('RgbaColor.src/M000057.html');return false;">
+          <span class="method-name">a</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Get the alpha element of a <a href="RgbaColor.html">RgbaColor</a> object.
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  amount = color.alpha
+  amount = color.a
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000058" class="method-detail">
+        <a name="M000058"></a>
+
+        <div class="method-heading">
+          <a href="RgbaColor.src/M000058.html" target="Code" class="method-signature"
+            onclick="popupCode('RgbaColor.src/M000058.html');return false;">
+          <span class="method-name">a=</span><span class="method-args">(p1)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Set the alpha element of a <a href="RgbaColor.html">RgbaColor</a> object.
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  color.alpha = 255
+  color.a = 255
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000059" class="method-detail">
+        <a name="M000059"></a>
+
+        <div class="method-heading">
+          <a href="RgbaColor.src/M000059.html" target="Code" class="method-signature"
+            onclick="popupCode('RgbaColor.src/M000059.html');return false;">
+          <span class="method-name">alpha</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Get the alpha element of a <a href="RgbaColor.html">RgbaColor</a> object.
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  amount = color.alpha
+  amount = color.a
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000060" class="method-detail">
+        <a name="M000060"></a>
+
+        <div class="method-heading">
+          <a href="RgbaColor.src/M000060.html" target="Code" class="method-signature"
+            onclick="popupCode('RgbaColor.src/M000060.html');return false;">
+          <span class="method-name">alpha=</span><span class="method-args">(p1)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Set the alpha element of a <a href="RgbaColor.html">RgbaColor</a> object.
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  color.alpha = 255
+  color.a = 255
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000053" class="method-detail">
+        <a name="M000053"></a>
+
+        <div class="method-heading">
+          <a href="RgbaColor.src/M000053.html" target="Code" class="method-signature"
+            onclick="popupCode('RgbaColor.src/M000053.html');return false;">
+          <span class="method-name">b</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Get the blue element of a <a href="RgbaColor.html">RgbaColor</a> object.
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  amount = color.blue
+  amount = color.b
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000054" class="method-detail">
+        <a name="M000054"></a>
+
+        <div class="method-heading">
+          <a href="RgbaColor.src/M000054.html" target="Code" class="method-signature"
+            onclick="popupCode('RgbaColor.src/M000054.html');return false;">
+          <span class="method-name">b=</span><span class="method-args">(p1)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Set the blue element of a <a href="RgbaColor.html">RgbaColor</a> object.
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  color.blue = 255
+  color.b = 255
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000055" class="method-detail">
+        <a name="M000055"></a>
+
+        <div class="method-heading">
+          <a href="RgbaColor.src/M000055.html" target="Code" class="method-signature"
+            onclick="popupCode('RgbaColor.src/M000055.html');return false;">
+          <span class="method-name">blue</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Get the blue element of a <a href="RgbaColor.html">RgbaColor</a> object.
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  amount = color.blue
+  amount = color.b
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000056" class="method-detail">
+        <a name="M000056"></a>
+
+        <div class="method-heading">
+          <a href="RgbaColor.src/M000056.html" target="Code" class="method-signature"
+            onclick="popupCode('RgbaColor.src/M000056.html');return false;">
+          <span class="method-name">blue=</span><span class="method-args">(p1)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Set the blue element of a <a href="RgbaColor.html">RgbaColor</a> object.
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  color.blue = 255
+  color.b = 255
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000049" class="method-detail">
+        <a name="M000049"></a>
+
+        <div class="method-heading">
+          <a href="RgbaColor.src/M000049.html" target="Code" class="method-signature"
+            onclick="popupCode('RgbaColor.src/M000049.html');return false;">
+          <span class="method-name">g</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Get the green element of a <a href="RgbaColor.html">RgbaColor</a> object.
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  amount = color.green
+  amount = color.g
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000050" class="method-detail">
+        <a name="M000050"></a>
+
+        <div class="method-heading">
+          <a href="RgbaColor.src/M000050.html" target="Code" class="method-signature"
+            onclick="popupCode('RgbaColor.src/M000050.html');return false;">
+          <span class="method-name">g=</span><span class="method-args">(p1)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Set the green element of a <a href="RgbaColor.html">RgbaColor</a> object.
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  color.green = 255
+  color.g = 255
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000051" class="method-detail">
+        <a name="M000051"></a>
+
+        <div class="method-heading">
+          <a href="RgbaColor.src/M000051.html" target="Code" class="method-signature"
+            onclick="popupCode('RgbaColor.src/M000051.html');return false;">
+          <span class="method-name">green</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Get the green element of a <a href="RgbaColor.html">RgbaColor</a> object.
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  amount = color.green
+  amount = color.g
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000052" class="method-detail">
+        <a name="M000052"></a>
+
+        <div class="method-heading">
+          <a href="RgbaColor.src/M000052.html" target="Code" class="method-signature"
+            onclick="popupCode('RgbaColor.src/M000052.html');return false;">
+          <span class="method-name">green=</span><span class="method-args">(p1)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Set the green element of a <a href="RgbaColor.html">RgbaColor</a> object.
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  color.green = 255
+  color.g = 255
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000045" class="method-detail">
+        <a name="M000045"></a>
+
+        <div class="method-heading">
+          <a href="RgbaColor.src/M000045.html" target="Code" class="method-signature"
+            onclick="popupCode('RgbaColor.src/M000045.html');return false;">
+          <span class="method-name">r</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Get the red element of a <a href="RgbaColor.html">RgbaColor</a> object.
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  amount = color.red
+  amount = color.r
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000046" class="method-detail">
+        <a name="M000046"></a>
+
+        <div class="method-heading">
+          <a href="RgbaColor.src/M000046.html" target="Code" class="method-signature"
+            onclick="popupCode('RgbaColor.src/M000046.html');return false;">
+          <span class="method-name">r=</span><span class="method-args">(p1)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Set the red element of a <a href="RgbaColor.html">RgbaColor</a> object.
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  color.red = 255
+  color.r = 255
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000047" class="method-detail">
+        <a name="M000047"></a>
+
+        <div class="method-heading">
+          <a href="RgbaColor.src/M000047.html" target="Code" class="method-signature"
+            onclick="popupCode('RgbaColor.src/M000047.html');return false;">
+          <span class="method-name">red</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Get the red element of a <a href="RgbaColor.html">RgbaColor</a> object.
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  amount = color.red
+  amount = color.r
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000048" class="method-detail">
+        <a name="M000048"></a>
+
+        <div class="method-heading">
+          <a href="RgbaColor.src/M000048.html" target="Code" class="method-signature"
+            onclick="popupCode('RgbaColor.src/M000048.html');return false;">
+          <span class="method-name">red=</span><span class="method-args">(p1)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Set the red element of a <a href="RgbaColor.html">RgbaColor</a> object.
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  color.red = 255
+  color.r = 255
+</pre>
+        </div>
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+
+<div id="validator-badges">
+  <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+</div>
+
+</body>
+</html>

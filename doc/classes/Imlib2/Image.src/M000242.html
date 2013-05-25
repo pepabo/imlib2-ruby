@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+  <title>save_with_error_return (Imlib2::Image)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="../../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre>/*
+ * Save an Imlib2::Image to a file (error returned as number).
+ * 
+ * Provides access to the low-level imlib_save_image_with_error_return()
+ * call.  You probably want to use Imlib2::Image::save() instead.
+ *
+ * Examples:
+ *   error = image.save_with_error_return 'output_file.png'
+ *   puts 'an error occurred' unless error == 0
+ *
+ */
+static VALUE image_save_with_error_return(VALUE self, VALUE val) {
+</pre>
+</body>
+</html>

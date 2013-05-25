@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+  <title>apply_cmod (Imlib2::Image)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="../../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre>/*
+ * Apply an Imlib2::ColorModifier to the image
+ *
+ * Examples:
+ *   # modify the contrast of the entire image
+ *   cmod = Imlib2::ColorModifier.new
+ *   cmod.contrast = 1.5
+ *   image.apply_cmod color_mod
+ *
+ *   # adjust the gamma of the given rect
+ *   cmod = Imlib2::ColorModifier.new
+ *   cmod.gamma = 0.5
+ *   rect = [10, 10, 20, 40]
+ *   image.apply_color_modifier cmod, rect
+ *
+ */
+static VALUE image_apply_cmod(int argc, VALUE *argv, VALUE self) {
+</pre>
+</body>
+</html>

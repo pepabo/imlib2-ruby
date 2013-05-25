@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+  <title>load (Imlib2::Image)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="../../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre>/*
+ * Load an Imlib2::Image from a file (throws exceptions).
+ *
+ * Examples:
+ *   image = Imlib2::Image.load 'sample_file.png'
+ *
+ *   begin 
+ *     image = Imlib2::Image.load 'sample_file.png'
+ *   rescue Imlib2::FileError
+ *     $stderr.puts 'Couldn't load file: ' + $!
+ *   end
+ *
+ */
+static VALUE image_load(VALUE klass, VALUE filename) {
+</pre>
+</body>
+</html>

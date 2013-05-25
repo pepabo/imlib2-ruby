@@ -1,0 +1,2764 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Class: Imlib2::Context</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript" />
+  <link rel="stylesheet" href="../.././rdoc-style.css" type="text/css" media="screen" />
+  <script type="text/javascript">
+  // <![CDATA[
+
+  function popupCode( url ) {
+    window.open(url, "Code", "resizable=yes,scrollbars=yes,toolbar=no,status=no,height=150,width=400")
+  }
+
+  function toggleCode( id ) {
+    if ( document.getElementById )
+      elem = document.getElementById( id );
+    else if ( document.all )
+      elem = eval( "document.all." + id );
+    else
+      return false;
+
+    elemStyle = elem.style;
+    
+    if ( elemStyle.display != "block" ) {
+      elemStyle.display = "block"
+    } else {
+      elemStyle.display = "none"
+    }
+
+    return true;
+  }
+  
+  // Make codeblocks hidden by default
+  document.writeln( "<style type=\"text/css\">div.method-source-code { display: none }</style>" )
+  
+  // ]]>
+  </script>
+
+</head>
+<body>
+
+
+
+    <div id="classHeader">
+        <table class="header-table">
+        <tr class="top-aligned-row">
+          <td><strong>Class</strong></td>
+          <td class="class-name-in-header">Imlib2::Context</td>
+        </tr>
+        <tr class="top-aligned-row">
+            <td><strong>In:</strong></td>
+            <td>
+                <a href="../../files/imlib2_c.html">
+                imlib2.c
+                </a>
+        &nbsp;(<a href="http://cvs.pablotron.org/cgi-bin/viewcvs.cgi/imlib2-ruby/imlib2.c">CVS</a>)
+        <br />
+            </td>
+        </tr>
+
+        <tr class="top-aligned-row">
+            <td><strong>Parent:</strong></td>
+            <td>
+                Object
+            </td>
+        </tr>
+        </table>
+    </div>
+  <!-- banner header -->
+
+  <div id="bodyContent">
+
+
+
+  <div id="contextContent">
+
+
+
+   </div>
+
+    <div id="method-list">
+      <h3 class="section-bar">Methods</h3>
+
+      <div class="name-list">
+      <a href="#M000140">aa</a>&nbsp;&nbsp;
+      <a href="#M000137">aa=</a>&nbsp;&nbsp;
+      <a href="#M000170">angle</a>&nbsp;&nbsp;
+      <a href="#M000168">angle=</a>&nbsp;&nbsp;
+      <a href="#M000139">anti_alias</a>&nbsp;&nbsp;
+      <a href="#M000136">anti_alias=</a>&nbsp;&nbsp;
+      <a href="#M000224">best_visual</a>&nbsp;&nbsp;
+      <a href="#M000144">blend</a>&nbsp;&nbsp;
+      <a href="#M000142">blend=</a>&nbsp;&nbsp;
+      <a href="#M000190">cliprect</a>&nbsp;&nbsp;
+      <a href="#M000188">cliprect=</a>&nbsp;&nbsp;
+      <a href="#M000212">cmap</a>&nbsp;&nbsp;
+      <a href="#M000208">cmap=</a>&nbsp;&nbsp;
+      <a href="#M000150">cmod</a>&nbsp;&nbsp;
+      <a href="#M000147">cmod=</a>&nbsp;&nbsp;
+      <a href="#M000174">color</a>&nbsp;&nbsp;
+      <a href="#M000172">color=</a>&nbsp;&nbsp;
+      <a href="#M000149">color_modifier</a>&nbsp;&nbsp;
+      <a href="#M000146">color_modifier=</a>&nbsp;&nbsp;
+      <a href="#M000210">colormap</a>&nbsp;&nbsp;
+      <a href="#M000206">colormap=</a>&nbsp;&nbsp;
+      <a href="#M000126">current</a>&nbsp;&nbsp;
+      <a href="#M000166">dir</a>&nbsp;&nbsp;
+      <a href="#M000163">dir=</a>&nbsp;&nbsp;
+      <a href="#M000165">direction</a>&nbsp;&nbsp;
+      <a href="#M000162">direction=</a>&nbsp;&nbsp;
+      <a href="#M000200">display</a>&nbsp;&nbsp;
+      <a href="#M000198">display=</a>&nbsp;&nbsp;
+      <a href="#M000130">dither</a>&nbsp;&nbsp;
+      <a href="#M000128">dither=</a>&nbsp;&nbsp;
+      <a href="#M000134">dither_mask</a>&nbsp;&nbsp;
+      <a href="#M000132">dither_mask=</a>&nbsp;&nbsp;
+      <a href="#M000216">drawable</a>&nbsp;&nbsp;
+      <a href="#M000214">drawable=</a>&nbsp;&nbsp;
+      <a href="#M000196">encoding</a>&nbsp;&nbsp;
+      <a href="#M000193">encoding=</a>&nbsp;&nbsp;
+      <a href="#M000160">font</a>&nbsp;&nbsp;
+      <a href="#M000158">font=</a>&nbsp;&nbsp;
+      <a href="#M000125">get</a>&nbsp;&nbsp;
+      <a href="#M000169">get_angle</a>&nbsp;&nbsp;
+      <a href="#M000138">get_anti_alias</a>&nbsp;&nbsp;
+      <a href="#M000223">get_best_visual</a>&nbsp;&nbsp;
+      <a href="#M000143">get_blend</a>&nbsp;&nbsp;
+      <a href="#M000189">get_cliprect</a>&nbsp;&nbsp;
+      <a href="#M000211">get_cmap</a>&nbsp;&nbsp;
+      <a href="#M000173">get_color</a>&nbsp;&nbsp;
+      <a href="#M000148">get_color_modifier</a>&nbsp;&nbsp;
+      <a href="#M000209">get_colormap</a>&nbsp;&nbsp;
+      <a href="#M000164">get_direction</a>&nbsp;&nbsp;
+      <a href="#M000199">get_display</a>&nbsp;&nbsp;
+      <a href="#M000129">get_dither</a>&nbsp;&nbsp;
+      <a href="#M000133">get_dither_mask</a>&nbsp;&nbsp;
+      <a href="#M000215">get_drawable</a>&nbsp;&nbsp;
+      <a href="#M000194">get_encoding</a>&nbsp;&nbsp;
+      <a href="#M000159">get_font</a>&nbsp;&nbsp;
+      <a href="#M000177">get_gradient</a>&nbsp;&nbsp;
+      <a href="#M000185">get_image</a>&nbsp;&nbsp;
+      <a href="#M000219">get_mask</a>&nbsp;&nbsp;
+      <a href="#M000154">get_operation</a>&nbsp;&nbsp;
+      <a href="#M000181">get_progress_granularity</a>&nbsp;&nbsp;
+      <a href="#M000195">get_ttf_encoding</a>&nbsp;&nbsp;
+      <a href="#M000221">get_visual</a>&nbsp;&nbsp;
+      <a href="#M000203">get_visual</a>&nbsp;&nbsp;
+      <a href="#M000178">gradient</a>&nbsp;&nbsp;
+      <a href="#M000176">gradient=</a>&nbsp;&nbsp;
+      <a href="#M000186">image</a>&nbsp;&nbsp;
+      <a href="#M000184">image=</a>&nbsp;&nbsp;
+      <a href="#M000220">mask</a>&nbsp;&nbsp;
+      <a href="#M000218">mask=</a>&nbsp;&nbsp;
+      <a href="#M000122">new</a>&nbsp;&nbsp;
+      <a href="#M000121">new</a>&nbsp;&nbsp;
+      <a href="#M000156">op</a>&nbsp;&nbsp;
+      <a href="#M000153">op=</a>&nbsp;&nbsp;
+      <a href="#M000155">operation</a>&nbsp;&nbsp;
+      <a href="#M000152">operation=</a>&nbsp;&nbsp;
+      <a href="#M000124">pop</a>&nbsp;&nbsp;
+      <a href="#M000182">progress_granularity</a>&nbsp;&nbsp;
+      <a href="#M000180">progress_granularity=</a>&nbsp;&nbsp;
+      <a href="#M000123">push</a>&nbsp;&nbsp;
+      <a href="#M000167">set_angle</a>&nbsp;&nbsp;
+      <a href="#M000135">set_anti_alias</a>&nbsp;&nbsp;
+      <a href="#M000141">set_blend</a>&nbsp;&nbsp;
+      <a href="#M000187">set_cliprect</a>&nbsp;&nbsp;
+      <a href="#M000207">set_cmap</a>&nbsp;&nbsp;
+      <a href="#M000171">set_color</a>&nbsp;&nbsp;
+      <a href="#M000145">set_color_modifier</a>&nbsp;&nbsp;
+      <a href="#M000205">set_colormap</a>&nbsp;&nbsp;
+      <a href="#M000161">set_direction</a>&nbsp;&nbsp;
+      <a href="#M000197">set_display</a>&nbsp;&nbsp;
+      <a href="#M000127">set_dither</a>&nbsp;&nbsp;
+      <a href="#M000131">set_dither_mask</a>&nbsp;&nbsp;
+      <a href="#M000213">set_drawable</a>&nbsp;&nbsp;
+      <a href="#M000192">set_encoding</a>&nbsp;&nbsp;
+      <a href="#M000157">set_font</a>&nbsp;&nbsp;
+      <a href="#M000175">set_gradient</a>&nbsp;&nbsp;
+      <a href="#M000183">set_image</a>&nbsp;&nbsp;
+      <a href="#M000217">set_mask</a>&nbsp;&nbsp;
+      <a href="#M000151">set_operation</a>&nbsp;&nbsp;
+      <a href="#M000179">set_progress_granularity</a>&nbsp;&nbsp;
+      <a href="#M000191">set_ttf_encoding</a>&nbsp;&nbsp;
+      <a href="#M000201">set_visual</a>&nbsp;&nbsp;
+      <a href="#M000204">visual</a>&nbsp;&nbsp;
+      <a href="#M000222">visual</a>&nbsp;&nbsp;
+      <a href="#M000202">visual=</a>&nbsp;&nbsp;
+      </div>
+    </div>
+
+  </div>
+
+
+    <!-- if includes -->
+
+    <div id="section">
+
+
+
+
+
+      
+
+
+    <!-- if method_list -->
+    <div id="methods">
+      <h3 class="section-bar">Public Class methods</h3>
+
+      <div id="method-M000126" class="method-detail">
+        <a name="M000126"></a>
+
+        <div class="method-heading">
+          <a href="Context.src/M000126.html" target="Code" class="method-signature"
+            onclick="popupCode('Context.src/M000126.html');return false;">
+          <span class="method-name">current</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Return the current context.
+</p>
+<p>
+Example:
+</p>
+<pre>
+  ctx = Imlib2::Context.get
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000125" class="method-detail">
+        <a name="M000125"></a>
+
+        <div class="method-heading">
+          <a href="Context.src/M000125.html" target="Code" class="method-signature"
+            onclick="popupCode('Context.src/M000125.html');return false;">
+          <span class="method-name">get</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Return the current context.
+</p>
+<p>
+Example:
+</p>
+<pre>
+  ctx = Imlib2::Context.get
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000122" class="method-detail">
+        <a name="M000122"></a>
+
+        <div class="method-heading">
+          <a href="Context.src/M000122.html" target="Code" class="method-signature"
+            onclick="popupCode('Context.src/M000122.html');return false;">
+          <span class="method-name">new</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+<a href="Context.html">Imlib2::Context</a> constructor.
+</p>
+<p>
+Currently just a placeholder
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000121" class="method-detail">
+        <a name="M000121"></a>
+
+        <div class="method-heading">
+          <a href="Context.src/M000121.html" target="Code" class="method-signature"
+            onclick="popupCode('Context.src/M000121.html');return false;">
+          <span class="method-name">new</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Return a new <a href="Context.html">Imlib2::Context</a>.
+</p>
+<p>
+Example:
+</p>
+<pre>
+  ctx = Imlib2::Context.new
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000124" class="method-detail">
+        <a name="M000124"></a>
+
+        <div class="method-heading">
+          <a href="Context.src/M000124.html" target="Code" class="method-signature"
+            onclick="popupCode('Context.src/M000124.html');return false;">
+          <span class="method-name">pop</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Pop the top context off the context stack.
+</p>
+<p>
+Example:
+</p>
+<pre>
+  ctx = Imlib2::Context.pop
+</pre>
+        </div>
+      </div>
+
+      <h3 class="section-bar">Public Instance methods</h3>
+
+      <div id="method-M000140" class="method-detail">
+        <a name="M000140"></a>
+
+        <div class="method-heading">
+          <a href="Context.src/M000140.html" target="Code" class="method-signature"
+            onclick="popupCode('Context.src/M000140.html');return false;">
+          <span class="method-name">aa</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Get the <a href="Context.html#M000139">anti_alias</a> flag.
+</p>
+<p>
+Example:
+</p>
+<pre>
+  if ctx.anti_alias == true
+    puts 'anti_alias enabled.'
+  end
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000137" class="method-detail">
+        <a name="M000137"></a>
+
+        <div class="method-heading">
+          <a href="Context.src/M000137.html" target="Code" class="method-signature"
+            onclick="popupCode('Context.src/M000137.html');return false;">
+          <span class="method-name">aa=</span><span class="method-args">(p1)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Set the <a href="Context.html#M000139">anti_alias</a> flag.
+</p>
+<p>
+Example:
+</p>
+<pre>
+  ctx.anti_alias = true
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000170" class="method-detail">
+        <a name="M000170"></a>
+
+        <div class="method-heading">
+          <a href="Context.src/M000170.html" target="Code" class="method-signature"
+            onclick="popupCode('Context.src/M000170.html');return false;">
+          <span class="method-name">angle</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Get the text drawing angle.
+</p>
+<p>
+Example:
+</p>
+<pre>
+  if ctx.dir == Imlib2::Direction::ANGLE
+    puts 'the current font angle is ' &lt;&lt; ctx.angle
+  end
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000168" class="method-detail">
+        <a name="M000168"></a>
+
+        <div class="method-heading">
+          <a href="Context.src/M000168.html" target="Code" class="method-signature"
+            onclick="popupCode('Context.src/M000168.html');return false;">
+          <span class="method-name">angle=</span><span class="method-args">(p1)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Set the text drawing angle.
+</p>
+<p>
+Example:
+</p>
+<pre>
+  ctx.angle = 76.8
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000139" class="method-detail">
+        <a name="M000139"></a>
+
+        <div class="method-heading">
+          <a href="Context.src/M000139.html" target="Code" class="method-signature"
+            onclick="popupCode('Context.src/M000139.html');return false;">
+          <span class="method-name">anti_alias</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Get the <a href="Context.html#M000139">anti_alias</a> flag.
+</p>
+<p>
+Example:
+</p>
+<pre>
+  if ctx.anti_alias == true
+    puts 'anti_alias enabled.'
+  end
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000136" class="method-detail">
+        <a name="M000136"></a>
+
+        <div class="method-heading">
+          <a href="Context.src/M000136.html" target="Code" class="method-signature"
+            onclick="popupCode('Context.src/M000136.html');return false;">
+          <span class="method-name">anti_alias=</span><span class="method-args">(p1)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Set the <a href="Context.html#M000139">anti_alias</a> flag.
+</p>
+<p>
+Example:
+</p>
+<pre>
+  ctx.anti_alias = true
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000224" class="method-detail">
+        <a name="M000224"></a>
+
+        <div class="method-heading">
+          <a href="Context.src/M000224.html" target="Code" class="method-signature"
+            onclick="popupCode('Context.src/M000224.html');return false;">
+          <span class="method-name">best_visual</span><span class="method-args">(...)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Get the current X11 Visual.
+</p>
+<p>
+Note: This method is not available unless <a
+href="../Imlib2.html">Imlib2</a>-Ruby was compiled with X11 support. You
+can check the constant Imlib2::X11_SUPPORT to see if X11 support is
+available.
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  visual = context.get_visual
+  visual = context.visual
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000144" class="method-detail">
+        <a name="M000144"></a>
+
+        <div class="method-heading">
+          <a href="Context.src/M000144.html" target="Code" class="method-signature"
+            onclick="popupCode('Context.src/M000144.html');return false;">
+          <span class="method-name">blend</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Get the blend flag.
+</p>
+<p>
+Example:
+</p>
+<pre>
+  if ctx.blend
+    puts 'blend enabled.'
+  end
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000142" class="method-detail">
+        <a name="M000142"></a>
+
+        <div class="method-heading">
+          <a href="Context.src/M000142.html" target="Code" class="method-signature"
+            onclick="popupCode('Context.src/M000142.html');return false;">
+          <span class="method-name">blend=</span><span class="method-args">(p1)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Set the blend flag.
+</p>
+<p>
+Example:
+</p>
+<pre>
+  ctx.blend = true
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000190" class="method-detail">
+        <a name="M000190"></a>
+
+        <div class="method-heading">
+          <a href="Context.src/M000190.html" target="Code" class="method-signature"
+            onclick="popupCode('Context.src/M000190.html');return false;">
+          <span class="method-name">cliprect</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Get the cliprect.
+</p>
+<p>
+Example:
+</p>
+<pre>
+  x, y, w, h = ctx.cliprect
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000188" class="method-detail">
+        <a name="M000188"></a>
+
+        <div class="method-heading">
+          <a href="Context.src/M000188.html" target="Code" class="method-signature"
+            onclick="popupCode('Context.src/M000188.html');return false;">
+          <span class="method-name">cliprect=</span><span class="method-args">(p1)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Set the cliprect.
+</p>
+<p>
+Example:
+</p>
+<pre>
+  ctx.cliprect = [10, 10, 100, 100]
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000212" class="method-detail">
+        <a name="M000212"></a>
+
+        <div class="method-heading">
+          <span class="method-name">cmap</span><span class="method-args">()</span>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000208" class="method-detail">
+        <a name="M000208"></a>
+
+        <div class="method-heading">
+          <span class="method-name">cmap=</span><span class="method-args">(p1)</span>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000150" class="method-detail">
+        <a name="M000150"></a>
+
+        <div class="method-heading">
+          <a href="Context.src/M000150.html" target="Code" class="method-signature"
+            onclick="popupCode('Context.src/M000150.html');return false;">
+          <span class="method-name">cmod</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Get the current color modifier (<a
+href="ColorModifier.html">Imlib2::ColorModifier</a>).
+</p>
+<p>
+Example:
+</p>
+<pre>
+  cmod = ctx.cmod
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000147" class="method-detail">
+        <a name="M000147"></a>
+
+        <div class="method-heading">
+          <a href="Context.src/M000147.html" target="Code" class="method-signature"
+            onclick="popupCode('Context.src/M000147.html');return false;">
+          <span class="method-name">cmod=</span><span class="method-args">(p1)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Set the current color modifier (<a
+href="ColorModifier.html">Imlib2::ColorModifier</a>).
+</p>
+<p>
+Example:
+</p>
+<pre>
+  ctx.cmod = cmod
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000174" class="method-detail">
+        <a name="M000174"></a>
+
+        <div class="method-heading">
+          <a href="Context.src/M000174.html" target="Code" class="method-signature"
+            onclick="popupCode('Context.src/M000174.html');return false;">
+          <span class="method-name">color</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Get the current color (<a
+href="Color/RgbaColor.html">Imlib2::Color::RgbaColor</a>).
+</p>
+<p>
+Example:
+</p>
+<pre>
+  color = ctx.color
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000172" class="method-detail">
+        <a name="M000172"></a>
+
+        <div class="method-heading">
+          <a href="Context.src/M000172.html" target="Code" class="method-signature"
+            onclick="popupCode('Context.src/M000172.html');return false;">
+          <span class="method-name">color=</span><span class="method-args">(p1)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Set the current color (<a href="Color.html">Imlib2::Color</a>).
+</p>
+<p>
+Example:
+</p>
+<pre>
+  ctx.color = Imlib2::Color::LIGHTGRAY
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000149" class="method-detail">
+        <a name="M000149"></a>
+
+        <div class="method-heading">
+          <a href="Context.src/M000149.html" target="Code" class="method-signature"
+            onclick="popupCode('Context.src/M000149.html');return false;">
+          <span class="method-name">color_modifier</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Get the current color modifier (<a
+href="ColorModifier.html">Imlib2::ColorModifier</a>).
+</p>
+<p>
+Example:
+</p>
+<pre>
+  cmod = ctx.cmod
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000146" class="method-detail">
+        <a name="M000146"></a>
+
+        <div class="method-heading">
+          <a href="Context.src/M000146.html" target="Code" class="method-signature"
+            onclick="popupCode('Context.src/M000146.html');return false;">
+          <span class="method-name">color_modifier=</span><span class="method-args">(p1)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Set the current color modifier (<a
+href="ColorModifier.html">Imlib2::ColorModifier</a>).
+</p>
+<p>
+Example:
+</p>
+<pre>
+  ctx.cmod = cmod
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000210" class="method-detail">
+        <a name="M000210"></a>
+
+        <div class="method-heading">
+          <span class="method-name">colormap</span><span class="method-args">()</span>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000206" class="method-detail">
+        <a name="M000206"></a>
+
+        <div class="method-heading">
+          <span class="method-name">colormap=</span><span class="method-args">(p1)</span>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000166" class="method-detail">
+        <a name="M000166"></a>
+
+        <div class="method-heading">
+          <a href="Context.src/M000166.html" target="Code" class="method-signature"
+            onclick="popupCode('Context.src/M000166.html');return false;">
+          <span class="method-name">dir</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Get the current font direction (<a href="Dir.html">Imlib2::Dir</a> or <a
+href="Direction.html">Imlib2::Direction</a>).
+</p>
+<p>
+Example:
+</p>
+<pre>
+  if ctx.direction != Imlib2::Direction::RIGHT
+    puts 'drawing funny text'
+  end
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000163" class="method-detail">
+        <a name="M000163"></a>
+
+        <div class="method-heading">
+          <a href="Context.src/M000163.html" target="Code" class="method-signature"
+            onclick="popupCode('Context.src/M000163.html');return false;">
+          <span class="method-name">dir=</span><span class="method-args">(p1)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Set the current font direction (<a href="Dir.html">Imlib2::Dir</a> or <a
+href="Direction.html">Imlib2::Direction</a>).
+</p>
+<p>
+Example:
+</p>
+<pre>
+  ctx.direction = Imlib2::Direction::LEFT
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000165" class="method-detail">
+        <a name="M000165"></a>
+
+        <div class="method-heading">
+          <a href="Context.src/M000165.html" target="Code" class="method-signature"
+            onclick="popupCode('Context.src/M000165.html');return false;">
+          <span class="method-name">direction</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Get the current font direction (<a href="Dir.html">Imlib2::Dir</a> or <a
+href="Direction.html">Imlib2::Direction</a>).
+</p>
+<p>
+Example:
+</p>
+<pre>
+  if ctx.direction != Imlib2::Direction::RIGHT
+    puts 'drawing funny text'
+  end
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000162" class="method-detail">
+        <a name="M000162"></a>
+
+        <div class="method-heading">
+          <a href="Context.src/M000162.html" target="Code" class="method-signature"
+            onclick="popupCode('Context.src/M000162.html');return false;">
+          <span class="method-name">direction=</span><span class="method-args">(p1)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Set the current font direction (<a href="Dir.html">Imlib2::Dir</a> or <a
+href="Direction.html">Imlib2::Direction</a>).
+</p>
+<p>
+Example:
+</p>
+<pre>
+  ctx.direction = Imlib2::Direction::LEFT
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000200" class="method-detail">
+        <a name="M000200"></a>
+
+        <div class="method-heading">
+          <a href="Context.src/M000200.html" target="Code" class="method-signature"
+            onclick="popupCode('Context.src/M000200.html');return false;">
+          <span class="method-name">display</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Get the current X11 Display.
+</p>
+<p>
+Note: This method is not available unless <a
+href="../Imlib2.html">Imlib2</a>-Ruby was compiled with X11 support. You
+can check the constant Imlib2::X11_SUPPORT to see if X11 support is
+available.
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  display = context.get_display
+  display = context.display
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000198" class="method-detail">
+        <a name="M000198"></a>
+
+        <div class="method-heading">
+          <a href="Context.src/M000198.html" target="Code" class="method-signature"
+            onclick="popupCode('Context.src/M000198.html');return false;">
+          <span class="method-name">display=</span><span class="method-args">(p1)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Set the current X11 Display.
+</p>
+<p>
+Note: This method is not available unless <a
+href="../Imlib2.html">Imlib2</a>-Ruby was compiled with X11 support. You
+can check the constant Imlib2::X11_SUPPORT to see if X11 support is
+available.
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  context.set_display display
+  context.display = display
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000130" class="method-detail">
+        <a name="M000130"></a>
+
+        <div class="method-heading">
+          <a href="Context.src/M000130.html" target="Code" class="method-signature"
+            onclick="popupCode('Context.src/M000130.html');return false;">
+          <span class="method-name">dither</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Get the dither flag.
+</p>
+<p>
+Example:
+</p>
+<pre>
+  if ctx.dither
+    puts 'dither enabled.'
+  end
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000128" class="method-detail">
+        <a name="M000128"></a>
+
+        <div class="method-heading">
+          <a href="Context.src/M000128.html" target="Code" class="method-signature"
+            onclick="popupCode('Context.src/M000128.html');return false;">
+          <span class="method-name">dither=</span><span class="method-args">(p1)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Set the dither flag.
+</p>
+<p>
+Example:
+</p>
+<pre>
+  ctx.dither = true
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000134" class="method-detail">
+        <a name="M000134"></a>
+
+        <div class="method-heading">
+          <a href="Context.src/M000134.html" target="Code" class="method-signature"
+            onclick="popupCode('Context.src/M000134.html');return false;">
+          <span class="method-name">dither_mask</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Get the <a href="Context.html#M000134">dither_mask</a> flag.
+</p>
+<p>
+Example:
+</p>
+<pre>
+  if ctx.dither_mask == true
+    puts 'dither_mask enabled'
+  end
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000132" class="method-detail">
+        <a name="M000132"></a>
+
+        <div class="method-heading">
+          <a href="Context.src/M000132.html" target="Code" class="method-signature"
+            onclick="popupCode('Context.src/M000132.html');return false;">
+          <span class="method-name">dither_mask=</span><span class="method-args">(p1)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Set the <a href="Context.html#M000134">dither_mask</a> flag.
+</p>
+<p>
+Example:
+</p>
+<pre>
+  ctx.dither_mask = true
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000216" class="method-detail">
+        <a name="M000216"></a>
+
+        <div class="method-heading">
+          <a href="Context.src/M000216.html" target="Code" class="method-signature"
+            onclick="popupCode('Context.src/M000216.html');return false;">
+          <span class="method-name">drawable</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Get the current X11 Drawable.
+</p>
+<p>
+Note: This method is not available unless <a
+href="../Imlib2.html">Imlib2</a>-Ruby was compiled with X11 support. You
+can check the constant Imlib2::X11_SUPPORT to see if X11 support is
+available.
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  drawable = context.get_drawable
+  drawable = context.drawable
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000214" class="method-detail">
+        <a name="M000214"></a>
+
+        <div class="method-heading">
+          <a href="Context.src/M000214.html" target="Code" class="method-signature"
+            onclick="popupCode('Context.src/M000214.html');return false;">
+          <span class="method-name">drawable=</span><span class="method-args">(p1)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Set the current X11 Drawable.
+</p>
+<p>
+Note: This method is not available unless <a
+href="../Imlib2.html">Imlib2</a>-Ruby was compiled with X11 support. You
+can check the constant Imlib2::X11_SUPPORT to see if X11 support is
+available.
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  context.set_drawable drawable
+  context.drawable = drawable
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000196" class="method-detail">
+        <a name="M000196"></a>
+
+        <div class="method-heading">
+          <a href="Context.src/M000196.html" target="Code" class="method-signature"
+            onclick="popupCode('Context.src/M000196.html');return false;">
+          <span class="method-name">encoding</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Get the current TrueType <a href="Font.html">Font</a> <a
+href="Encoding.html">Encoding</a>.
+</p>
+<p>
+Example:
+</p>
+<pre>
+  if ctx.encoding == Imlib2::Encoding::ISO_8859_1
+    puts 'using ISO-8859-1 encoding'
+  end
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000193" class="method-detail">
+        <a name="M000193"></a>
+
+        <div class="method-heading">
+          <a href="Context.src/M000193.html" target="Code" class="method-signature"
+            onclick="popupCode('Context.src/M000193.html');return false;">
+          <span class="method-name">encoding=</span><span class="method-args">(p1)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Set the current TrueType <a href="Font.html">Font</a> <a
+href="Encoding.html">Encoding</a>.
+</p>
+<p>
+Example:
+</p>
+<pre>
+  ctx.encoding = Imlib2::Encoding::ISO_8859_5
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000160" class="method-detail">
+        <a name="M000160"></a>
+
+        <div class="method-heading">
+          <a href="Context.src/M000160.html" target="Code" class="method-signature"
+            onclick="popupCode('Context.src/M000160.html');return false;">
+          <span class="method-name">font</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Get the current font (<a href="Font.html">Imlib2::Font</a>).
+</p>
+<p>
+Example:
+</p>
+<pre>
+  font = ctx.font
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000158" class="method-detail">
+        <a name="M000158"></a>
+
+        <div class="method-heading">
+          <a href="Context.src/M000158.html" target="Code" class="method-signature"
+            onclick="popupCode('Context.src/M000158.html');return false;">
+          <span class="method-name">font=</span><span class="method-args">(p1)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Set the current font (<a href="Font.html">Imlib2::Font</a>).
+</p>
+<p>
+Example:
+</p>
+<pre>
+  ctx.font = Imlib2::Font.new 'helvetica/12'
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000169" class="method-detail">
+        <a name="M000169"></a>
+
+        <div class="method-heading">
+          <a href="Context.src/M000169.html" target="Code" class="method-signature"
+            onclick="popupCode('Context.src/M000169.html');return false;">
+          <span class="method-name">get_angle</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Get the text drawing angle.
+</p>
+<p>
+Example:
+</p>
+<pre>
+  if ctx.dir == Imlib2::Direction::ANGLE
+    puts 'the current font angle is ' &lt;&lt; ctx.angle
+  end
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000138" class="method-detail">
+        <a name="M000138"></a>
+
+        <div class="method-heading">
+          <a href="Context.src/M000138.html" target="Code" class="method-signature"
+            onclick="popupCode('Context.src/M000138.html');return false;">
+          <span class="method-name">get_anti_alias</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Get the <a href="Context.html#M000139">anti_alias</a> flag.
+</p>
+<p>
+Example:
+</p>
+<pre>
+  if ctx.anti_alias == true
+    puts 'anti_alias enabled.'
+  end
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000223" class="method-detail">
+        <a name="M000223"></a>
+
+        <div class="method-heading">
+          <a href="Context.src/M000223.html" target="Code" class="method-signature"
+            onclick="popupCode('Context.src/M000223.html');return false;">
+          <span class="method-name">get_best_visual</span><span class="method-args">(...)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Get the current X11 Visual.
+</p>
+<p>
+Note: This method is not available unless <a
+href="../Imlib2.html">Imlib2</a>-Ruby was compiled with X11 support. You
+can check the constant Imlib2::X11_SUPPORT to see if X11 support is
+available.
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  visual = context.get_visual
+  visual = context.visual
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000143" class="method-detail">
+        <a name="M000143"></a>
+
+        <div class="method-heading">
+          <a href="Context.src/M000143.html" target="Code" class="method-signature"
+            onclick="popupCode('Context.src/M000143.html');return false;">
+          <span class="method-name">get_blend</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Get the blend flag.
+</p>
+<p>
+Example:
+</p>
+<pre>
+  if ctx.blend
+    puts 'blend enabled.'
+  end
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000189" class="method-detail">
+        <a name="M000189"></a>
+
+        <div class="method-heading">
+          <a href="Context.src/M000189.html" target="Code" class="method-signature"
+            onclick="popupCode('Context.src/M000189.html');return false;">
+          <span class="method-name">get_cliprect</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Get the cliprect.
+</p>
+<p>
+Example:
+</p>
+<pre>
+  x, y, w, h = ctx.cliprect
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000211" class="method-detail">
+        <a name="M000211"></a>
+
+        <div class="method-heading">
+          <span class="method-name">get_cmap</span><span class="method-args">()</span>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000173" class="method-detail">
+        <a name="M000173"></a>
+
+        <div class="method-heading">
+          <a href="Context.src/M000173.html" target="Code" class="method-signature"
+            onclick="popupCode('Context.src/M000173.html');return false;">
+          <span class="method-name">get_color</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Get the current color (<a
+href="Color/RgbaColor.html">Imlib2::Color::RgbaColor</a>).
+</p>
+<p>
+Example:
+</p>
+<pre>
+  color = ctx.color
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000148" class="method-detail">
+        <a name="M000148"></a>
+
+        <div class="method-heading">
+          <a href="Context.src/M000148.html" target="Code" class="method-signature"
+            onclick="popupCode('Context.src/M000148.html');return false;">
+          <span class="method-name">get_color_modifier</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Get the current color modifier (<a
+href="ColorModifier.html">Imlib2::ColorModifier</a>).
+</p>
+<p>
+Example:
+</p>
+<pre>
+  cmod = ctx.cmod
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000209" class="method-detail">
+        <a name="M000209"></a>
+
+        <div class="method-heading">
+          <span class="method-name">get_colormap</span><span class="method-args">()</span>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000164" class="method-detail">
+        <a name="M000164"></a>
+
+        <div class="method-heading">
+          <a href="Context.src/M000164.html" target="Code" class="method-signature"
+            onclick="popupCode('Context.src/M000164.html');return false;">
+          <span class="method-name">get_direction</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Get the current font direction (<a href="Dir.html">Imlib2::Dir</a> or <a
+href="Direction.html">Imlib2::Direction</a>).
+</p>
+<p>
+Example:
+</p>
+<pre>
+  if ctx.direction != Imlib2::Direction::RIGHT
+    puts 'drawing funny text'
+  end
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000199" class="method-detail">
+        <a name="M000199"></a>
+
+        <div class="method-heading">
+          <a href="Context.src/M000199.html" target="Code" class="method-signature"
+            onclick="popupCode('Context.src/M000199.html');return false;">
+          <span class="method-name">get_display</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Get the current X11 Display.
+</p>
+<p>
+Note: This method is not available unless <a
+href="../Imlib2.html">Imlib2</a>-Ruby was compiled with X11 support. You
+can check the constant Imlib2::X11_SUPPORT to see if X11 support is
+available.
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  display = context.get_display
+  display = context.display
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000129" class="method-detail">
+        <a name="M000129"></a>
+
+        <div class="method-heading">
+          <a href="Context.src/M000129.html" target="Code" class="method-signature"
+            onclick="popupCode('Context.src/M000129.html');return false;">
+          <span class="method-name">get_dither</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Get the dither flag.
+</p>
+<p>
+Example:
+</p>
+<pre>
+  if ctx.dither
+    puts 'dither enabled.'
+  end
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000133" class="method-detail">
+        <a name="M000133"></a>
+
+        <div class="method-heading">
+          <a href="Context.src/M000133.html" target="Code" class="method-signature"
+            onclick="popupCode('Context.src/M000133.html');return false;">
+          <span class="method-name">get_dither_mask</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Get the <a href="Context.html#M000134">dither_mask</a> flag.
+</p>
+<p>
+Example:
+</p>
+<pre>
+  if ctx.dither_mask == true
+    puts 'dither_mask enabled'
+  end
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000215" class="method-detail">
+        <a name="M000215"></a>
+
+        <div class="method-heading">
+          <a href="Context.src/M000215.html" target="Code" class="method-signature"
+            onclick="popupCode('Context.src/M000215.html');return false;">
+          <span class="method-name">get_drawable</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Get the current X11 Drawable.
+</p>
+<p>
+Note: This method is not available unless <a
+href="../Imlib2.html">Imlib2</a>-Ruby was compiled with X11 support. You
+can check the constant Imlib2::X11_SUPPORT to see if X11 support is
+available.
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  drawable = context.get_drawable
+  drawable = context.drawable
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000194" class="method-detail">
+        <a name="M000194"></a>
+
+        <div class="method-heading">
+          <a href="Context.src/M000194.html" target="Code" class="method-signature"
+            onclick="popupCode('Context.src/M000194.html');return false;">
+          <span class="method-name">get_encoding</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Get the current TrueType <a href="Font.html">Font</a> <a
+href="Encoding.html">Encoding</a>.
+</p>
+<p>
+Example:
+</p>
+<pre>
+  if ctx.encoding == Imlib2::Encoding::ISO_8859_1
+    puts 'using ISO-8859-1 encoding'
+  end
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000159" class="method-detail">
+        <a name="M000159"></a>
+
+        <div class="method-heading">
+          <a href="Context.src/M000159.html" target="Code" class="method-signature"
+            onclick="popupCode('Context.src/M000159.html');return false;">
+          <span class="method-name">get_font</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Get the current font (<a href="Font.html">Imlib2::Font</a>).
+</p>
+<p>
+Example:
+</p>
+<pre>
+  font = ctx.font
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000177" class="method-detail">
+        <a name="M000177"></a>
+
+        <div class="method-heading">
+          <a href="Context.src/M000177.html" target="Code" class="method-signature"
+            onclick="popupCode('Context.src/M000177.html');return false;">
+          <span class="method-name">get_gradient</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Get the current gradient (<a href="Gradient.html">Imlib2::Gradient</a>).
+</p>
+<p>
+Example:
+</p>
+<pre>
+  grad = ctx.gradient
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000185" class="method-detail">
+        <a name="M000185"></a>
+
+        <div class="method-heading">
+          <a href="Context.src/M000185.html" target="Code" class="method-signature"
+            onclick="popupCode('Context.src/M000185.html');return false;">
+          <span class="method-name">get_image</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Get the current image (<a href="Image.html">Imlib2::Image</a>).
+</p>
+<p>
+Note that this function is not useful at the moment since all image
+instance methods blindly blow away the image and color context. So you
+cannot safely mix image context and image instance methods.
+</p>
+<p>
+Example:
+</p>
+<pre>
+  im = ctx.image
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000219" class="method-detail">
+        <a name="M000219"></a>
+
+        <div class="method-heading">
+          <a href="Context.src/M000219.html" target="Code" class="method-signature"
+            onclick="popupCode('Context.src/M000219.html');return false;">
+          <span class="method-name">get_mask</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Get the current X11 Mask.
+</p>
+<p>
+Note: This method is not available unless <a
+href="../Imlib2.html">Imlib2</a>-Ruby was compiled with X11 support. You
+can check the constant Imlib2::X11_SUPPORT to see if X11 support is
+available.
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  mask = context.get_mask
+  mask = context.mask
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000154" class="method-detail">
+        <a name="M000154"></a>
+
+        <div class="method-heading">
+          <a href="Context.src/M000154.html" target="Code" class="method-signature"
+            onclick="popupCode('Context.src/M000154.html');return false;">
+          <span class="method-name">get_operation</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Get the current operation (<a href="Op.html">Imlib2::Op</a> or <a
+href="Operation.html">Imlib2::Operation</a>).
+</p>
+<p>
+Example:
+</p>
+<pre>
+  if ctx.op == Imlib2::Op::COPY
+    puts 'copy operation'
+  end
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000181" class="method-detail">
+        <a name="M000181"></a>
+
+        <div class="method-heading">
+          <a href="Context.src/M000181.html" target="Code" class="method-signature"
+            onclick="popupCode('Context.src/M000181.html');return false;">
+          <span class="method-name">get_progress_granularity</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Get the progress callback granularity.
+</p>
+<p>
+This function is not useful at the moment since you cannot specify progress
+callbacks from within Ruby (this is a TODO item).
+</p>
+<p>
+Example:
+</p>
+<pre>
+  granularity = ctx.progress_granularity
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000195" class="method-detail">
+        <a name="M000195"></a>
+
+        <div class="method-heading">
+          <a href="Context.src/M000195.html" target="Code" class="method-signature"
+            onclick="popupCode('Context.src/M000195.html');return false;">
+          <span class="method-name">get_ttf_encoding</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Get the current TrueType <a href="Font.html">Font</a> <a
+href="Encoding.html">Encoding</a>.
+</p>
+<p>
+Example:
+</p>
+<pre>
+  if ctx.encoding == Imlib2::Encoding::ISO_8859_1
+    puts 'using ISO-8859-1 encoding'
+  end
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000221" class="method-detail">
+        <a name="M000221"></a>
+
+        <div class="method-heading">
+          <a href="Context.src/M000221.html" target="Code" class="method-signature"
+            onclick="popupCode('Context.src/M000221.html');return false;">
+          <span class="method-name">get_visual</span><span class="method-args">(...)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Get the current X11 Visual.
+</p>
+<p>
+Note: This method is not available unless <a
+href="../Imlib2.html">Imlib2</a>-Ruby was compiled with X11 support. You
+can check the constant Imlib2::X11_SUPPORT to see if X11 support is
+available.
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  visual = context.get_visual
+  visual = context.visual
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000203" class="method-detail">
+        <a name="M000203"></a>
+
+        <div class="method-heading">
+          <a href="Context.src/M000203.html" target="Code" class="method-signature"
+            onclick="popupCode('Context.src/M000203.html');return false;">
+          <span class="method-name">get_visual</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Get the current X11 Visual.
+</p>
+<p>
+Note: This method is not available unless <a
+href="../Imlib2.html">Imlib2</a>-Ruby was compiled with X11 support. You
+can check the constant Imlib2::X11_SUPPORT to see if X11 support is
+available.
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  visual = context.get_visual
+  visual = context.visual
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000178" class="method-detail">
+        <a name="M000178"></a>
+
+        <div class="method-heading">
+          <a href="Context.src/M000178.html" target="Code" class="method-signature"
+            onclick="popupCode('Context.src/M000178.html');return false;">
+          <span class="method-name">gradient</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Get the current gradient (<a href="Gradient.html">Imlib2::Gradient</a>).
+</p>
+<p>
+Example:
+</p>
+<pre>
+  grad = ctx.gradient
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000176" class="method-detail">
+        <a name="M000176"></a>
+
+        <div class="method-heading">
+          <a href="Context.src/M000176.html" target="Code" class="method-signature"
+            onclick="popupCode('Context.src/M000176.html');return false;">
+          <span class="method-name">gradient=</span><span class="method-args">(p1)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Set the current gradient (<a href="Gradient.html">Imlib2::Gradient</a>).
+</p>
+<p>
+Example:
+</p>
+<pre>
+  ctx.gradient = grad
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000186" class="method-detail">
+        <a name="M000186"></a>
+
+        <div class="method-heading">
+          <a href="Context.src/M000186.html" target="Code" class="method-signature"
+            onclick="popupCode('Context.src/M000186.html');return false;">
+          <span class="method-name">image</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Get the current image (<a href="Image.html">Imlib2::Image</a>).
+</p>
+<p>
+Note that this function is not useful at the moment since all image
+instance methods blindly blow away the image and color context. So you
+cannot safely mix image context and image instance methods.
+</p>
+<p>
+Example:
+</p>
+<pre>
+  im = ctx.image
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000184" class="method-detail">
+        <a name="M000184"></a>
+
+        <div class="method-heading">
+          <a href="Context.src/M000184.html" target="Code" class="method-signature"
+            onclick="popupCode('Context.src/M000184.html');return false;">
+          <span class="method-name">image=</span><span class="method-args">(p1)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Set the current image (<a href="Image.html">Imlib2::Image</a>).
+</p>
+<p>
+Note that this function is not useful at the moment since all image
+instance methods blindly blow away the image and color context. So you
+cannot safely mix image context and image instance methods.
+</p>
+<p>
+Example:
+</p>
+<pre>
+  ctx.image = image
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000220" class="method-detail">
+        <a name="M000220"></a>
+
+        <div class="method-heading">
+          <a href="Context.src/M000220.html" target="Code" class="method-signature"
+            onclick="popupCode('Context.src/M000220.html');return false;">
+          <span class="method-name">mask</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Get the current X11 Mask.
+</p>
+<p>
+Note: This method is not available unless <a
+href="../Imlib2.html">Imlib2</a>-Ruby was compiled with X11 support. You
+can check the constant Imlib2::X11_SUPPORT to see if X11 support is
+available.
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  mask = context.get_mask
+  mask = context.mask
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000218" class="method-detail">
+        <a name="M000218"></a>
+
+        <div class="method-heading">
+          <a href="Context.src/M000218.html" target="Code" class="method-signature"
+            onclick="popupCode('Context.src/M000218.html');return false;">
+          <span class="method-name">mask=</span><span class="method-args">(p1)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Set the current X11 Mask.
+</p>
+<p>
+Note: This method is not available unless <a
+href="../Imlib2.html">Imlib2</a>-Ruby was compiled with X11 support. You
+can check the constant Imlib2::X11_SUPPORT to see if X11 support is
+available.
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  context.set_mask mask
+  context.mask = mask
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000156" class="method-detail">
+        <a name="M000156"></a>
+
+        <div class="method-heading">
+          <a href="Context.src/M000156.html" target="Code" class="method-signature"
+            onclick="popupCode('Context.src/M000156.html');return false;">
+          <span class="method-name">op</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Get the current operation (<a href="Op.html">Imlib2::Op</a> or <a
+href="Operation.html">Imlib2::Operation</a>).
+</p>
+<p>
+Example:
+</p>
+<pre>
+  if ctx.op == Imlib2::Op::COPY
+    puts 'copy operation'
+  end
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000153" class="method-detail">
+        <a name="M000153"></a>
+
+        <div class="method-heading">
+          <a href="Context.src/M000153.html" target="Code" class="method-signature"
+            onclick="popupCode('Context.src/M000153.html');return false;">
+          <span class="method-name">op=</span><span class="method-args">(p1)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Set the current operation (<a href="Op.html">Imlib2::Op</a> or <a
+href="Operation.html">Imlib2::Operation</a>).
+</p>
+<p>
+Example:
+</p>
+<pre>
+  ctx.operation = Imlib2::Op::COPY
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000155" class="method-detail">
+        <a name="M000155"></a>
+
+        <div class="method-heading">
+          <a href="Context.src/M000155.html" target="Code" class="method-signature"
+            onclick="popupCode('Context.src/M000155.html');return false;">
+          <span class="method-name">operation</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Get the current operation (<a href="Op.html">Imlib2::Op</a> or <a
+href="Operation.html">Imlib2::Operation</a>).
+</p>
+<p>
+Example:
+</p>
+<pre>
+  if ctx.op == Imlib2::Op::COPY
+    puts 'copy operation'
+  end
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000152" class="method-detail">
+        <a name="M000152"></a>
+
+        <div class="method-heading">
+          <a href="Context.src/M000152.html" target="Code" class="method-signature"
+            onclick="popupCode('Context.src/M000152.html');return false;">
+          <span class="method-name">operation=</span><span class="method-args">(p1)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Set the current operation (<a href="Op.html">Imlib2::Op</a> or <a
+href="Operation.html">Imlib2::Operation</a>).
+</p>
+<p>
+Example:
+</p>
+<pre>
+  ctx.operation = Imlib2::Op::COPY
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000182" class="method-detail">
+        <a name="M000182"></a>
+
+        <div class="method-heading">
+          <a href="Context.src/M000182.html" target="Code" class="method-signature"
+            onclick="popupCode('Context.src/M000182.html');return false;">
+          <span class="method-name">progress_granularity</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Get the progress callback granularity.
+</p>
+<p>
+This function is not useful at the moment since you cannot specify progress
+callbacks from within Ruby (this is a TODO item).
+</p>
+<p>
+Example:
+</p>
+<pre>
+  granularity = ctx.progress_granularity
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000180" class="method-detail">
+        <a name="M000180"></a>
+
+        <div class="method-heading">
+          <a href="Context.src/M000180.html" target="Code" class="method-signature"
+            onclick="popupCode('Context.src/M000180.html');return false;">
+          <span class="method-name">progress_granularity=</span><span class="method-args">(p1)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Set the progress callback granularity.
+</p>
+<p>
+This function is not useful at the moment since you cannot specify progress
+callbacks from within ruby (this is a TODO item).
+</p>
+<p>
+Example:
+</p>
+<pre>
+  ctx.progress_granularity = 10
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000123" class="method-detail">
+        <a name="M000123"></a>
+
+        <div class="method-heading">
+          <a href="Context.src/M000123.html" target="Code" class="method-signature"
+            onclick="popupCode('Context.src/M000123.html');return false;">
+          <span class="method-name">push</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Push this context onto the context stack.
+</p>
+<p>
+Example:
+</p>
+<pre>
+  ctx.push
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000167" class="method-detail">
+        <a name="M000167"></a>
+
+        <div class="method-heading">
+          <a href="Context.src/M000167.html" target="Code" class="method-signature"
+            onclick="popupCode('Context.src/M000167.html');return false;">
+          <span class="method-name">set_angle</span><span class="method-args">(p1)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Set the text drawing angle.
+</p>
+<p>
+Example:
+</p>
+<pre>
+  ctx.angle = 76.8
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000135" class="method-detail">
+        <a name="M000135"></a>
+
+        <div class="method-heading">
+          <a href="Context.src/M000135.html" target="Code" class="method-signature"
+            onclick="popupCode('Context.src/M000135.html');return false;">
+          <span class="method-name">set_anti_alias</span><span class="method-args">(p1)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Set the <a href="Context.html#M000139">anti_alias</a> flag.
+</p>
+<p>
+Example:
+</p>
+<pre>
+  ctx.anti_alias = true
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000141" class="method-detail">
+        <a name="M000141"></a>
+
+        <div class="method-heading">
+          <a href="Context.src/M000141.html" target="Code" class="method-signature"
+            onclick="popupCode('Context.src/M000141.html');return false;">
+          <span class="method-name">set_blend</span><span class="method-args">(p1)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Set the blend flag.
+</p>
+<p>
+Example:
+</p>
+<pre>
+  ctx.blend = true
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000187" class="method-detail">
+        <a name="M000187"></a>
+
+        <div class="method-heading">
+          <a href="Context.src/M000187.html" target="Code" class="method-signature"
+            onclick="popupCode('Context.src/M000187.html');return false;">
+          <span class="method-name">set_cliprect</span><span class="method-args">(p1)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Set the cliprect.
+</p>
+<p>
+Example:
+</p>
+<pre>
+  ctx.cliprect = [10, 10, 100, 100]
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000207" class="method-detail">
+        <a name="M000207"></a>
+
+        <div class="method-heading">
+          <span class="method-name">set_cmap</span><span class="method-args">(p1)</span>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000171" class="method-detail">
+        <a name="M000171"></a>
+
+        <div class="method-heading">
+          <a href="Context.src/M000171.html" target="Code" class="method-signature"
+            onclick="popupCode('Context.src/M000171.html');return false;">
+          <span class="method-name">set_color</span><span class="method-args">(p1)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Set the current color (<a href="Color.html">Imlib2::Color</a>).
+</p>
+<p>
+Example:
+</p>
+<pre>
+  ctx.color = Imlib2::Color::LIGHTGRAY
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000145" class="method-detail">
+        <a name="M000145"></a>
+
+        <div class="method-heading">
+          <a href="Context.src/M000145.html" target="Code" class="method-signature"
+            onclick="popupCode('Context.src/M000145.html');return false;">
+          <span class="method-name">set_color_modifier</span><span class="method-args">(p1)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Set the current color modifier (<a
+href="ColorModifier.html">Imlib2::ColorModifier</a>).
+</p>
+<p>
+Example:
+</p>
+<pre>
+  ctx.cmod = cmod
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000205" class="method-detail">
+        <a name="M000205"></a>
+
+        <div class="method-heading">
+          <span class="method-name">set_colormap</span><span class="method-args">(p1)</span>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000161" class="method-detail">
+        <a name="M000161"></a>
+
+        <div class="method-heading">
+          <a href="Context.src/M000161.html" target="Code" class="method-signature"
+            onclick="popupCode('Context.src/M000161.html');return false;">
+          <span class="method-name">set_direction</span><span class="method-args">(p1)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Set the current font direction (<a href="Dir.html">Imlib2::Dir</a> or <a
+href="Direction.html">Imlib2::Direction</a>).
+</p>
+<p>
+Example:
+</p>
+<pre>
+  ctx.direction = Imlib2::Direction::LEFT
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000197" class="method-detail">
+        <a name="M000197"></a>
+
+        <div class="method-heading">
+          <a href="Context.src/M000197.html" target="Code" class="method-signature"
+            onclick="popupCode('Context.src/M000197.html');return false;">
+          <span class="method-name">set_display</span><span class="method-args">(p1)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Set the current X11 Display.
+</p>
+<p>
+Note: This method is not available unless <a
+href="../Imlib2.html">Imlib2</a>-Ruby was compiled with X11 support. You
+can check the constant Imlib2::X11_SUPPORT to see if X11 support is
+available.
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  context.set_display display
+  context.display = display
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000127" class="method-detail">
+        <a name="M000127"></a>
+
+        <div class="method-heading">
+          <a href="Context.src/M000127.html" target="Code" class="method-signature"
+            onclick="popupCode('Context.src/M000127.html');return false;">
+          <span class="method-name">set_dither</span><span class="method-args">(p1)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Set the dither flag.
+</p>
+<p>
+Example:
+</p>
+<pre>
+  ctx.dither = true
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000131" class="method-detail">
+        <a name="M000131"></a>
+
+        <div class="method-heading">
+          <a href="Context.src/M000131.html" target="Code" class="method-signature"
+            onclick="popupCode('Context.src/M000131.html');return false;">
+          <span class="method-name">set_dither_mask</span><span class="method-args">(p1)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Set the <a href="Context.html#M000134">dither_mask</a> flag.
+</p>
+<p>
+Example:
+</p>
+<pre>
+  ctx.dither_mask = true
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000213" class="method-detail">
+        <a name="M000213"></a>
+
+        <div class="method-heading">
+          <a href="Context.src/M000213.html" target="Code" class="method-signature"
+            onclick="popupCode('Context.src/M000213.html');return false;">
+          <span class="method-name">set_drawable</span><span class="method-args">(p1)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Set the current X11 Drawable.
+</p>
+<p>
+Note: This method is not available unless <a
+href="../Imlib2.html">Imlib2</a>-Ruby was compiled with X11 support. You
+can check the constant Imlib2::X11_SUPPORT to see if X11 support is
+available.
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  context.set_drawable drawable
+  context.drawable = drawable
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000192" class="method-detail">
+        <a name="M000192"></a>
+
+        <div class="method-heading">
+          <a href="Context.src/M000192.html" target="Code" class="method-signature"
+            onclick="popupCode('Context.src/M000192.html');return false;">
+          <span class="method-name">set_encoding</span><span class="method-args">(p1)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Set the current TrueType <a href="Font.html">Font</a> <a
+href="Encoding.html">Encoding</a>.
+</p>
+<p>
+Example:
+</p>
+<pre>
+  ctx.encoding = Imlib2::Encoding::ISO_8859_5
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000157" class="method-detail">
+        <a name="M000157"></a>
+
+        <div class="method-heading">
+          <a href="Context.src/M000157.html" target="Code" class="method-signature"
+            onclick="popupCode('Context.src/M000157.html');return false;">
+          <span class="method-name">set_font</span><span class="method-args">(p1)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Set the current font (<a href="Font.html">Imlib2::Font</a>).
+</p>
+<p>
+Example:
+</p>
+<pre>
+  ctx.font = Imlib2::Font.new 'helvetica/12'
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000175" class="method-detail">
+        <a name="M000175"></a>
+
+        <div class="method-heading">
+          <a href="Context.src/M000175.html" target="Code" class="method-signature"
+            onclick="popupCode('Context.src/M000175.html');return false;">
+          <span class="method-name">set_gradient</span><span class="method-args">(p1)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Set the current gradient (<a href="Gradient.html">Imlib2::Gradient</a>).
+</p>
+<p>
+Example:
+</p>
+<pre>
+  ctx.gradient = grad
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000183" class="method-detail">
+        <a name="M000183"></a>
+
+        <div class="method-heading">
+          <a href="Context.src/M000183.html" target="Code" class="method-signature"
+            onclick="popupCode('Context.src/M000183.html');return false;">
+          <span class="method-name">set_image</span><span class="method-args">(p1)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Set the current image (<a href="Image.html">Imlib2::Image</a>).
+</p>
+<p>
+Note that this function is not useful at the moment since all image
+instance methods blindly blow away the image and color context. So you
+cannot safely mix image context and image instance methods.
+</p>
+<p>
+Example:
+</p>
+<pre>
+  ctx.image = image
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000217" class="method-detail">
+        <a name="M000217"></a>
+
+        <div class="method-heading">
+          <a href="Context.src/M000217.html" target="Code" class="method-signature"
+            onclick="popupCode('Context.src/M000217.html');return false;">
+          <span class="method-name">set_mask</span><span class="method-args">(p1)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Set the current X11 Mask.
+</p>
+<p>
+Note: This method is not available unless <a
+href="../Imlib2.html">Imlib2</a>-Ruby was compiled with X11 support. You
+can check the constant Imlib2::X11_SUPPORT to see if X11 support is
+available.
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  context.set_mask mask
+  context.mask = mask
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000151" class="method-detail">
+        <a name="M000151"></a>
+
+        <div class="method-heading">
+          <a href="Context.src/M000151.html" target="Code" class="method-signature"
+            onclick="popupCode('Context.src/M000151.html');return false;">
+          <span class="method-name">set_operation</span><span class="method-args">(p1)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Set the current operation (<a href="Op.html">Imlib2::Op</a> or <a
+href="Operation.html">Imlib2::Operation</a>).
+</p>
+<p>
+Example:
+</p>
+<pre>
+  ctx.operation = Imlib2::Op::COPY
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000179" class="method-detail">
+        <a name="M000179"></a>
+
+        <div class="method-heading">
+          <a href="Context.src/M000179.html" target="Code" class="method-signature"
+            onclick="popupCode('Context.src/M000179.html');return false;">
+          <span class="method-name">set_progress_granularity</span><span class="method-args">(p1)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Set the progress callback granularity.
+</p>
+<p>
+This function is not useful at the moment since you cannot specify progress
+callbacks from within ruby (this is a TODO item).
+</p>
+<p>
+Example:
+</p>
+<pre>
+  ctx.progress_granularity = 10
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000191" class="method-detail">
+        <a name="M000191"></a>
+
+        <div class="method-heading">
+          <a href="Context.src/M000191.html" target="Code" class="method-signature"
+            onclick="popupCode('Context.src/M000191.html');return false;">
+          <span class="method-name">set_ttf_encoding</span><span class="method-args">(p1)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Set the current TrueType <a href="Font.html">Font</a> <a
+href="Encoding.html">Encoding</a>.
+</p>
+<p>
+Example:
+</p>
+<pre>
+  ctx.encoding = Imlib2::Encoding::ISO_8859_5
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000201" class="method-detail">
+        <a name="M000201"></a>
+
+        <div class="method-heading">
+          <a href="Context.src/M000201.html" target="Code" class="method-signature"
+            onclick="popupCode('Context.src/M000201.html');return false;">
+          <span class="method-name">set_visual</span><span class="method-args">(p1)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Set the current X11 Visual.
+</p>
+<p>
+Note: This method is not available unless <a
+href="../Imlib2.html">Imlib2</a>-Ruby was compiled with X11 support. You
+can check the constant Imlib2::X11_SUPPORT to see if X11 support is
+available.
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  context.set_visual visual
+  context.visual = visual
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000204" class="method-detail">
+        <a name="M000204"></a>
+
+        <div class="method-heading">
+          <a href="Context.src/M000204.html" target="Code" class="method-signature"
+            onclick="popupCode('Context.src/M000204.html');return false;">
+          <span class="method-name">visual</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Get the current X11 Visual.
+</p>
+<p>
+Note: This method is not available unless <a
+href="../Imlib2.html">Imlib2</a>-Ruby was compiled with X11 support. You
+can check the constant Imlib2::X11_SUPPORT to see if X11 support is
+available.
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  visual = context.get_visual
+  visual = context.visual
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000222" class="method-detail">
+        <a name="M000222"></a>
+
+        <div class="method-heading">
+          <a href="Context.src/M000222.html" target="Code" class="method-signature"
+            onclick="popupCode('Context.src/M000222.html');return false;">
+          <span class="method-name">visual</span><span class="method-args">(...)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Get the current X11 Visual.
+</p>
+<p>
+Note: This method is not available unless <a
+href="../Imlib2.html">Imlib2</a>-Ruby was compiled with X11 support. You
+can check the constant Imlib2::X11_SUPPORT to see if X11 support is
+available.
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  visual = context.get_visual
+  visual = context.visual
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000202" class="method-detail">
+        <a name="M000202"></a>
+
+        <div class="method-heading">
+          <a href="Context.src/M000202.html" target="Code" class="method-signature"
+            onclick="popupCode('Context.src/M000202.html');return false;">
+          <span class="method-name">visual=</span><span class="method-args">(p1)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Set the current X11 Visual.
+</p>
+<p>
+Note: This method is not available unless <a
+href="../Imlib2.html">Imlib2</a>-Ruby was compiled with X11 support. You
+can check the constant Imlib2::X11_SUPPORT to see if X11 support is
+available.
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  context.set_visual visual
+  context.visual = visual
+</pre>
+        </div>
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+
+<div id="validator-badges">
+  <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+Paul Duncan <pabs@pablotron.org>
+* Main author.
+
+Akinori Musha <knu@iDaemons.org>
+* imlib2-config patch for extconf.rb, FreeBSD Port Maintainer
+
+Tom Gilbert <i_r_dhumb@linuxbrit.co.uk>
+* suggested fix to avoid fill_ellipse bug in examples/checkerboard.rb
+  and oo-board.rb
+* upstream bug fixes to Imlib2 (reported by me).
+
+Jon Bernard <jbernard@roanoke.edu>
+* Debian packages (see the README for the url and apt source).
+* font licensing cleanups
+
+Yosuke Oikawa <rx21@ma2.justnet.ne.jp>
+* reported Imlib2::Image#crop_scaled() bug (fixed as of 0.4.2).
+
+Christian Szegedy <szegedy@ur.uni-bonn.de>
+* reported several small link errors.
+
+Alvin Schur <schur@cpsc.ucalgary.ca>
+* patch to fix Image#image_data and Image#image_data_ro
+
+Tilman Sauerbeck <tilman@code-monkey.de>
+* patch to fix create_{copied,}_data
+* patch for RSTRING(foo)->ptr => StringValuePtr(foo)
+* suggestion for attach_value patch
+* patch to add deleted error 
+* suggestion for filename in exception strings
+* patch for Image#put_data work-around
+
+Chad Fowler <chad@chadfowler.com>
+* maintains RubyGem
+
+OBATA Akio <obata@lins.jp>
+* NetBSD maintainer
+* patch to fix im_struct memory leak

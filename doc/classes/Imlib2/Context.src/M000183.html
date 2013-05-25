@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+  <title>set_image (Imlib2::Context)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="../../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre>/*
+ * Set the current image (Imlib2::Image).
+ *
+ * Note that this function is not useful at the moment since all image
+ * instance methods blindly blow away the image and color context.  So
+ * you cannot safely mix image context and image instance methods.
+ *
+ * Example:
+ *   ctx.image = image
+ *
+ */
+static VALUE ctx_set_image(VALUE self, VALUE val) {
+</pre>
+</body>
+</html>

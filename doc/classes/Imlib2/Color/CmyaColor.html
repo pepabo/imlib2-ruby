@@ -1,0 +1,598 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Class: Imlib2::Color::CmyaColor</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript" />
+  <link rel="stylesheet" href="../../.././rdoc-style.css" type="text/css" media="screen" />
+  <script type="text/javascript">
+  // <![CDATA[
+
+  function popupCode( url ) {
+    window.open(url, "Code", "resizable=yes,scrollbars=yes,toolbar=no,status=no,height=150,width=400")
+  }
+
+  function toggleCode( id ) {
+    if ( document.getElementById )
+      elem = document.getElementById( id );
+    else if ( document.all )
+      elem = eval( "document.all." + id );
+    else
+      return false;
+
+    elemStyle = elem.style;
+    
+    if ( elemStyle.display != "block" ) {
+      elemStyle.display = "block"
+    } else {
+      elemStyle.display = "none"
+    }
+
+    return true;
+  }
+  
+  // Make codeblocks hidden by default
+  document.writeln( "<style type=\"text/css\">div.method-source-code { display: none }</style>" )
+  
+  // ]]>
+  </script>
+
+</head>
+<body>
+
+
+
+    <div id="classHeader">
+        <table class="header-table">
+        <tr class="top-aligned-row">
+          <td><strong>Class</strong></td>
+          <td class="class-name-in-header">Imlib2::Color::CmyaColor</td>
+        </tr>
+        <tr class="top-aligned-row">
+            <td><strong>In:</strong></td>
+            <td>
+                <a href="../../../files/imlib2_c.html">
+                imlib2.c
+                </a>
+        &nbsp;(<a href="http://cvs.pablotron.org/cgi-bin/viewcvs.cgi/imlib2-ruby/imlib2.c">CVS</a>)
+        <br />
+            </td>
+        </tr>
+
+        <tr class="top-aligned-row">
+            <td><strong>Parent:</strong></td>
+            <td>
+                Object
+            </td>
+        </tr>
+        </table>
+    </div>
+  <!-- banner header -->
+
+  <div id="bodyContent">
+
+
+
+  <div id="contextContent">
+
+
+
+   </div>
+
+    <div id="method-list">
+      <h3 class="section-bar">Methods</h3>
+
+      <div class="name-list">
+      <a href="#M000003">[]</a>&nbsp;&nbsp;
+      <a href="#M000004">[]=</a>&nbsp;&nbsp;
+      <a href="#M000017">a</a>&nbsp;&nbsp;
+      <a href="#M000018">a=</a>&nbsp;&nbsp;
+      <a href="#M000019">alpha</a>&nbsp;&nbsp;
+      <a href="#M000020">alpha=</a>&nbsp;&nbsp;
+      <a href="#M000005">c</a>&nbsp;&nbsp;
+      <a href="#M000006">c=</a>&nbsp;&nbsp;
+      <a href="#M000007">cyan</a>&nbsp;&nbsp;
+      <a href="#M000008">cyan=</a>&nbsp;&nbsp;
+      <a href="#M000009">m</a>&nbsp;&nbsp;
+      <a href="#M000010">m=</a>&nbsp;&nbsp;
+      <a href="#M000011">magenta</a>&nbsp;&nbsp;
+      <a href="#M000012">magenta=</a>&nbsp;&nbsp;
+      <a href="#M000002">new</a>&nbsp;&nbsp;
+      <a href="#M000001">new</a>&nbsp;&nbsp;
+      <a href="#M000013">y</a>&nbsp;&nbsp;
+      <a href="#M000014">y=</a>&nbsp;&nbsp;
+      <a href="#M000015">yellow</a>&nbsp;&nbsp;
+      <a href="#M000016">yellow=</a>&nbsp;&nbsp;
+      </div>
+    </div>
+
+  </div>
+
+
+    <!-- if includes -->
+
+    <div id="section">
+
+
+
+
+
+      
+
+
+    <!-- if method_list -->
+    <div id="methods">
+      <h3 class="section-bar">Public Class methods</h3>
+
+      <div id="method-M000002" class="method-detail">
+        <a name="M000002"></a>
+
+        <div class="method-heading">
+          <a href="CmyaColor.src/M000002.html" target="Code" class="method-signature"
+            onclick="popupCode('CmyaColor.src/M000002.html');return false;">
+          <span class="method-name">new</span><span class="method-args">(...)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+<a href="CmyaColor.html">Imlib2::Color::CmyaColor</a> constructor.
+</p>
+<p>
+Parameters are identical to Imlib2::Color::CmyaColor::new.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000001" class="method-detail">
+        <a name="M000001"></a>
+
+        <div class="method-heading">
+          <a href="CmyaColor.src/M000001.html" target="Code" class="method-signature"
+            onclick="popupCode('CmyaColor.src/M000001.html');return false;">
+          <span class="method-name">new</span><span class="method-args">(...)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Returns a new <a href="CmyaColor.html">Imlib2::Color::CmyaColor</a>.
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  c, m, y, a = 255, 0, 0, 255
+  border = Imlib2::Color::CmyaColor.new c, m, y, a
+
+  values = [255, 0, 0, 255]
+  border = Imlib2::Color::CmyaColor.new values
+</pre>
+        </div>
+      </div>
+
+      <h3 class="section-bar">Public Instance methods</h3>
+
+      <div id="method-M000003" class="method-detail">
+        <a name="M000003"></a>
+
+        <div class="method-heading">
+          <span class="method-name">[]</span><span class="method-args">()</span>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000004" class="method-detail">
+        <a name="M000004"></a>
+
+        <div class="method-heading">
+          <span class="method-name">[]=</span><span class="method-args">(p1, p2)</span>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000017" class="method-detail">
+        <a name="M000017"></a>
+
+        <div class="method-heading">
+          <a href="CmyaColor.src/M000017.html" target="Code" class="method-signature"
+            onclick="popupCode('CmyaColor.src/M000017.html');return false;">
+          <span class="method-name">a</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Get the alpha element of a <a href="CmyaColor.html">CmyaColor</a> object.
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  amount = color.alpha
+  amount = color.a
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000018" class="method-detail">
+        <a name="M000018"></a>
+
+        <div class="method-heading">
+          <a href="CmyaColor.src/M000018.html" target="Code" class="method-signature"
+            onclick="popupCode('CmyaColor.src/M000018.html');return false;">
+          <span class="method-name">a=</span><span class="method-args">(p1)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Set the alpha element of a <a href="CmyaColor.html">CmyaColor</a> object.
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  color.alpha = 255
+  color.a = 255
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000019" class="method-detail">
+        <a name="M000019"></a>
+
+        <div class="method-heading">
+          <a href="CmyaColor.src/M000019.html" target="Code" class="method-signature"
+            onclick="popupCode('CmyaColor.src/M000019.html');return false;">
+          <span class="method-name">alpha</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Get the alpha element of a <a href="CmyaColor.html">CmyaColor</a> object.
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  amount = color.alpha
+  amount = color.a
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000020" class="method-detail">
+        <a name="M000020"></a>
+
+        <div class="method-heading">
+          <a href="CmyaColor.src/M000020.html" target="Code" class="method-signature"
+            onclick="popupCode('CmyaColor.src/M000020.html');return false;">
+          <span class="method-name">alpha=</span><span class="method-args">(p1)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Set the alpha element of a <a href="CmyaColor.html">CmyaColor</a> object.
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  color.alpha = 255
+  color.a = 255
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000005" class="method-detail">
+        <a name="M000005"></a>
+
+        <div class="method-heading">
+          <a href="CmyaColor.src/M000005.html" target="Code" class="method-signature"
+            onclick="popupCode('CmyaColor.src/M000005.html');return false;">
+          <span class="method-name">c</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Get the cyan element of a <a href="CmyaColor.html">CmyaColor</a> object.
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  amount = color.cyan
+  amount = color.c
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000006" class="method-detail">
+        <a name="M000006"></a>
+
+        <div class="method-heading">
+          <a href="CmyaColor.src/M000006.html" target="Code" class="method-signature"
+            onclick="popupCode('CmyaColor.src/M000006.html');return false;">
+          <span class="method-name">c=</span><span class="method-args">(p1)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Set the cyan element of a <a href="CmyaColor.html">CmyaColor</a> object.
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  color.cyan = 255
+  color.c = 255
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000007" class="method-detail">
+        <a name="M000007"></a>
+
+        <div class="method-heading">
+          <a href="CmyaColor.src/M000007.html" target="Code" class="method-signature"
+            onclick="popupCode('CmyaColor.src/M000007.html');return false;">
+          <span class="method-name">cyan</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Get the cyan element of a <a href="CmyaColor.html">CmyaColor</a> object.
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  amount = color.cyan
+  amount = color.c
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000008" class="method-detail">
+        <a name="M000008"></a>
+
+        <div class="method-heading">
+          <a href="CmyaColor.src/M000008.html" target="Code" class="method-signature"
+            onclick="popupCode('CmyaColor.src/M000008.html');return false;">
+          <span class="method-name">cyan=</span><span class="method-args">(p1)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Set the cyan element of a <a href="CmyaColor.html">CmyaColor</a> object.
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  color.cyan = 255
+  color.c = 255
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000009" class="method-detail">
+        <a name="M000009"></a>
+
+        <div class="method-heading">
+          <a href="CmyaColor.src/M000009.html" target="Code" class="method-signature"
+            onclick="popupCode('CmyaColor.src/M000009.html');return false;">
+          <span class="method-name">m</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Get the magenta element of a <a href="CmyaColor.html">CmyaColor</a> object.
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  amount = color.magenta
+  amount = color.m
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000010" class="method-detail">
+        <a name="M000010"></a>
+
+        <div class="method-heading">
+          <a href="CmyaColor.src/M000010.html" target="Code" class="method-signature"
+            onclick="popupCode('CmyaColor.src/M000010.html');return false;">
+          <span class="method-name">m=</span><span class="method-args">(p1)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Set the magenta element of a <a href="CmyaColor.html">CmyaColor</a> object.
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  color.magenta = 255
+  color.m = 255
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000011" class="method-detail">
+        <a name="M000011"></a>
+
+        <div class="method-heading">
+          <a href="CmyaColor.src/M000011.html" target="Code" class="method-signature"
+            onclick="popupCode('CmyaColor.src/M000011.html');return false;">
+          <span class="method-name">magenta</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Get the magenta element of a <a href="CmyaColor.html">CmyaColor</a> object.
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  amount = color.magenta
+  amount = color.m
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000012" class="method-detail">
+        <a name="M000012"></a>
+
+        <div class="method-heading">
+          <a href="CmyaColor.src/M000012.html" target="Code" class="method-signature"
+            onclick="popupCode('CmyaColor.src/M000012.html');return false;">
+          <span class="method-name">magenta=</span><span class="method-args">(p1)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Set the magenta element of a <a href="CmyaColor.html">CmyaColor</a> object.
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  color.magenta = 255
+  color.m = 255
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000013" class="method-detail">
+        <a name="M000013"></a>
+
+        <div class="method-heading">
+          <a href="CmyaColor.src/M000013.html" target="Code" class="method-signature"
+            onclick="popupCode('CmyaColor.src/M000013.html');return false;">
+          <span class="method-name">y</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Get the yellow element of a <a href="CmyaColor.html">CmyaColor</a> object.
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  amount = color.yellow
+  amount = color.y
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000014" class="method-detail">
+        <a name="M000014"></a>
+
+        <div class="method-heading">
+          <a href="CmyaColor.src/M000014.html" target="Code" class="method-signature"
+            onclick="popupCode('CmyaColor.src/M000014.html');return false;">
+          <span class="method-name">y=</span><span class="method-args">(p1)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Set the yellow element of a <a href="CmyaColor.html">CmyaColor</a> object.
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  color.yellow = 255
+  color.y = 255
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000015" class="method-detail">
+        <a name="M000015"></a>
+
+        <div class="method-heading">
+          <a href="CmyaColor.src/M000015.html" target="Code" class="method-signature"
+            onclick="popupCode('CmyaColor.src/M000015.html');return false;">
+          <span class="method-name">yellow</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Get the yellow element of a <a href="CmyaColor.html">CmyaColor</a> object.
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  amount = color.yellow
+  amount = color.y
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000016" class="method-detail">
+        <a name="M000016"></a>
+
+        <div class="method-heading">
+          <a href="CmyaColor.src/M000016.html" target="Code" class="method-signature"
+            onclick="popupCode('CmyaColor.src/M000016.html');return false;">
+          <span class="method-name">yellow=</span><span class="method-args">(p1)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Set the yellow element of a <a href="CmyaColor.html">CmyaColor</a> object.
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  color.yellow = 255
+  color.y = 255
+</pre>
+        </div>
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+
+<div id="validator-badges">
+  <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+</div>
+
+</body>
+</html>

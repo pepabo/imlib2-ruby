@@ -1,0 +1,65 @@
+Imlib2-Ruby 0.5.2 README
+========================
+
+This document was last updated on Sun May 29 18:34:43 2005.
+Please see the file COPYING for licensing and warranty information.  The
+latest version of this library is available at the following URL:
+http://pablotron.org/software/imlib2-ruby/.
+
+Introduction
+============
+Imlib2-Ruby is a Ruby interface to Imlib2.  All of Imlib2 (except for
+X11 calls) has been wrapped.  I've provided a my test script and handful
+of commented scripts in examples/, and there's an rdoc-generated API
+reference in doc/ (which you can rebuild yourself by typing "rdoc
+./imlib2.c").  Imlib2-Ruby is also available in the FreeBSD ports
+collection (courtesy of Akinori Musha), as a NetBSD package (courtesy of 
+Obata Akio), in Debian Linux via apt-get (courtesy of Jon Bernard), and
+as a RubyGem (courtesy of Chad Fowler).  Imlib2-Ruby is still a work in
+progress, so bug reports or patches are welcome.  Feel free to email me
+at the address below if you have any additional questions.
+
+
+System Requirements
+===================
+* Imlib2, version 1.2.0 (or newer):
+  http://www.enlightenment.org/pages/imlib2.html
+  (you can find source tarballs and RPMs at the following URL)
+  ftp://ftp.sourceforge.net/pub/sourceforge/enlightenment/
+* Ruby, version 1.8.x (or newer):
+  http://www.ruby-lang.org/
+
+
+Installation
+============
+ruby ./extconf.rb            # generate Makefile
+make && su -c 'make install' # compile and install library
+
+
+Related Links
+=============
+* RDoc: used to generate the API Documentation
+  http://rdoc.sourceforge.net/
+* RubyGems: Another method of installing Imlib2-Ruby
+  http://rubygems.rubyforge.org/
+
+
+Reporting Bugs
+==============
+Have a bug to report or a feature you'd like me to add to Imlib2-Ruby?
+Feel free to email me at the address below.  Alternatively, you can
+submit your feature request or bug directly to my bug-tracking web
+interface at the following URL:
+
+  http://bugs.pablotron.org/
+
+(note that you'll need to create an account in order to submit a feature
+request or a bug report via the web interface).
+
+
+About the Author
+================
+Paul Duncan <pabs@pablotron.org>
+http://pablotron.org/
+
+Please see the file AUTHORS for additional contributions.

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+  <title>fill_ellipse (Imlib2::Image)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="../../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre>/*
+ * Fill an ellipse at the specified coordinates with the given color
+ *
+ * Examples:
+ *   # fill an ellipse in the center of the image using the context color
+ *   xc, yc, w, h = image.w / 2, image.h / 2, image.w / 2, image.h / 2
+ *   image.draw_oval xc, yc, w, h
+ *
+ *   # fill a violet circle in the center of the image
+ *   rect = [image.w / 2, image.h / 2, image.w / 2, image.w / 2]
+ *   color = Imlib2::Color::VIOLET
+ *   image.draw_ellipse rect, color
+ *
+ */
+static VALUE image_fill_ellipse(int argc, VALUE *argv, VALUE self) {
+</pre>
+</body>
+</html>

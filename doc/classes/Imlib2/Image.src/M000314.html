@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+  <title>draw_rectangle (Imlib2::Image)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="../../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre>/* 
+ * Draw a rectangle outline at the specified coordinates.
+ *
+ * Examples:
+ *   # draw rectangle around edge of image using context color
+ *   rect = [1, 1, im.width - 2, im.height - 2]
+ *   im.draw_rect rect
+ *
+ *   # draw magenta rectangle outline in top-left corner of image
+ *   color = Imlib2::Color::MAGENTA
+ *   im.draw_rect [0, 0], [im.width / 2, im.height / 2], color
+ *
+ *   # draw square from 10, 10 to 30, 30 using context color
+ *   im.draw_rect [10, 10, 20, 20] 
+ *
+ */
+static VALUE image_draw_rect(int argc, VALUE *argv, VALUE self) {
+</pre>
+</body>
+</html>
