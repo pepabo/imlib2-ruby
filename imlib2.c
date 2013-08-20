@@ -1902,7 +1902,7 @@ static VALUE image_put_data(VALUE self, VALUE str) {
   new_data = (DATA32*) StringValuePtr(str);
   
   /* check size of new buffer */
-  if (RSTRING(str)->len != old_size)
+  if (RSTRING_LEN(str) != old_size)
     rb_raise(rb_eArgError, "invalid buffer size");
   
   /* copy new data to old address */
