@@ -8,7 +8,10 @@ addons:
   apt:
     packages:
     - libimlib2-dev
-script:
+before_install:
 - ruby ./extconf.rb
+install:
 - make
 - make install
+script:
+- ruby -rimlib2 -e 'exit Imlib2::VERSION == "0.5.2"'
