@@ -163,7 +163,7 @@ static void raise_imlib_error(const char *path, int err) {
   snprintf(buf, sizeof(buf), "\"%s\": %s", path, imlib_errors[err].description);
   
   /* raise exception */
-  rb_raise(imlib_errors[err].exception, buf);
+  rb_raise(imlib_errors[err].exception, "%s", buf);
 }
 
 /* set the context color -- polymorphic based on color class */
